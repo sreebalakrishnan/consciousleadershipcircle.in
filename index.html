@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conscious Leadership Circle</title>
+<meta name="description" content="A community for technology leaders navigating the pace of AI — with clarity, groundedness, and each other. Co-hosted by Sree Balakrishnan and Sunil Rawlani.">
+
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="3" fill="%23F7F4ED"/><text x="16" y="23" text-anchor="middle" font-family="Georgia,serif" font-size="22" font-style="italic" fill="%239B4A2C">s</text></svg>' type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter+Tight:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:       #F7F4ED;
+    --paper-deep:  #EDEAE0;
+    --paper-card:  #FBF8F0;
+    --ink:         #1F1A14;
+    --ink-soft:    #54483B;
+    --ink-faint:   #9A8C7B;
+    --rust:        #9B4A2C;
+    --rust-soft:   rgba(155, 74, 44, 0.12);
+    --moss:        #5B6E50;
+    --indigo:      #3D4F7C;
+    --rule:        rgba(31, 26, 20, 0.14);
+    --rule-soft:   rgba(31, 26, 20, 0.06);
+    --serif:      "Spectral", Georgia, "Times New Roman", serif;
+    --sans:       "Inter Tight", system-ui, sans-serif;
+    --devanagari: "Noto Sans Devanagari", "Spectral", serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--rust); color: var(--paper); }
+  a { color: var(--rust); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--rust) 35%, transparent); transition: border-color .15s; }
+  a:hover { border-bottom-color: var(--rust); }
+
+  .shell { max-width: 640px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 32px); }
+
+  /* topbar */
+  .topbar { padding: 24px 0 0; font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; }
+  .topbar a { color: var(--ink-soft); border-bottom: none; }
+  .topbar a:hover { color: var(--rust); }
+
+  /* opening question */
+  .opening {
+    padding: clamp(56px, 8vw, 96px) 0 clamp(40px, 6vw, 64px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .opening .eyebrow {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust);
+    margin-bottom: 28px; display: flex; align-items: center; gap: 10px;
+  }
+  .opening .eyebrow::after { content: ""; height: 1px; flex: 1; background: var(--rule); max-width: 60px; }
+  .opening .big-q {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 1.05;
+    letter-spacing: -0.022em; color: var(--ink);
+    margin-bottom: 20px;
+  }
+  .opening .pivot {
+    font-family: var(--serif); font-size: clamp(1.05rem, 2vw, 1.2rem);
+    line-height: 1.65; color: var(--ink-soft); max-width: 46ch;
+    font-style: italic;
+  }
+  .opening .pivot em { font-style: normal; color: var(--ink); font-weight: 500; }
+
+  /* body sections */
+  .section { padding: clamp(48px, 6vw, 72px) 0; border-bottom: 1px solid var(--rule-soft); }
+  .section:last-of-type { border-bottom: none; }
+  .section h2 {
+    font-family: var(--serif); font-weight: 500;
+    font-size: clamp(1.3rem, 2.8vw, 1.6rem); line-height: 1.25;
+    letter-spacing: -0.008em; color: var(--ink);
+    margin-bottom: 22px; max-width: 34ch;
+  }
+  .section h2 em { font-style: italic; color: var(--rust); }
+  .section p { margin: 0 0 20px; font-size: 1.04rem; line-height: 1.78; color: var(--ink); }
+  .section p:last-child { margin-bottom: 0; }
+  .section p em { font-style: italic; }
+  .section p strong { font-weight: 600; }
+
+  /* pull quote */
+  .pull {
+    margin: clamp(32px, 4vw, 44px) 0;
+    padding-left: 22px;
+    border-left: 3px solid var(--rust);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.15rem, 2.2vw, 1.35rem); line-height: 1.45;
+    color: var(--ink); max-width: 38ch;
+  }
+
+  /* Devanagari callout */
+  .dyk {
+    margin: clamp(36px, 5vw, 52px) 0; padding: clamp(22px, 3.5vw, 30px);
+    background: var(--paper-card);
+    border: 1px solid var(--rule-soft);
+    border-left: 3px solid var(--rust);
+  }
+  .dyk .dyk-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--rust);
+    margin-bottom: 14px;
+  }
+  .dyk .sanskrit-word {
+    font-family: var(--devanagari); font-size: clamp(1.7rem, 3.4vw, 2.1rem);
+    font-weight: 500; color: var(--ink); line-height: 1.1;
+    display: inline-block; margin-right: 12px;
+  }
+  .dyk .romaji {
+    font-family: var(--serif); font-style: italic; font-size: 1.05rem;
+    color: var(--ink-soft); display: inline-block;
+  }
+  .dyk .meaning {
+    margin-top: 10px; font-family: var(--serif); font-size: 1rem;
+    line-height: 1.65; color: var(--ink);
+  }
+  .dyk .meaning em { font-style: italic; }
+
+  /* lotus block — the Gita passage */
+  .lotus {
+    margin: clamp(36px, 5vw, 52px) 0;
+    padding: clamp(24px, 4vw, 36px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .lotus .source {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 18px;
+  }
+  .lotus blockquote {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem); line-height: 1.5;
+    color: var(--ink); margin-bottom: 14px;
+  }
+  .lotus .citation {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.08em;
+    color: var(--ink-faint); font-style: normal;
+  }
+  .lotus .essence {
+    margin-top: 22px; padding-top: 18px;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .lotus .essence p {
+    font-family: var(--serif); font-size: 0.98rem; line-height: 1.7;
+    color: var(--ink-soft); margin: 0 0 8px;
+  }
+  .lotus .essence p:last-child { margin: 0; }
+
+  .lotus.lotus--moss { border-color: var(--moss); }
+  .lotus.lotus--moss .source { color: var(--moss); }
+  .lotus.lotus--indigo { border-color: var(--indigo); }
+  .lotus.lotus--indigo .source { color: var(--indigo); }
+
+  .tradition-bridge {
+    margin: clamp(28px, 4vw, 40px) 0 clamp(20px, 3vw, 28px);
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); display: flex; align-items: center; gap: 12px;
+  }
+  .tradition-bridge::before,
+  .tradition-bridge::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .tradition-bridge span { white-space: nowrap; }
+  .lotus .essence em { font-style: italic; color: var(--ink); }
+  .lotus .essence[hidden] { display: none; }
+  .lotus-toggle {
+    margin-top: 14px;
+    background: none; border: none; padding: 0;
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--ink-faint); cursor: pointer;
+    text-decoration: underline dotted; text-underline-offset: 3px;
+  }
+  .lotus-toggle:hover { color: var(--rust); }
+
+  /* people grid */
+  .people {
+    margin-top: 24px;
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .person {
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+    padding: 6px 14px;
+    background: var(--paper-card);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    color: var(--ink-soft);
+  }
+
+  /* connect section */
+  .connect {
+    padding: clamp(48px, 6vw, 72px) 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .connect h2 {
+    font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.2;
+    color: var(--ink); margin-bottom: 16px; letter-spacing: -0.012em;
+  }
+  .connect p {
+    font-family: var(--serif); font-size: 1.04rem; line-height: 1.72;
+    color: var(--ink-soft); margin-bottom: 28px; max-width: 44ch;
+  }
+  .connect-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn-wa {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 12px 22px; background: #25D366; color: white !important;
+    font-family: var(--sans); font-size: 14px; font-weight: 500;
+    border-radius: 28px; border: none; text-decoration: none; border-bottom: none;
+  }
+  .btn-wa:hover { background: #1ebe5b; transform: translateY(-1px); border: none; }
+  .btn-wa svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+  /* human interstitial */
+  .human-pause {
+    padding: clamp(52px, 7vw, 84px) 0;
+    text-align: center;
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .human-pause p {
+    font-family: var(--serif); font-style: italic; font-weight: 300;
+    font-size: clamp(1.25rem, 2.8vw, 1.65rem); line-height: 1.55;
+    color: var(--ink-soft); max-width: 34ch; margin: 0 auto 0;
+    letter-spacing: -0.01em;
+  }
+  .human-pause p em { font-style: normal; color: var(--ink); font-weight: 400; }
+  .human-pause .breath {
+    margin-top: 28px;
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint);
+  }
+
+  /* passcode gate */
+  .gate { padding: clamp(40px, 6vw, 72px) 0 clamp(48px, 6vw, 80px); border-bottom: 1px solid var(--rule-soft); }
+  .gate-card { max-width: 520px; margin: 0 auto; text-align: center; }
+  .gate h3 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.6rem, 4vw, 2.1rem); line-height: 1.15; letter-spacing: -0.012em; color: var(--ink); margin-bottom: 16px; }
+  .gate-lede { font-family: var(--serif); font-size: 1.04rem; line-height: 1.65; color: var(--ink-soft); margin-bottom: 28px; }
+  .gate-lede em { font-style: italic; }
+  .gate-form { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 12px; }
+  .gate-form input { flex: 1 1 200px; max-width: 240px; padding: 12px 16px; background: var(--paper); border: 1px solid var(--rule); font-family: var(--sans); font-size: 15px; color: var(--ink); border-radius: 2px; text-align: center; letter-spacing: 0.04em; }
+  .gate-form input:focus { outline: none; border-color: var(--rust); }
+  .gate-form input::placeholder { color: var(--ink-faint); font-style: italic; letter-spacing: 0; }
+  .gate-form button { padding: 12px 26px; background: var(--ink); color: var(--paper); font-family: var(--sans); font-size: 14px; font-weight: 500; letter-spacing: 0.06em; border: 1px solid var(--ink); border-radius: 2px; cursor: pointer; }
+  .gate-form button:hover { background: var(--rust); border-color: var(--rust); }
+  .gate-error { font-family: var(--serif); font-style: italic; color: var(--rust); font-size: 0.95rem; min-height: 1.4em; margin-bottom: 14px; }
+  .gate-shake { animation: gate-shake .35s cubic-bezier(.36,.07,.19,.97); }
+  @keyframes gate-shake { 10%,90%{transform:translateX(-2px);} 20%,80%{transform:translateX(4px);} 30%,50%,70%{transform:translateX(-6px);} 40%,60%{transform:translateX(6px);} }
+  .gate-extras { margin-top: 14px; display: flex; flex-direction: column; gap: 16px; align-items: center; }
+  .gate-hint-toggle { background: none; border: none; font-family: var(--sans); font-size: 13px; color: var(--ink-faint); cursor: pointer; padding: 4px 8px; text-decoration: underline dotted; text-underline-offset: 3px; }
+  .gate-hint-toggle:hover { color: var(--rust); }
+  .gate-hint { font-family: var(--serif); font-style: italic; color: var(--ink-soft); font-size: 0.98rem; line-height: 1.55; padding: 14px 20px; background: var(--paper-card); border: 1px solid var(--rule-soft); border-radius: 2px; max-width: 400px; }
+  .gate-hint em { font-style: italic; color: var(--ink); }
+  .gate-hint[hidden] { display: none; }
+  .gate-or { font-family: var(--sans); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint); }
+  .gate-wa { display: inline-flex; align-items: center; gap: 9px; padding: 11px 20px; background: #25D366; color: white !important; font-family: var(--sans); font-size: 14px; font-weight: 500; border: none; border-radius: 28px; text-decoration: none; border-bottom: none; }
+  .gate-wa:hover { background: #1ebe5b; transform: translateY(-1px); }
+  .gate-wa svg { width: 18px; height: 18px; fill: currentColor; }
+
+  /* lock state — hide everything except opening + gate */
+  body.locked .section,
+  body.locked .dyk,
+  body.locked .human-pause,
+  body.locked .connect,
+  body.locked footer { display: none; }
+  body:not(.locked) .gate { display: none; }
+  body:not(.locked) .topbar-strip-hint { display: none; }
+
+  .btn-mail {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px;
+    background: transparent; color: var(--ink) !important;
+    font-family: var(--sans); font-size: 14px; font-weight: 500;
+    border: 1px solid var(--rule); border-radius: 28px;
+    text-decoration: none;
+  }
+  .btn-mail:hover { border-color: var(--ink); }
+
+  /* comic strip section */
+  .topbar .row { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .topbar-strip-hint {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.04em;
+    color: var(--rust); padding: 4px 10px;
+    background: rgba(155,74,44,0.1); border-radius: 12px;
+    text-decoration: none; border-bottom: none;
+  }
+  .topbar-strip-hint:hover { background: rgba(155,74,44,0.18); color: var(--rust); }
+
+  .strip-section {
+    margin-top: 0; padding: clamp(40px,5vw,64px) 0;
+    background: var(--paper-deep);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+  }
+
+  /* footer */
+  footer {
+    padding: 36px 0 52px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans); font-size: 13px; color: var(--ink-faint); line-height: 1.65;
+  }
+  footer a { color: var(--ink-soft); border-bottom: none; }
+  footer a:hover { color: var(--rust); }
+  .col-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+</style>
+</head>
+<body class="locked">
+
+<div class="topbar">
+  <div class="shell">
+    <div class="row">
+      <a href="/">consciousleadershipcircle.in</a>
+      <a href="#gate" class="topbar-strip-hint">↓ Read the comic · then enter</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── Opening question ─────────────────────────── -->
+<section class="opening">
+  <div class="shell">
+    <div class="eyebrow">Conscious Leadership</div>
+    <div class="big-q">Is this too much?</div>
+    <p class="pivot">The question we kept returning to — every Saturday, across batches, across years — was that one. And the turn that changed everything: <em>too much for who?</em> If this is the path you have chosen, that question has a different answer entirely.</p>
+  </div>
+</section>
+
+<!-- ── Comic strip ─────────────────────────────── -->
+<section class="strip-section" id="strip">
+  <div class="shell" style="max-width:880px;">
+    <div style="font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--rust);margin-bottom:14px;text-align:center;">A note from history</div>
+    <h3 style="font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;color:var(--ink);text-align:center;margin-bottom:8px;letter-spacing:-0.012em;">The Same Question</h3>
+    <p style="font-family:var(--serif);font-style:italic;font-size:1.02rem;color:var(--ink-soft);text-align:center;margin-bottom:32px;">A fear as old as the machine. A truth as steady as the human.</p>
+    <figure style="background:#faf6ee;padding:clamp(14px,2vw,22px);border:1px solid var(--rule);box-shadow:0 1px 0 rgba(0,0,0,0.02),0 10px 30px rgba(60,40,20,0.08);">
+      <img src="images/the-luddites.jpg"
+           alt="A four-panel comic: Panel 1 — a Luddite smashing a steam loom in 1811. Panel 2 — a montage of humans thriving through technology across centuries. Panel 3 — a modern tech leader, same fear, different century. Panel 4 — the same person, calmer, working alongside AI."
+           loading="lazy"
+           style="display:block;width:100%;height:auto;"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <div style="display:none;padding:64px 24px;text-align:center;font-family:var(--serif);font-style:italic;color:var(--ink-faint);border:1px dashed var(--rule);">The strip is coming — save it as <code>conscious-leadership/images/the-luddites.jpg</code>.</div>
+    </figure>
+    <p style="margin-top:18px;text-align:center;font-family:var(--serif);font-style:italic;color:var(--ink-soft);font-size:0.96rem;">— Shared by Venkatramana Siddheshwar</p>
+  </div>
+</section>
+
+<!-- ── Passcode gate ───────────────────────────── -->
+<section class="gate" id="gate" aria-label="Page is gated">
+  <div class="shell">
+    <div class="gate-card">
+      <h3>One word before you enter.</h3>
+      <p class="gate-lede">The comic above holds the clue — look at what the Luddites feared, and what actually happened. <em>One word from that story</em> will open this page. Or ping Sree and he will send it across.</p>
+      <form class="gate-form" id="gate-form" novalidate>
+        <input type="text" id="gate-input" name="passcode" placeholder="one word…" autocomplete="off" autocapitalize="none" spellcheck="false" aria-label="Enter the passcode">
+        <button type="submit">Enter →</button>
+      </form>
+      <div class="gate-error" id="gate-error" role="status" aria-live="polite"></div>
+      <div class="gate-extras">
+        <button type="button" class="gate-hint-toggle" id="gate-hint-toggle" aria-expanded="false" aria-controls="gate-hint">Need a nudge? →</button>
+        <div class="gate-hint" id="gate-hint" hidden>Think about what this community is — or what the practice asks of you first. <em>One English word is enough.</em></div>
+        <span class="gate-or">or</span>
+        <a class="gate-wa" href="https://wa.me/919880330330?text=Hi%20Sree%20%E2%80%94%20I%27m%20at%20the%20gate%20of%20your%20Conscious%20Leadership%20page%20(sreebalakrishnan.in%2Fconscious-leadership%2F).%20What%27s%20the%20word%3F" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.42 1.27 4.86L2 22l5.27-1.27A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.07 14.33c-.21.59-1.04 1.13-1.51 1.2-.37.06-.86.08-1.39-.09-.32-.1-.73-.24-1.26-.46-2.21-.95-3.66-3.17-3.77-3.32-.11-.15-.91-1.21-.91-2.31s.58-1.64.78-1.86c.21-.22.45-.27.61-.27h.43c.14 0 .33-.05.51.39.21.51.71 1.77.77 1.9.06.13.1.28.02.43-.08.15-.12.24-.24.37-.12.13-.25.3-.36.4-.12.12-.25.26-.11.49.14.24.62 1.03 1.35 1.66.93.81 1.71 1.05 1.95 1.17.24.12.38.1.52-.05.14-.15.6-.69.76-.92.16-.24.32-.2.55-.12.23.08 1.43.68 1.68.8.24.12.41.18.46.28.06.1.06.59-.15 1.18z"/></svg>
+          Ping Sree on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Origin ───────────────────────────────────── -->
+<section class="section">
+  <div class="shell">
+    <h2>Where it began</h2>
+
+    <p>Somewhere between 2024 and 2025, across multiple ISB CTO batches, a group of technology leaders found themselves asking the same questions. The batches had different people, different timelines — but the questions kept arriving in the same shape. About pace. About direction. About what kind of leader you actually want to be.</p>
+
+    <p>We met every Saturday for two hours — learning about AI, emerging technology, and the rapidly shifting landscape that anyone leading technology today has to navigate. Sunil Rawlani was our mentor: patient, incisive, someone who always found a way to turn the question back to you.</p>
+
+    <p>When the batches wound down, the group didn't want to stop. Not because we hadn't learned enough — but because something else had started. A habit of reflection. A trust in each other. A willingness to ask: <em>wait, is this actually what I want?</em></p>
+
+    <p>Santhosh, Shiva, Roopa, and several others stepped forward. Sunil stayed. And so did I. The Conscious Leadership group was, and is, an attempt to keep that alive — and to open it to others who are asking the same questions.</p>
+  </div>
+</section>
+
+<!-- ── Sangha callout ───────────────────────────── -->
+<div class="shell">
+  <div class="dyk">
+    <div class="dyk-label">The word</div>
+    <span class="sanskrit-word">संघ</span>
+    <span class="romaji">Sangha</span>
+    <p class="meaning">A community of practice. In Buddhist and Vedic tradition, the sangha is one of the three refuges — alongside dharma (the teaching) and the teacher. It is not a network. It is not a cohort. It is <em>a group of people who walk alongside you</em>, who have agreed to be honest with each other, and who hold the space for you to hear your own voice.</p>
+    <p style="margin-top: 14px; font-family: var(--sans); font-size: 12px; color: var(--ink-faint); letter-spacing: 0.01em;">Thanks to Sunil's push, Shiva, Santhosh, Roopa and Sree got together to make it happen.</p>
+  </div>
+</div>
+
+<!-- ── What it is ───────────────────────────────── -->
+<section class="section">
+  <div class="shell">
+    <h2>What conscious leadership <em>is</em></h2>
+
+    <p>It is not a leadership framework. It is not a course, a certification, or a methodology. It is, in the simplest terms, an invitation to pause.</p>
+
+    <div class="pull">Watch yourself. Get back to whatever you are doing. That is the whole practice.</div>
+
+    <p>The group serves as a mirror. When you bring a question — should I take this role, should I build this thing, should I say yes to this — the group does not give you an answer. It asks: <em>is this what you want?</em> If the answer is yes, great. If the answer is no, great. Either way, you return to your work with greater clarity than you left with.</p>
+
+    <p>In a world where AI is rewriting the pace of everything, that pause is not a luxury. It is the work. A confident inner self — grounded, resolved, present — is what allows you to lead well in a landscape where the ground keeps shifting.</p>
+  </div>
+</section>
+
+<!-- ── Chetana callout ───────────────────────────── -->
+<div class="shell">
+  <div class="dyk">
+    <div class="dyk-label">The word</div>
+    <span class="sanskrit-word">चेतना</span>
+    <span class="romaji">Chetana</span>
+    <p class="meaning">Consciousness. Awareness. The quality of being awake to what is happening — inside you, not just around you. In leadership, chetana is the difference between <em>reacting</em> to what the world throws at you and <em>responding</em> from a place you have consciously chosen. It is the thing you are trying to protect when you pause.</p>
+    <p style="margin-top: 14px; font-family: var(--sans); font-size: 12px; color: var(--ink-faint); letter-spacing: 0.01em;">Sunil Rawlani brought this word into the room — not as a definition, but as a prompt to reflect.</p>
+  </div>
+</div>
+
+<!-- ── Human interstitial ───────────────────────── -->
+<div class="human-pause">
+  <div class="shell">
+    <p>We do technology for a living. But <em>we are human too.</em> We spend most of our time inside the virtual — building it, shaping it, sometimes disappearing into it. And somewhere in all of that, we need to stop. Pause. Breathe. Reflect. And remember what we are walking back to.</p>
+    <p style="margin-top: 22px; font-family: var(--serif); font-style: italic; font-weight: 300; font-size: clamp(1.05rem, 2vw, 1.25rem); line-height: 1.6; color: var(--ink); max-width: 36ch; margin-left: auto; margin-right: auto;">The choice is ours — to embrace it, with everything it brings, the good and the difficult. And to remember: <em style="font-style:normal; font-weight:500;">you</em> have the freedom to change course. Always.</p>
+    <div class="breath">· · ·</div>
+    <p style="margin-top: 20px; font-family: var(--sans); font-size: 13px; color: var(--ink-faint); font-style: normal; letter-spacing: 0.01em;">— Sree Balakrishnan, inspired by Sunil Rawlani</p>
+  </div>
+</div>
+
+<!-- ── Philosophical ground ─────────────────────── -->
+<section class="section">
+  <div class="shell">
+    <h2>The ancient answer to a very modern question</h2>
+
+    <p>As I was writing this, a message arrived in my chat. It described something from the fifth chapter of the Bhagavad Gita — <em>Karma Sanyasa Yoga</em>. I am sharing it here almost exactly as it arrived, because it named something the group has been circling for a while without quite having the words.</p>
+
+    <div class="lotus">
+      <div class="source">Bhagavad Gita · Chapter 5 · Karma Sanyasa Yoga</div>
+      <blockquote>"One who performs actions, offering them to the Supreme, without attachment, is untouched by sin — like a lotus leaf untouched by water."</blockquote>
+      <div class="citation">— Bhagavad Gita 5.10</div>
+
+      <div class="essence">
+        <p>The chapter explores the relationship between <em>Karma Yoga</em> — the path of selfless action — and <em>Sanyasa</em> — inner detachment. True renunciation, it says, is not abandoning your work. It is performing your duty without attachment to the fruits of action.</p>
+        <p>Act without ego. Offer actions to dharma. Renounce attachment, not responsibility. Maintain equanimity in success and failure.</p>
+        <p>The contemplative seeker and the active contributor to society — both can lead to liberation when performed with right understanding.</p>
+        <p><em>Inner renunciation amidst outer action.</em></p>
+        <p>Living in the world. Yet not psychologically drowned by it.</p>
+      </div>
+    </div>
+
+    <p>The same understanding arrived in other rooms, in other centuries, through other words.</p>
+
+    <div class="tradition-bridge"><span>Across traditions</span></div>
+
+    <div class="lotus lotus--moss">
+      <div class="source">Buddhism · Anguttara Nikaya · The Buddha</div>
+      <blockquote>"Just as a lotus, born in water, grown in water, rises above the water and stands unsoiled — so too I, born in the world, raised in the world, having understood the world, live unsoiled by it."</blockquote>
+      <button class="lotus-toggle" aria-expanded="false">Read more ↓</button>
+      <div class="essence" hidden>
+        <p>Non-attachment does not mean withdrawal. The lotus grows in mud — it is shaped by its conditions, sustained by them even — but it is not defined by them.</p>
+        <p>You can be fully present in the world, fully engaged, and still remain free. That is the teaching. Not escape. <em>Understanding.</em></p>
+        <p>The Gita's lotus and the Buddha's lotus are the same lotus.</p>
+      </div>
+    </div>
+
+    <div class="lotus lotus--indigo" style="margin-top: 20px;">
+      <div class="source">Stoicism · Marcus Aurelius, Meditations · 2nd century CE</div>
+      <blockquote>"You have power over your mind, not outside events. Realise this, and you will find strength."</blockquote>
+      <div class="citation">— Meditations · Book IV</div>
+      <button class="lotus-toggle" aria-expanded="false">Read more ↓</button>
+      <div class="essence" hidden>
+        <p>And from Epictetus, his teacher's tradition: <em>"Make the best use of what is in your power, and take the rest as it happens."</em></p>
+        <p>The Stoic dichotomy of control — separate what you can influence from what you cannot, act fully on the former, release the latter — is Karma Yoga in Greek clothes.</p>
+        <p>Marcus Aurelius was running an empire while practising this. He did not withdraw from the world to find equanimity. He found it in the work, and brought it back into the room with him every morning.</p>
+        <p><em>Inner renunciation amidst outer action.</em> The same four words, arrived at from Rome.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: clamp(28px, 4vw, 40px);">For a technology leader navigating AI — this is not abstract philosophy. Leading ethically without greed. Serving without seeking praise. Working sincerely while accepting outcomes calmly. That is exactly the kind of leadership the moment is asking for.</p>
+
+    <p>The lotus grows in mud. It is not untouched by its context. It simply is not <em>of</em> it.</p>
+  </div>
+</section>
+
+<!-- ── Connect ──────────────────────────────────── -->
+<section class="connect">
+  <div class="shell">
+    <h2>Walk alongside us.</h2>
+    <p>The group grows through existing members — if someone in the group knows you, they can bring you in. If this resonates and you would like to find your way here, reach out to me or Sunil directly.</p>
+    <div class="connect-actions">
+      <a class="btn-wa" href="https://wa.me/919880330330?text=Hi%20Sree%20%E2%80%94%20I%20came%20across%20the%20Conscious%20Leadership%20group%20on%20your%20site.%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.42 1.27 4.86L2 22l5.27-1.27A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.07 14.33c-.21.59-1.04 1.13-1.51 1.2-.37.06-.86.08-1.39-.09-.32-.1-.73-.24-1.26-.46-2.21-.95-3.66-3.17-3.77-3.32-.11-.15-.91-1.21-.91-2.31s.58-1.64.78-1.86c.21-.22.45-.27.61-.27h.43c.14 0 .33-.05.51.39.21.51.71 1.77.77 1.9.06.13.1.28.02.43-.08.15-.12.24-.24.37-.12.13-.25.3-.36.4-.12.12-.25.26-.11.49.14.24.62 1.03 1.35 1.66.93.81 1.71 1.05 1.95 1.17.24.12.38.1.52-.05.14-.15.6-.69.76-.92.16-.24.32-.2.55-.12.23.08 1.43.68 1.68.8.24.12.41.18.46.28.06.1.06.59-.15 1.18z"/></svg>
+        Ping Sree on WhatsApp
+      </a>
+      <a class="btn-wa" href="https://wa.me/919820331113?text=Hi%20Sunil%20%E2%80%94%20I%20came%20across%20the%20Conscious%20Leadership%20group%20on%20Sree%27s%20site.%20I%27d%20like%20to%20know%20more." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.42 1.27 4.86L2 22l5.27-1.27A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.07 14.33c-.21.59-1.04 1.13-1.51 1.2-.37.06-.86.08-1.39-.09-.32-.1-.73-.24-1.26-.46-2.21-.95-3.66-3.17-3.77-3.32-.11-.15-.91-1.21-.91-2.31s.58-1.64.78-1.86c.21-.22.45-.27.61-.27h.43c.14 0 .33-.05.51.39.21.51.71 1.77.77 1.9.06.13.1.28.02.43-.08.15-.12.24-.24.37-.12.13-.25.3-.36.4-.12.12-.25.26-.11.49.14.24.62 1.03 1.35 1.66.93.81 1.71 1.05 1.95 1.17.24.12.38.1.52-.05.14-.15.6-.69.76-.92.16-.24.32-.2.55-.12.23.08 1.43.68 1.68.8.24.12.41.18.46.28.06.1.06.59-.15 1.18z"/></svg>
+        Ping Sunil on WhatsApp
+      </a>
+      <a class="btn-mail" href="mailto:gnuyoga@gmail.com?subject=Conscious%20Leadership%20group">
+        Send an email →
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="shell">
+    <div class="col-row">
+      <span><strong style="color:var(--ink-soft); font-weight:500;">Conscious Leadership Circle</strong> · consciousleadershipcircle.in</span>
+      <span>Maintained by <a href="https://sreebalakrishnan.in">Sree Balakrishnan</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'gate-conscious-leadership';
+  var ACCEPTED = ['pause','breathe','chetana','sangha','lotus','human','witness',
+                  'presence','reflect','dharma','aware','awareness','luddite',
+                  'thrive','inner','equanimity'];
+
+  // Unlock if already stored
+  try { if (localStorage.getItem(STORAGE_KEY) === 'yes') document.body.classList.remove('locked'); } catch(e) {}
+
+  var form  = document.getElementById('gate-form');
+  var input = document.getElementById('gate-input');
+  var error = document.getElementById('gate-error');
+  var hint  = document.getElementById('gate-hint');
+  var hintBtn = document.getElementById('gate-hint-toggle');
+
+  if (form) {
+    form.addEventListener('submit', function(ev) {
+      ev.preventDefault();
+      var val = (input.value || '').trim().toLowerCase();
+      if (!val) return;
+      if (ACCEPTED.indexOf(val) !== -1) {
+        try { localStorage.setItem(STORAGE_KEY, 'yes'); } catch(e) {}
+        document.body.classList.remove('locked');
+        error.textContent = '';
+      } else {
+        error.textContent = 'Not quite — try another word.';
+        form.classList.remove('gate-shake');
+        void form.offsetWidth;
+        form.classList.add('gate-shake');
+        input.select();
+      }
+    });
+  }
+
+  if (hintBtn && hint) {
+    hintBtn.addEventListener('click', function() {
+      var open = hint.hidden === false;
+      hint.hidden = open;
+      hintBtn.setAttribute('aria-expanded', String(!open));
+      hintBtn.textContent = open ? 'Need a nudge? →' : 'Hide hint ↑';
+    });
+  }
+})();
+
+document.querySelectorAll('.lotus-toggle').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var essence = btn.nextElementSibling;
+    var expanded = btn.getAttribute('aria-expanded') === 'true';
+    if (expanded) {
+      essence.hidden = true;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = 'Read more ↓';
+    } else {
+      essence.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      btn.textContent = 'Close ↑';
+    }
+  });
+});
+</script>
+</body>
+</html>
