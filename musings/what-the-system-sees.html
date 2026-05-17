@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What the System Sees · Conscious Leadership Circle</title>
+<meta name="description" content="A reflection by Sivarama Sundar on the annual review that ended in tears — and why systems thinking changes everything about how we lead people.">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:      #FBFBF8;
+    --paper-deep: #F4F2EB;
+    --ink:        #14181D;
+    --ink-soft:   #4B5560;
+    --ink-faint:  #8B95A0;
+    --moss:       #3F5847;
+    --moss-soft:  #6E8473;
+    --rule:       #E5E2DA;
+    --rule-soft:  #EEEBE2;
+    --display:   "Bricolage Grotesque", system-ui, sans-serif;
+    --serif:     "Instrument Serif", Georgia, serif;
+    --sans:      "Inter Tight", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+  a { color: var(--moss); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--moss) 35%, transparent); transition: border-color .15s; }
+  a:hover { border-bottom-color: var(--moss); }
+
+  .shell { max-width: 680px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px); }
+
+  /* ── topbar ─────────────────────────────────────── */
+  .topbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+  }
+  .topbar .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .topbar a { color: var(--ink-soft); border-bottom: none; }
+  .topbar a:hover { color: var(--moss); }
+  .topbar .nav-links { display: flex; gap: 20px; }
+  .topbar .nav-links a { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-faint); }
+
+  /* ── masthead ────────────────────────────────────── */
+  .mast {
+    padding: clamp(52px, 8vw, 88px) 0 clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mast-tag {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .mast-tag::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--moss); border-radius: 50%; }
+  .mast h1 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 96, "wght" 300;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    line-height: 1.02; letter-spacing: -0.025em;
+    color: var(--ink); max-width: 20ch;
+    margin-bottom: 20px;
+  }
+  .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .mast .lede {
+    font-family: var(--sans); font-size: 1.05rem;
+    line-height: 1.65; color: var(--ink-soft); max-width: 50ch;
+    margin-bottom: 28px;
+  }
+  .byline {
+    display: flex; align-items: center; gap: 16px;
+    padding-top: 20px; border-top: 1px solid var(--rule-soft);
+    flex-wrap: wrap;
+  }
+  .byline-author {
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+    color: var(--ink-soft);
+  }
+  .byline-author a { color: var(--moss-soft); border-bottom: none; }
+  .byline-author a:hover { color: var(--moss); }
+  .byline-date {
+    font-family: var(--sans); font-size: 12px; letter-spacing: 0.04em;
+    color: var(--ink-faint);
+  }
+  .byline-sep { color: var(--rule); }
+
+  /* ── body prose ─────────────────────────────────── */
+  .body { padding: clamp(44px, 6vw, 68px) 0; }
+  .body p {
+    font-size: 1.04rem; line-height: 1.78;
+    color: var(--ink-soft); margin-bottom: 22px;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .body p em { font-style: italic; color: var(--ink); }
+  .body p strong { font-weight: 600; color: var(--ink); }
+
+  /* ── pull quote ─────────────────────────────────── */
+  .pull {
+    margin: clamp(32px, 4vw, 48px) 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+    line-height: 1.45; color: var(--ink); max-width: 40ch;
+  }
+
+  /* ── section divider ────────────────────────────── */
+  .section-bridge {
+    margin: clamp(44px, 6vw, 64px) 0 clamp(28px, 4vw, 40px);
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-faint); display: flex; align-items: center; gap: 12px;
+  }
+  .section-bridge::before, .section-bridge::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  .section-bridge span { white-space: nowrap; }
+
+  /* ── practice block ─────────────────────────────── */
+  .practice {
+    padding: clamp(32px, 4.5vw, 52px) 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .practice:first-of-type { border-top: none; }
+  .practice-label {
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--moss); margin-bottom: 10px;
+  }
+  .practice h2 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 48, "wght" 400;
+    font-size: clamp(1.25rem, 2.8vw, 1.6rem);
+    line-height: 1.15; letter-spacing: -0.015em;
+    color: var(--ink); margin-bottom: 18px; max-width: 32ch;
+  }
+  .practice h2 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .practice p {
+    font-size: 1.04rem; line-height: 1.78;
+    color: var(--ink-soft); margin-bottom: 18px;
+  }
+  .practice p:last-child { margin-bottom: 0; }
+  .practice p em { font-style: italic; color: var(--ink); }
+
+  /* ── meadows note ────────────────────────────────── */
+  .meadows-note {
+    margin: clamp(28px, 4vw, 40px) 0;
+    padding: 18px 22px;
+    background: var(--paper-deep);
+    border-left: 2px solid var(--rule);
+    font-family: var(--sans); font-size: 0.96rem;
+    line-height: 1.68; color: var(--ink-soft);
+  }
+  .meadows-note em { font-style: italic; color: var(--ink); }
+  .meadows-note strong { font-weight: 600; color: var(--ink); }
+
+  /* ── the circle question ─────────────────────────── */
+  .circle-q {
+    margin: clamp(44px, 6vw, 64px) 0 0;
+    padding: clamp(32px, 4vw, 48px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .circle-q .label {
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 16px;
+  }
+  .circle-q blockquote {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+    line-height: 1.55; color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .circle-q .attribution {
+    font-family: var(--sans); font-size: 12px;
+    letter-spacing: 0.04em; color: var(--ink-faint);
+  }
+
+  /* ── sources ─────────────────────────────────────── */
+  .sources {
+    margin-top: clamp(48px, 6vw, 72px);
+    padding-top: clamp(32px, 4vw, 48px);
+    border-top: 1px solid var(--rule);
+  }
+  .sources-label {
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 20px;
+  }
+  .source-item {
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .source-item:last-child { border-bottom: none; }
+  .source-type {
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 5px;
+  }
+  .source-title {
+    font-family: var(--sans); font-size: 0.95rem; font-weight: 500;
+    color: var(--ink); margin-bottom: 3px;
+  }
+  .source-title a { color: var(--moss); border-bottom: none; }
+  .source-title a:hover { border-bottom: 1px solid var(--moss); }
+  .source-author {
+    font-family: var(--sans); font-size: 12px;
+    color: var(--ink-faint); letter-spacing: 0.02em;
+  }
+
+  /* ── footer ─────────────────────────────────────── */
+  footer {
+    padding: 36px 0 52px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-faint); line-height: 1.65;
+  }
+  footer a { color: var(--ink-soft); border-bottom: none; }
+  footer a:hover { color: var(--moss); }
+  .col-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="shell">
+    <div class="row">
+      <a href="/">← Conscious Leadership Circle</a>
+      <div class="nav-links">
+        <a href="/musings/">All musings</a>
+        <a href="/lotus.html">The lotus</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="mast">
+  <div class="shell">
+    <div class="mast-tag">Reflection · Conscious Leadership Circle</div>
+    <h1>What the <em>system</em> sees</h1>
+    <p class="lede">An employee leaves her annual review in tears. She is excellent, hardworking, the kind of person you want on your team. And she was completely blindsided. Siva has watched this scene from every side of the table. Here is what he has learned to do about it.</p>
+    <div class="byline">
+      <span class="byline-author">By <a href="https://www.linkedin.com/in/sivaramasundar/" target="_blank" rel="noopener">Sivarama Sundar</a></span>
+      <span class="byline-sep">·</span>
+      <span class="byline-date">May 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="body">
+  <div class="shell">
+
+    <p>Harvey Lee wrote about an employee who left her annual review in tears. She was good — genuinely excellent. Hardworking. The kind of person you want on your team. And she was blindsided.</p>
+
+    <p>Not because she had failed. Because the review wasn't measuring what she thought it was measuring.</p>
+
+    <p>Siva read that piece and found himself peering, in his words, into a crystal ball spinning backwards — pulling out every annual review he had been part of, from every side of the table. As a young engineer working hard and hoping someone would notice. As a manager having to deliver ratings that didn't feel fair. As a leader watching people he had mentored walk in underprepared, certain they would be seen.</p>
+
+    <div class="pull">The same story. Different years. Different people. The same gap.</div>
+
+    <p>Harvey Lee's article names seven things that catch people off guard: bell curves, recency bias, compensation decisions made by committees you'll never meet, self-evaluations treated as afterthoughts when they are among the highest-leverage moments in the whole process. Read it. It's useful.</p>
+
+    <p>But reading it, Siva's mind went somewhere else. Not to tactics. To the system.</p>
+
+    <div class="section-bridge"><span>The systems lens</span></div>
+
+    <p>Donella Meadows spent her career studying how complex systems work — and where you can actually change them. Her essay on leverage points is one of the most quietly radical things written about organisational life, even though it was written about economies and ecosystems.</p>
+
+    <div class="meadows-note">
+      In any complex system, there are places where a small shift produces large changes. Meadows called these <em>leverage points</em>. The catch: most people reach instinctively for the <em>lowest</em>-leverage interventions — numbers, quantities, effort. <strong>Work harder. Produce more. Add more hours.</strong> These work, just not very much, and not for very long. The high-leverage interventions are different. They are about changing what information flows through the system. Changing what the system is optimising for. Changing the story the system tells about itself.
+    </div>
+
+    <p>When Siva looks at the annual review blindside, he sees a systems problem. The hardworking employee was reaching for the lowest-leverage point — output, effort, technical delivery. The system was measuring something different: visibility, narrative, relationship, strategic alignment. Neither of them had made that mismatch visible until the room.</p>
+
+    <p>As a conscious leader, his response isn't to teach people better review tactics. It's to intervene at the leverage points — all year, not just before review season.</p>
+
+    <div class="section-bridge"><span>Three practices</span></div>
+
+    <div class="practice">
+      <div class="practice-label">Practice · 01</div>
+      <h2>Help people <em>tell their own story.</em></h2>
+      <p>The hardest workers are often the least visible. Not because they are hiding — but because they are heads-down. In the system, heads-down looks like absence. It looks like: <em>I'm not sure what she's been doing.</em> It looks like the gap between what the person knows they have delivered and what the organisation has registered.</p>
+      <p>Creating early awareness — waking people up to tell their stories — is a leverage intervention at the level of information flow. You are not asking them to work differently. You are asking them to surface what they have already done, to find the words for it, to make it legible to the people who are forming impressions of them across twelve months.</p>
+      <p>It is not self-promotion. It is self-representation. The difference matters.</p>
+    </div>
+
+    <div class="practice">
+      <div class="practice-label">Practice · 02</div>
+      <h2>Help people own their <em>growth.</em></h2>
+      <p>Every organisation has its own grammar. What "good" looks like. What "visible" means. What kinds of contributions get credited, and by whom. This grammar is rarely written down — but it shapes every review, every promotion decision, every room where someone's name comes up without them in it.</p>
+      <p>Siva's second practice is helping people read that grammar and move within it deliberately. Strengthen the networks that amplify your work. Understand the cultural dictums of where you are. Own your growth as something you are doing actively — not something that is happening to you.</p>
+      <p>In Meadows' frame: this is helping people understand what the system is actually optimising for, so they can act on that understanding — rather than optimising hard for the wrong thing and being surprised when it isn't rewarded.</p>
+    </div>
+
+    <div class="practice">
+      <div class="practice-label">Practice · 03</div>
+      <h2>Rewire <em>priorities.</em></h2>
+      <p>Most high performers have built their identity around technical excellence. That identity is often what made them good. It is also, at some point in the career arc, what holds them back.</p>
+      <p>The system begins to ask different questions. Can you operate at the intersection of technology and business? Can you influence across functions? Can you see the strategic picture and bring others along with you?</p>
+      <p>Helping people rebalance — not abandon their technical depth, but weave it into a broader operating range — is a leverage intervention at the level of goals. You are not changing what they do so much as what they are trying to become. That shift, when it happens, tends to compound.</p>
+    </div>
+
+    <div class="circle-q">
+      <div class="label">Siva's question to the circle</div>
+      <blockquote>"What small (big) things do you do as a conscious leader — in changing the status quo, in helping people understand the environment they are in, in helping them understand themselves and how others see them?"</blockquote>
+      <div class="attribution">— Sivarama Sundar, CLC group conversation</div>
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources &amp; further reading</div>
+
+      <div class="source-item">
+        <div class="source-type">Article · Prompt for this reflection</div>
+        <div class="source-title"><a href="https://career-accelerator-newsletter.com/p/annual-review-blindsided-what-your-manager-sees" target="_blank" rel="noopener">My Best Employee Left Her Annual Review in Tears — 7 Things Your Manager Sees That You Don't</a></div>
+        <div class="source-author">Harvey Lee · The Career Accelerator · May 2026</div>
+      </div>
+
+      <div class="source-item">
+        <div class="source-type">Essay · Systems frame</div>
+        <div class="source-title"><a href="https://donellameadows.org/archives/leverage-points-places-to-intervene-in-a-system/" target="_blank" rel="noopener">Leverage Points: Places to Intervene in a System</a></div>
+        <div class="source-author">Donella Meadows · The Donella Meadows Project</div>
+      </div>
+
+      <div class="source-item">
+        <div class="source-type">Essay · Companion reading</div>
+        <div class="source-title"><a href="https://donellameadows.org/archives/dancing-with-systems/" target="_blank" rel="noopener">Dancing with Systems</a></div>
+        <div class="source-author">Donella Meadows · The Donella Meadows Project</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="shell">
+    <div class="col-row">
+      <span><strong style="color:var(--ink-soft);font-weight:500;">Conscious Leadership Circle</strong> · consciousleadershipcircle.in</span>
+      <span>Maintained by <a href="https://sreebalakrishnan.in">Sree Balakrishnan</a></span>
+    </div>
+    <div style="margin-top:10px;font-size:13px;color:var(--ink-faint);line-height:1.6;">
+      Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
+    </div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
+      Created May 2026 · Last updated May 2026 · <a href="/" style="color:var(--ink-faint);">Back to home</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

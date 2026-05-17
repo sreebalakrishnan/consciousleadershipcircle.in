@@ -307,6 +307,7 @@
   body.locked footer { display: none; }
   body:not(.locked) .gate { display: none; }
   body:not(.locked) .topbar-strip-hint { display: none; }
+  body.locked .topbar-nav { display: none; }
 
   .btn-mail {
     display: inline-flex; align-items: center; gap: 8px;
@@ -352,6 +353,10 @@
     <div class="row">
       <a href="/">← Conscious Leadership Circle</a>
       <a href="#gate" class="topbar-strip-hint">↓ Read the comic · then enter</a>
+      <div class="topbar-nav" style="display:flex;gap:20px;">
+        <a href="/lotus.html" style="font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);border-bottom:none;">The lotus</a>
+        <a href="/musings/" style="font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);border-bottom:none;">Musings</a>
+      </div>
     </div>
   </div>
 </div>

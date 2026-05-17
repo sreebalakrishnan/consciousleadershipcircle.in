@@ -27,14 +27,18 @@ Started as a thought. Then an in-person session across a few cities in India. No
 ## Site structure
 
 ```
-/                        → index.html                 Homepage (CLC hub — who we are, how we gather, founding members)
-/the-same-question       → the-same-question.html     Article: Luddite comic, gate, founding story, Sunil's pillars
-/lotus                   → lotus.html                 Article: Buddhism, Taoism, Stoicism, Gita — four traditions
-/puzzle                  → puzzle.html                Dormant redirect to / — do not edit for content
-/origins                 → origins.html               Dormant — superseded by the-same-question.html
+/                             → index.html                          Homepage (CLC hub — who we are, how we gather, founding members)
+/the-same-question            → the-same-question.html              Article: Luddite comic, gate, founding story, Sunil's pillars
+/lotus                        → lotus.html                          Article: Buddhism, Taoism, Stoicism, Gita — four traditions
+/musings/                     → musings/index.html                  Musings index — listing of all community reflections
+/musings/what-the-system-sees → musings/what-the-system-sees.html  Musing: Siva — annual review, leverage points, 3 practices
+/what-the-system-sees         → what-the-system-sees.html           Redirect → /musings/what-the-system-sees.html
+/puzzle                       → puzzle.html                         Dormant redirect to / — do not edit for content
+/origins                      → origins.html                        Dormant — superseded by the-same-question.html
 ```
 
 > **Important:** Edit `index.html` directly for homepage changes. `puzzle.html` and `origins.html` are dormant legacy files.
+> When adding a new musing: create `musings/[slug].html`, add an entry to `musings/index.html` above the `<!-- future musings -->` comment.
 
 ### Pages yet to build
 - `/reads/` or `/articles/` — article index as content grows
@@ -98,10 +102,11 @@ These are the anchor of the circle. Always rendered consistently:
 
 ### Articles live
 - **The Architecture of Courage** — on Abhaya, The Witness, The word before the storm. By Sree. Full version on Substack: https://sreebalakrishnan.substack.com/p/the-architecture-of-courage
+- **What the System Sees** — annual review blindside, leverage points (Donella Meadows), three practices of a conscious leader. By Sivarama Sundar. `/what-the-system-sees.html`
 
 ### Articles teased / in progress
-- **The Same Question** — the Luddite comic and founding story (origins.html)
-- **The Ancient Answer** — Gita / Buddhism / Stoicism philosophical piece (the-lotus.html)
+- **The Same Question** — the Luddite comic and founding story (`the-same-question.html`)
+- **The Ancient Answer** — Buddhism, Taoism, Stoicism, Gita — four traditions (`lotus.html`)
 
 ---
 
