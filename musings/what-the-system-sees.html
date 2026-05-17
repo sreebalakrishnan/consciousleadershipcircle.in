@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What the System Sees · Conscious Leadership Circle</title>
+<title>Curve-Balled by the System · Conscious Leadership Circle</title>
 <meta name="description" content="A reflection by Sivarama Sundar on the annual review that ended in tears — and why systems thinking changes everything about how we lead people.">
 <meta name="robots" content="index, follow">
 
@@ -75,10 +75,15 @@
     font-variation-settings: "opsz" 96, "wght" 300;
     font-size: clamp(2.4rem, 7vw, 4rem);
     line-height: 1.02; letter-spacing: -0.025em;
-    color: var(--ink); max-width: 20ch;
-    margin-bottom: 20px;
+    color: var(--ink); max-width: 22ch;
+    margin-bottom: 10px;
   }
   .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .mast .subtitle {
+    font-family: var(--sans); font-size: 0.95rem; font-weight: 400;
+    letter-spacing: 0.01em; color: var(--ink-faint);
+    margin-bottom: 20px;
+  }
   .mast .lede {
     font-family: var(--sans); font-size: 1.05rem;
     line-height: 1.65; color: var(--ink-soft); max-width: 50ch;
@@ -101,6 +106,19 @@
   }
   .byline-sep { color: var(--rule); }
 
+  /* ── article image ──────────────────────────────── */
+  .article-img {
+    margin: clamp(32px, 4vw, 48px) 0;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--rule-soft);
+  }
+  .article-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   /* ── body prose ─────────────────────────────────── */
   .body { padding: clamp(44px, 6vw, 68px) 0; }
   .body p {
@@ -110,6 +128,17 @@
   .body p:last-child { margin-bottom: 0; }
   .body p em { font-style: italic; color: var(--ink); }
   .body p strong { font-weight: 600; color: var(--ink); }
+
+  /* ── examples note (inline parenthetical) ────────── */
+  .examples {
+    margin-top: 14px;
+    padding: 12px 16px;
+    background: var(--paper-deep);
+    border-left: 2px solid var(--rule);
+    font-family: var(--sans); font-size: 0.93rem;
+    line-height: 1.65; color: var(--ink-faint);
+  }
+  .examples strong { font-weight: 500; color: var(--ink-soft); }
 
   /* ── pull quote ─────────────────────────────────── */
   .pull {
@@ -182,15 +211,30 @@
     letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--ink-faint); margin-bottom: 16px;
   }
-  .circle-q blockquote {
+  .circle-q .intro {
     font-family: var(--serif); font-style: italic;
-    font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+    font-size: clamp(1.05rem, 2vw, 1.2rem);
     line-height: 1.55; color: var(--ink);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .circle-q ul {
+    list-style: none; padding: 0; margin: 0 0 16px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .circle-q ul li {
+    font-family: var(--sans); font-size: 0.97rem;
+    line-height: 1.65; color: var(--ink-soft);
+    padding-left: 18px; position: relative;
+  }
+  .circle-q ul li::before {
+    content: "→";
+    position: absolute; left: 0;
+    color: var(--moss); font-size: 0.85rem;
   }
   .circle-q .attribution {
     font-family: var(--sans); font-size: 12px;
     letter-spacing: 0.04em; color: var(--ink-faint);
+    padding-top: 16px; border-top: 1px solid var(--rule-soft);
   }
 
   /* ── sources ─────────────────────────────────────── */
@@ -254,10 +298,11 @@
 <header class="mast">
   <div class="shell">
     <div class="mast-tag">Reflection · Conscious Leadership Circle</div>
-    <h1>What the <em>system</em> sees</h1>
+    <h1>Curve-Balled by the <em>System</em></h1>
+    <p class="subtitle">How to build your own brand and reclaim your power</p>
     <p class="lede">An employee leaves her annual review in tears. She is excellent, hardworking, the kind of person you want on your team. And she was completely blindsided. Siva has watched this scene from every side of the table. Here is what he has learned to do about it.</p>
     <div class="byline">
-      <span class="byline-author">By <a href="https://www.linkedin.com/in/sivaramasundar/" target="_blank" rel="noopener">Sivarama Sundar</a></span>
+      <span class="byline-author">By <a href="https://www.linkedin.com/in/sivaramasundar/" target="_blank" rel="noopener">Sivarama Sundar</a> &amp; <a href="https://www.linkedin.com/in/sreekandhbalakrishnan/" target="_blank" rel="noopener">Sree Balakrishnan</a></span>
       <span class="byline-sep">·</span>
       <span class="byline-date">May 2026</span>
     </div>
@@ -266,6 +311,10 @@
 
 <div class="body">
   <div class="shell">
+
+    <div class="article-img">
+      <img src="/musings/what-the-system-sees-1.jpg" alt="Illustration: the annual review moment" loading="lazy">
+    </div>
 
     <p>Harvey Lee wrote about an employee who left her annual review in tears. She was good — genuinely excellent. Hardworking. The kind of person you want on your team. And she was blindsided.</p>
 
@@ -277,11 +326,11 @@
 
     <p>Harvey Lee's article names seven things that catch people off guard: bell curves, recency bias, compensation decisions made by committees you'll never meet, self-evaluations treated as afterthoughts when they are among the highest-leverage moments in the whole process. Read it. It's useful.</p>
 
-    <p>But reading it, Siva's mind went somewhere else. Not to tactics. To the system.</p>
+    <p>But reading it, Siva's mind went somewhere else. Not to tactics. To the system itself — and to the question of how a conscious leader intervenes before the room, not inside it.</p>
 
-    <div class="section-bridge"><span>The systems lens</span></div>
+    <div class="section-bridge"><span>The systems thinking lens</span></div>
 
-    <p>Donella Meadows spent her career studying how complex systems work — and where you can actually change them. Her essay on leverage points is one of the most quietly radical things written about organisational life, even though it was written about economies and ecosystems.</p>
+    <p><a href="https://donellameadows.org/staff/" target="_blank" rel="noopener">Donella Meadows</a> spent her career studying how complex systems work — and where you can actually change them. Her essay on leverage points is one of the most quietly radical things written about organisational life, even though it was written about economies and ecosystems.</p>
 
     <div class="meadows-note">
       In any complex system, there are places where a small shift produces large changes. Meadows called these <em>leverage points</em>. The catch: most people reach instinctively for the <em>lowest</em>-leverage interventions — numbers, quantities, effort. <strong>Work harder. Produce more. Add more hours.</strong> These work, just not very much, and not for very long. The high-leverage interventions are different. They are about changing what information flows through the system. Changing what the system is optimising for. Changing the story the system tells about itself.
@@ -299,6 +348,7 @@
       <p>The hardest workers are often the least visible. Not because they are hiding — but because they are heads-down. In the system, heads-down looks like absence. It looks like: <em>I'm not sure what she's been doing.</em> It looks like the gap between what the person knows they have delivered and what the organisation has registered.</p>
       <p>Creating early awareness — waking people up to tell their stories — is a leverage intervention at the level of information flow. You are not asking them to work differently. You are asking them to surface what they have already done, to find the words for it, to make it legible to the people who are forming impressions of them across twelve months.</p>
       <p>It is not self-promotion. It is self-representation. The difference matters.</p>
+      <div class="examples"><strong>In practice:</strong> 1-1s, Q&amp;As, custom planned growth paths, informal mentoring and guidance, OKRs — small, consistent moments that build a visible record of contribution.</div>
     </div>
 
     <div class="practice">
@@ -307,19 +357,32 @@
       <p>Every organisation has its own grammar. What "good" looks like. What "visible" means. What kinds of contributions get credited, and by whom. This grammar is rarely written down — but it shapes every review, every promotion decision, every room where someone's name comes up without them in it.</p>
       <p>Siva's second practice is helping people read that grammar and move within it deliberately. Strengthen the networks that amplify your work. Understand the cultural dictums of where you are. Own your growth as something you are doing actively — not something that is happening to you.</p>
       <p>In Meadows' frame: this is helping people understand what the system is actually optimising for, so they can act on that understanding — rather than optimising hard for the wrong thing and being surprised when it isn't rewarded.</p>
+      <div class="examples"><strong>In practice:</strong> forums to present and lead, initiatives that stretch beyond the comfort zone, exposure to different leadership styles, peer groups that share experiences and build mutual visibility.</div>
     </div>
 
     <div class="practice">
       <div class="practice-label">Practice · 03</div>
-      <h2>Rewire <em>priorities.</em></h2>
+      <h2>Help people rewire <em>priorities.</em></h2>
       <p>Most high performers have built their identity around technical excellence. That identity is often what made them good. It is also, at some point in the career arc, what holds them back.</p>
       <p>The system begins to ask different questions. Can you operate at the intersection of technology and business? Can you influence across functions? Can you see the strategic picture and bring others along with you?</p>
       <p>Helping people rebalance — not abandon their technical depth, but weave it into a broader operating range — is a leverage intervention at the level of goals. You are not changing what they do so much as what they are trying to become. That shift, when it happens, tends to compound.</p>
+      <div class="examples"><strong>In practice:</strong> people and business skills training, exposure to RFPs and business pitches, access to research reports and conferences, customer behaviour patterns, cohort programs and simulations that build situational and stakeholder awareness.</div>
+    </div>
+
+    <div class="article-img" style="margin-top: clamp(44px, 6vw, 64px);">
+      <img src="/musings/what-the-system-sees-2.jpg" alt="Illustration: the conscious leader in the system" loading="lazy">
     </div>
 
     <div class="circle-q">
-      <div class="label">Siva's question to the circle</div>
-      <blockquote>"What small (big) things do you do as a conscious leader — in changing the status quo, in helping people understand the environment they are in, in helping them understand themselves and how others see them?"</blockquote>
+      <div class="label">Siva's questions to the circle</div>
+      <p class="intro">What small (or big) steps are working well for you as a conscious leader — in changing the status quo and braving the system to help and enable your people:</p>
+      <ul>
+        <li>to understand the environment they are part of?</li>
+        <li>to understand themselves and how they are perceived by others?</li>
+        <li>to build organisational awareness and sensitivity to the implied realities?</li>
+        <li>to build their brands within and beyond the organisation?</li>
+        <li>to build long-term business orientation and acumen, beyond their immediate technical prowess?</li>
+      </ul>
       <div class="attribution">— Sivarama Sundar, CLC group conversation</div>
     </div>
 
@@ -358,7 +421,7 @@
       Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
     </div>
     <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
-      Created May 2026 · Last updated May 2026 · <a href="/" style="color:var(--ink-faint);">Back to home</a>
+      Created May 2026 · Last updated May 2026 · <a href="/musings/" style="color:var(--ink-faint);">All musings</a>
     </div>
   </div>
 </footer>
