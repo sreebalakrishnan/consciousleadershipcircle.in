@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Can You Receive? · Conscious Leadership Circle</title>
+<meta name="description" content="Someone gives you a genuine compliment. What happens in you? On why receiving is a capacity, not a skill — and what it means for how we lead.">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:      #FBFBF8;
+    --paper-deep: #F4F2EB;
+    --ink:        #14181D;
+    --ink-soft:   #4B5560;
+    --ink-faint:  #8B95A0;
+    --moss:       #3F5847;
+    --moss-soft:  #6E8473;
+    --rule:       #E5E2DA;
+    --rule-soft:  #EEEBE2;
+    --display:   "Bricolage Grotesque", system-ui, sans-serif;
+    --serif:     "Instrument Serif", Georgia, serif;
+    --sans:      "Inter Tight", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+  a { color: var(--moss); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--moss) 35%, transparent); transition: border-color .15s; }
+  a:hover { border-bottom-color: var(--moss); }
+
+  .shell { max-width: 680px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px); }
+
+  /* ── topbar ─────────────────────────────────────── */
+  .topbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+  }
+  .topbar .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .topbar a { color: var(--ink-soft); border-bottom: none; }
+  .topbar a:hover { color: var(--moss); }
+  .topbar .nav-links { display: flex; gap: 20px; }
+  .topbar .nav-links a { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-faint); }
+
+  /* ── masthead ────────────────────────────────────── */
+  .mast {
+    padding: clamp(52px, 8vw, 88px) 0 clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mast-tag {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .mast-tag::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--moss); border-radius: 50%; }
+  .mast h1 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 96, "wght" 300;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    line-height: 1.02; letter-spacing: -0.025em;
+    color: var(--ink); max-width: 20ch;
+    margin-bottom: 20px;
+  }
+  .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .mast .lede {
+    font-family: var(--sans); font-size: 1.05rem;
+    line-height: 1.65; color: var(--ink-soft); max-width: 50ch;
+    margin-bottom: 24px;
+  }
+  .mast-byline {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; color: var(--ink-faint);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mast-byline .author { color: var(--moss-soft); }
+  .mast-byline .sep { color: var(--rule); }
+
+  /* ── body ───────────────────────────────────────── */
+  .body { padding: clamp(48px, 6vw, 72px) 0; }
+  .body p {
+    font-size: 1.04rem; line-height: 1.8;
+    color: var(--ink-soft); margin-bottom: 24px;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .body p em { font-style: italic; color: var(--ink); }
+  .body p strong { font-weight: 600; color: var(--ink); }
+
+  /* ── section divider ─────────────────────────────── */
+  .section-break {
+    margin: clamp(32px, 4vw, 48px) 0 clamp(24px, 3vw, 36px);
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); display: flex; align-items: center; gap: 12px;
+  }
+  .section-break::before, .section-break::after {
+    content: ""; flex: 1; height: 1px; background: var(--rule);
+  }
+  .section-break span { white-space: nowrap; }
+
+  /* ── pull quote ──────────────────────────────────── */
+  .pull {
+    margin: clamp(32px, 4vw, 48px) 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5;
+    color: var(--ink); max-width: 44ch;
+  }
+
+  /* ── scenario block ──────────────────────────────── */
+  .scenario {
+    margin: clamp(28px, 4vw, 40px) 0;
+    padding: clamp(20px, 3vw, 28px) clamp(20px, 3vw, 32px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .scenario .scenario-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 14px;
+  }
+  .scenario p {
+    font-family: var(--sans); font-size: 0.97rem;
+    line-height: 1.72; color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+  .scenario p:last-child { margin-bottom: 0; }
+  .scenario p em { font-style: italic; color: var(--ink); }
+
+  /* ── closing pull ────────────────────────────────── */
+  .closing-pull {
+    margin: clamp(40px, 5vw, 56px) 0 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem); line-height: 1.45;
+    color: var(--ink); max-width: 40ch;
+  }
+
+  /* ── footer ─────────────────────────────────────── */
+  footer {
+    padding: 36px 0 52px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-faint); line-height: 1.65;
+  }
+  footer a { color: var(--ink-soft); border-bottom: none; }
+  footer a:hover { color: var(--moss); }
+  .col-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="shell">
+    <div class="row">
+      <a href="/">← Conscious Leadership Circle</a>
+      <div class="nav-links">
+        <a href="/musings/">All musings</a>
+        <a href="/lotus.html">The lotus</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="mast">
+  <div class="shell">
+    <div class="mast-tag">Musing · Conscious Leadership Circle</div>
+    <h1>Can you <em>receive?</em></h1>
+    <p class="lede">Someone gives you a genuine compliment. What happens in you? On why receiving is a capacity, not a skill — and what it has to do with how we lead.</p>
+    <div class="mast-byline">
+      <span class="author">Sree Balakrishnan</span>
+      <span class="sep">·</span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="body">
+  <div class="shell">
+
+    <p>A simple experiment. Someone walks up to you and says something kind — a genuine compliment, freely given. What happens?</p>
+
+    <p>Most of us deflect. <em>"Oh it was nothing."</em> <em>"The team did it, not me."</em> <em>"You should see what the others did."</em> We reroute the compliment away from ourselves before it can land. We call it humility. We've been trained to call it humility.</p>
+
+    <p>But what if it's something else? What if deflecting isn't modesty — what if it's an inability to receive?</p>
+
+    <div class="section-break"><span>The asymmetry</span></div>
+
+    <p>Most leaders I know are very good at giving. Praise, feedback, attention, time. Giving feels active. It feels like leadership. It puts you in control of the exchange.</p>
+
+    <p>Receiving asks something different. It asks you to be still. To let something in. To sit with the discomfort of being seen — and not immediately redirect it.</p>
+
+    <p>We don't talk about this asymmetry enough. We train for giving. We build cultures that reward giving. But a leader who cannot receive is only half in the relationship. They can pour out endlessly, but nothing fills them back up.</p>
+
+    <div class="pull">Receiving is not a skill you pick up. It is a capacity you develop — and like all capacities, it starts from the inside.</div>
+
+    <div class="section-break"><span>Competence is the tip. Capacity is the water.</span></div>
+
+    <p>We tend to think of receiving as a social skill — learn to say "thank you" and mean it, hold eye contact, don't deflect. These are real things. But they're surface.</p>
+
+    <p>The deeper layer is this: <em>how full are you?</em></p>
+
+    <p>If there is a genuine appreciation of yourself — not arrogance, not performance, but a quiet sense of your own worth — you don't need external validation to feel okay. Which means you can actually receive it when it comes, without it destabilising you in either direction. You don't collapse when it doesn't arrive. You don't inflate when it does.</p>
+
+    <p>The leader who hasn't built this yet is running on a kind of scarcity. They need the compliment to feel good. Which means they're anxious about whether it will come. Which means they can't be fully present in the room, because part of them is tracking — am I being seen? am I being valued? did that land?</p>
+
+    <div class="scenario">
+      <div class="scenario-label">A pattern worth noticing</div>
+      <p>Someone doesn't wish you on your birthday. Someone doesn't reply to your message. Someone doesn't acknowledge the work you did.</p>
+      <p>If you're running on empty — if you don't have a strong relationship with yourself — these small absences become large things. They become evidence. Evidence that you're not valued, not seen, not enough.</p>
+      <p>But none of that is actually in the absence. <em>The meaning is coming from you.</em></p>
+      <p>If you're full — if you genuinely love and appreciate yourself — those absences are just absences. They're not data about your worth.</p>
+    </div>
+
+    <div class="section-break"><span>The mirror we miss</span></div>
+
+    <p>Here's the harder part. We tend to frame this as something that happens to us. <em>People don't acknowledge me. People don't appreciate what I bring. I'm not receiving what I deserve.</em></p>
+
+    <p>But we do the same thing to others. We forget to acknowledge. We're too busy to pause and say — that mattered, what you did. We move to the next thing. The same absence we experience, we create.</p>
+
+    <p>This isn't about blame. It's about seeing the pattern whole. When you're running on scarcity, you can't give freely either. Giving from depletion is exhausting. It eventually turns resentful. <em>I give so much and get so little back.</em></p>
+
+    <p>The shift isn't about giving more or receiving better. It's about where you're giving from.</p>
+
+    <div class="pull">You can't pour from an empty cup — but the answer isn't to find a better source. The answer is to build a relationship with the spring inside you.</div>
+
+    <div class="section-break"><span>Where it starts</span></div>
+
+    <p>There's a practice that sounds almost embarrassingly simple until you actually try it. Before you look for appreciation from anyone else — before you check if they noticed, if they replied, if they acknowledged — you fill yourself first.</p>
+
+    <p>Not as a technique. Not as a productivity hack. As a genuine act of self-recognition. <em>I see what I brought today. I see what I'm carrying. I see what I'm trying to build.</em></p>
+
+    <p>This is what self-love actually is in a leadership context. Not indulgence. Not self-congratulation. A kind of inner steadiness that doesn't require constant external confirmation — and that makes you far more present, far more generous, and far more able to actually receive what's being offered.</p>
+
+    <p>Because when you're full, a compliment can just be a compliment. You can let it land. You can say <em>thank you</em> and mean it. You can receive without deflecting, without inflating, without immediately passing it on to someone else to prove your humility.</p>
+
+    <p>That's not a small thing. That's the beginning of a different kind of leadership.</p>
+
+    <div class="closing-pull">The question isn't whether people are giving to you. The question is whether you're letting it in — and whether you've filled yourself enough that it matters either way.</div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="shell">
+    <div class="col-row">
+      <span><strong style="color:var(--ink-soft);font-weight:500;">Conscious Leadership Circle</strong> · consciousleadershipcircle.in</span>
+      <span>Maintained by <a href="https://sreebalakrishnan.in">Sree Balakrishnan</a></span>
+    </div>
+    <div style="margin-top:10px;font-size:13px;color:var(--ink-faint);line-height:1.6;">
+      Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
+    </div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
+      Created May 2026 · Last updated May 2026 · <a href="/musings/" style="color:var(--ink-faint);">All musings</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
