@@ -291,9 +291,143 @@
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
   }
+
+  /* ── gate ──────────────────────────────────────────── */
+  .gate {
+    min-height: calc(100vh - 73px);
+    display: flex; align-items: center; justify-content: center;
+    padding: clamp(40px, 8vw, 80px) 0;
+  }
+  .gate-inner {
+    width: 100%;
+    margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px);
+    max-width: 440px;
+  }
+  .gate-eyebrow {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 36px; display: flex; align-items: center; gap: 10px;
+  }
+  .gate-eyebrow::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--moss); border-radius: 50%; }
+
+  .sequence {
+    border-left: 1px solid var(--rule);
+    padding-left: 24px;
+    margin-left: 5px;
+    margin-bottom: clamp(24px, 3.5vw, 36px);
+  }
+  .seq-row {
+    display: flex; align-items: center;
+    gap: 14px; padding: 8px 0;
+    position: relative;
+  }
+  .seq-dot {
+    position: absolute; left: -30px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--moss);
+    box-shadow: 0 0 0 3px var(--paper);
+    flex-shrink: 0;
+  }
+  .seq-dot.blank {
+    background: var(--paper);
+    box-shadow: 0 0 0 2px var(--paper);
+    border: 1.5px dashed var(--ink-faint);
+  }
+  .seq-label {
+    font-family: var(--sans); font-size: 1rem;
+    line-height: 1.4; color: var(--ink-soft);
+  }
+  .seq-label-blank {
+    font-family: var(--serif); font-style: italic;
+    font-size: 1rem; color: var(--ink-faint);
+    letter-spacing: 0.05em;
+  }
+  .gate-caption {
+    font-family: var(--sans); font-size: 0.97rem;
+    color: var(--ink-soft); line-height: 1.65;
+    margin-bottom: clamp(22px, 3vw, 30px);
+  }
+  .gate-form {
+    display: flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .gate-form input {
+    flex: 1 1 160px; padding: 12px 16px;
+    background: var(--paper); border: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 15px;
+    color: var(--ink); border-radius: 2px; letter-spacing: 0.02em;
+  }
+  .gate-form input:focus { outline: none; border-color: var(--moss); }
+  .gate-form input::placeholder { color: var(--ink-faint); font-style: italic; letter-spacing: 0; }
+  .gate-form button {
+    padding: 12px 22px; background: var(--ink); color: var(--paper);
+    font-family: var(--sans); font-size: 14px; font-weight: 500;
+    letter-spacing: 0.06em; border: 1px solid var(--ink);
+    border-radius: 2px; cursor: pointer; white-space: nowrap;
+  }
+  .gate-form button:hover { background: var(--moss); border-color: var(--moss); }
+  .gate-error {
+    font-family: var(--serif); font-style: italic;
+    color: var(--moss); font-size: 0.94rem;
+    min-height: 1.4em; margin-bottom: 10px;
+  }
+  .gate-shake { animation: gate-shake .35s cubic-bezier(.36,.07,.19,.97); }
+  @keyframes gate-shake { 10%,90%{transform:translateX(-2px);} 20%,80%{transform:translateX(4px);} 30%,50%,70%{transform:translateX(-6px);} 40%,60%{transform:translateX(6px);} }
+  .gate-extras { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; margin-top: 14px; }
+  .gate-hint-toggle {
+    background: none; border: none; padding: 0;
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-faint); cursor: pointer;
+    text-decoration: underline dotted; text-underline-offset: 3px;
+  }
+  .gate-hint-toggle:hover { color: var(--moss); }
+  .gate-hint {
+    font-family: var(--serif); font-style: italic;
+    color: var(--ink-soft); font-size: 0.97rem; line-height: 1.6;
+    padding: 14px 18px;
+    background: var(--paper-deep); border: 1px solid var(--rule-soft);
+    border-radius: 2px; max-width: 360px;
+  }
+  .gate-hint em { font-style: normal; color: var(--ink); }
+  .gate-hint[hidden] { display: none; }
+  .gate-or {
+    font-family: var(--sans); font-size: 11px;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  .gate-wa {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 11px 20px; background: #25D366; color: white !important;
+    font-family: var(--sans); font-size: 14px; font-weight: 500;
+    border-radius: 28px; border-bottom: none; text-decoration: none;
+    transition: background .15s, transform .15s;
+  }
+  .gate-wa:hover { background: #1ebe5b; transform: translateY(-1px); }
+  .gate-wa svg { width: 18px; height: 18px; fill: currentColor; flex-shrink: 0; }
+
+  @keyframes gate-out { to { opacity: 0; transform: translateY(-10px); } }
+
+  /* ── lock / unlock states ───────────────────────── */
+  body.locked .opening,
+  body.locked .prose,
+  body.locked .the-question,
+  body.locked .pillars-section,
+  body.locked .members-section,
+  body.locked .connect,
+  body.locked footer { display: none; }
+  body:not(.locked) .gate { display: none; }
+
+  /* content reveal after unlock */
+  body.unlocking .opening,
+  body.unlocking .prose,
+  body.unlocking .the-question,
+  body.unlocking .pillars-section,
+  body.unlocking .members-section,
+  body.unlocking .connect {
+    animation: rise .7s cubic-bezier(.2,.6,.2,1) both;
+  }
 </style>
 </head>
-<body>
+<body class="locked">
 
 <!-- ── topbar ───────────────────────────────────────── -->
 <nav class="topbar">
@@ -307,6 +441,66 @@
     </div>
   </div>
 </nav>
+
+<!-- ── gate ─────────────────────────────────────────── -->
+<section class="gate" id="gate" aria-label="Page gate">
+  <div class="gate-inner">
+    <div class="gate-eyebrow">A question before you enter</div>
+
+    <div class="sequence" role="list" aria-label="Career progression">
+      <div class="seq-row" role="listitem">
+        <div class="seq-dot" aria-hidden="true"></div>
+        <span class="seq-label">Individual contributor</span>
+      </div>
+      <div class="seq-row" role="listitem">
+        <div class="seq-dot" aria-hidden="true"></div>
+        <span class="seq-label">Team lead</span>
+      </div>
+      <div class="seq-row" role="listitem">
+        <div class="seq-dot" aria-hidden="true"></div>
+        <span class="seq-label">Manager</span>
+      </div>
+      <div class="seq-row" role="listitem">
+        <div class="seq-dot" aria-hidden="true"></div>
+        <span class="seq-label">Director</span>
+      </div>
+      <div class="seq-row" role="listitem">
+        <div class="seq-dot" aria-hidden="true"></div>
+        <span class="seq-label">CTO &nbsp;·&nbsp; Head of &nbsp;·&nbsp; VP</span>
+      </div>
+      <div class="seq-row" role="listitem">
+        <div class="seq-dot blank" aria-hidden="true"></div>
+        <span class="seq-label-blank">___________</span>
+      </div>
+    </div>
+
+    <p class="gate-caption">Every step on this list was planned.<br>This one, you name yourself.</p>
+
+    <form class="gate-form" id="gate-form" novalidate>
+      <input type="text" id="gate-input" name="passcode"
+             placeholder="one word…"
+             autocomplete="off" autocapitalize="none" spellcheck="false"
+             aria-label="What comes after the last title?">
+      <button type="submit">Enter →</button>
+    </form>
+    <div class="gate-error" id="gate-error" role="status" aria-live="polite"></div>
+
+    <div class="gate-extras">
+      <button type="button" class="gate-hint-toggle" id="gate-hint-toggle"
+              aria-expanded="false" aria-controls="gate-hint">Need a nudge? →</button>
+      <div class="gate-hint" id="gate-hint" hidden>
+        Think about what leaders in this circle are actually searching for — after all the titles, after the ISB programs, after the calendar fills up. <em>Any word that fits is right.</em>
+      </div>
+      <span class="gate-or">or</span>
+      <a class="gate-wa"
+         href="https://wa.me/919880330330?text=Hi%20Sree%20%E2%80%94%20I%27m%20at%20the%20gate%20of%20the%20Conscious%20Leadership%20Circle%20(consciousleadershipcircle.in).%20What%20comes%20after%20CTO%3F"
+         target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.42 1.27 4.86L2 22l5.27-1.27A9.96 9.96 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.07 14.33c-.21.59-1.04 1.13-1.51 1.2-.37.06-.86.08-1.39-.09-.32-.1-.73-.24-1.26-.46-2.21-.95-3.66-3.17-3.77-3.32-.11-.15-.91-1.21-.91-2.31s.58-1.64.78-1.86c.21-.22.45-.27.61-.27h.43c.14 0 .33-.05.51.39.21.51.71 1.77.77 1.9.06.13.1.28.02.43-.08.15-.12.24-.24.37-.12.13-.25.3-.36.4-.12.12-.25.26-.11.49.14.24.62 1.03 1.35 1.66.93.81 1.71 1.05 1.95 1.17.24.12.38.1.52-.05.14-.15.6-.69.76-.92.16-.24.32-.2.55-.12.23.08 1.43.68 1.68.8.24.12.41.18.46.28.06.1.06.59-.15 1.18z"/></svg>
+        Ping Sree on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
 
 <!-- ── opening ──────────────────────────────────────── -->
 <section class="opening">
@@ -490,6 +684,70 @@
     </div>
   </div>
 </footer>
+
+
+<script>
+(function () {
+  var STORAGE_KEY = 'gate-clc-home';
+  var ACCEPTED = [
+    'pause','breathe','reflect','stop','slow','rest','stillness',
+    'meaning','purpose','why','calling','fulfillment','fulfil','fulfill','fulfilling',
+    'you','self','inner','soul','human','me',
+    'peace','joy','clarity','balance','wisdom','depth',
+    'question','what','now','life','live','grow','evolve','continue','search',
+    'sangha','circle','chetana','awareness','presence','lotus','equanimity','dharma',
+    'authentic','authenticity','transformation','witness',
+    'nothing','incomplete','missing','empty','quiet','unknown',
+    'community','belonging','connection','trust','more'
+  ];
+
+  function unlock() {
+    try { localStorage.setItem(STORAGE_KEY, 'yes'); } catch(e) {}
+    var gate = document.getElementById('gate');
+    gate.style.animation = 'gate-out 0.4s ease forwards';
+    setTimeout(function () {
+      document.body.classList.remove('locked');
+      document.body.classList.add('unlocking');
+    }, 420);
+  }
+
+  // Already unlocked?
+  try { if (localStorage.getItem(STORAGE_KEY) === 'yes') { document.body.classList.remove('locked'); } } catch(e) {}
+
+  var form     = document.getElementById('gate-form');
+  var input    = document.getElementById('gate-input');
+  var errorEl  = document.getElementById('gate-error');
+  var hintBtn  = document.getElementById('gate-hint-toggle');
+  var hintEl   = document.getElementById('gate-hint');
+
+  if (form) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var val = (input.value || '').trim().toLowerCase();
+      if (!val) return;
+      if (ACCEPTED.indexOf(val) !== -1) {
+        errorEl.textContent = '';
+        unlock();
+      } else {
+        errorEl.textContent = 'Not quite — try another word.';
+        form.classList.remove('gate-shake');
+        void form.offsetWidth;
+        form.classList.add('gate-shake');
+        input.select();
+      }
+    });
+  }
+
+  if (hintBtn && hintEl) {
+    hintBtn.addEventListener('click', function () {
+      var open = !hintEl.hidden;
+      hintEl.hidden = open;
+      hintBtn.setAttribute('aria-expanded', String(!open));
+      hintBtn.textContent = open ? 'Need a nudge? →' : 'Hide hint ↑';
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
