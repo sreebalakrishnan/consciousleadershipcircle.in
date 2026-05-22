@@ -31,7 +31,8 @@ Started as a thought. Then an in-person session across a few cities in India. No
 /the-same-question            → the-same-question.html              Article: Luddite comic, gate, founding story, Sunil's pillars
 /lotus                        → lotus.html                          Article: Buddhism, Taoism, Stoicism, Gita — four traditions
 /musings/                     → musings/index.html                  Musings index — listing of all community reflections
-/musings/what-the-system-sees → musings/what-the-system-sees.html  Musing: Siva — annual review, leverage points, 3 practices
+/musings/can-you-receive      → musings/can-you-receive.html        Musing: Sree — receiving as a capacity, the asymmetry of giving vs. receiving
+/musings/what-the-system-sees → musings/what-the-system-sees.html  Musing: Siva — "Curve-Balled by the System": annual review, leverage points, 3 practices
 /what-the-system-sees         → what-the-system-sees.html           Redirect → /musings/what-the-system-sees.html
 /puzzle                       → puzzle.html                         Dormant redirect to / — do not edit for content
 /origins                      → origins.html                        Dormant — superseded by the-same-question.html
@@ -102,7 +103,10 @@ These are the anchor of the circle. Always rendered consistently:
 
 ### Articles live
 - **The Architecture of Courage** — on Abhaya, The Witness, The word before the storm. By Sree. Full version on Substack: https://sreebalakrishnan.substack.com/p/the-architecture-of-courage
-- **What the System Sees** — annual review blindside, leverage points (Donella Meadows), three practices of a conscious leader. By Sivarama Sundar. `/what-the-system-sees.html`
+
+### Musings live
+- **Curve-Balled by the System** — annual review blindside, leverage points (Donella Meadows), three practices of a conscious leader. By Sivarama Sundar. `/musings/what-the-system-sees.html` (redirect at `/what-the-system-sees.html`)
+- **Can You Receive?** — receiving as a capacity, not a skill; the asymmetry of giving vs. receiving and what it means for how we lead. By Sree Balakrishnan. `/musings/can-you-receive.html`
 
 ### Articles teased / in progress
 - **The Same Question** — the Luddite comic and founding story (`the-same-question.html`)
