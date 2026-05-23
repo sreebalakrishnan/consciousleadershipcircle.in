@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jo hua so hua · Conscious Leadership Circle</title>
+<meta name="description" content="A rabbit hole of worry, a friend who points back to the present, and a WhatsApp forward (audio + transcript) that arrived right on time. On acceptance — not as a slogan, but as the floor everything else stands on.">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:      #FBFBF8;
+    --paper-deep: #F4F2EB;
+    --ink:        #14181D;
+    --ink-soft:   #4B5560;
+    --ink-faint:  #8B95A0;
+    --moss:       #3F5847;
+    --moss-soft:  #6E8473;
+    --rule:       #E5E2DA;
+    --rule-soft:  #EEEBE2;
+    --display:   "Bricolage Grotesque", "Noto Sans Devanagari", system-ui, sans-serif;
+    --serif:     "Instrument Serif", Georgia, serif;
+    --sans:      "Inter Tight", "Noto Sans Devanagari", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+  a { color: var(--moss); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--moss) 35%, transparent); transition: border-color .15s; }
+  a:hover { border-bottom-color: var(--moss); }
+
+  .shell { max-width: 680px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px); }
+
+  /* ── topbar ─────────────────────────────────────── */
+  .topbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+  }
+  .topbar .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .topbar a { color: var(--ink-soft); border-bottom: none; }
+  .topbar a:hover { color: var(--moss); }
+  .topbar .nav-links { display: flex; gap: 20px; }
+  .topbar .nav-links a { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-faint); }
+
+  /* ── masthead ────────────────────────────────────── */
+  .mast {
+    padding: clamp(52px, 8vw, 88px) 0 clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mast-tag {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .mast-tag::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--moss); border-radius: 50%; }
+  .mast h1 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 96, "wght" 300;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    line-height: 1.02; letter-spacing: -0.025em;
+    color: var(--ink); max-width: 20ch;
+    margin-bottom: 20px;
+  }
+  .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .mast .lede {
+    font-family: var(--sans); font-size: 1.05rem;
+    line-height: 1.65; color: var(--ink-soft); max-width: 52ch;
+    margin-bottom: 24px;
+  }
+  .mast-byline {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; color: var(--ink-faint);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mast-byline .author { color: var(--moss-soft); }
+  .mast-byline .sep { color: var(--rule); }
+
+  /* ── body ───────────────────────────────────────── */
+  .body { padding: clamp(48px, 6vw, 72px) 0; }
+  .body p {
+    font-size: 1.04rem; line-height: 1.8;
+    color: var(--ink-soft); margin-bottom: 24px;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .body p em { font-style: italic; color: var(--ink); }
+  .body p strong { font-weight: 600; color: var(--ink); }
+
+  /* ── section divider ─────────────────────────────── */
+  .section-break {
+    margin: clamp(32px, 4vw, 48px) 0 clamp(24px, 3vw, 36px);
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); display: flex; align-items: center; gap: 12px;
+  }
+  .section-break::before, .section-break::after {
+    content: ""; flex: 1; height: 1px; background: var(--rule);
+  }
+  .section-break span { white-space: nowrap; }
+
+  /* ── pull quote ──────────────────────────────────── */
+  .pull {
+    margin: clamp(32px, 4vw, 48px) 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5;
+    color: var(--ink); max-width: 44ch;
+  }
+
+  /* ── listen block (audio player) ────────────────── */
+  .listen {
+    margin: clamp(28px, 4vw, 40px) 0 clamp(16px, 2vw, 20px);
+    padding: clamp(18px, 2.5vw, 22px) clamp(20px, 3vw, 26px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .listen-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .listen-label::before {
+    content: ""; display: inline-block; width: 6px; height: 6px;
+    background: var(--moss); border-radius: 50%;
+  }
+  .listen audio {
+    width: 100%; height: 40px;
+    display: block;
+  }
+
+  /* ── forward block (verbatim, attribution unknown) ── */
+  .forward {
+    margin: clamp(28px, 4vw, 40px) 0;
+    padding: clamp(24px, 4vw, 36px) clamp(22px, 3.5vw, 36px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .forward-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 6px;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .forward-label::before {
+    content: ""; display: inline-block; width: 6px; height: 6px;
+    background: var(--moss-soft); border-radius: 50%;
+  }
+  .forward-attribution {
+    font-family: var(--serif); font-style: italic;
+    font-size: 0.92rem; color: var(--ink-faint);
+    margin-bottom: 22px; line-height: 1.55;
+  }
+  .forward p {
+    font-family: var(--sans); font-size: 0.99rem;
+    line-height: 1.78; color: var(--ink);
+    margin-bottom: 16px;
+  }
+  .forward p:last-child { margin-bottom: 0; }
+
+  /* ── closing pull ────────────────────────────────── */
+  .closing-pull {
+    margin: clamp(40px, 5vw, 56px) 0 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem); line-height: 1.45;
+    color: var(--ink); max-width: 42ch;
+  }
+
+  /* ── footer ─────────────────────────────────────── */
+  footer {
+    padding: 36px 0 52px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-faint); line-height: 1.65;
+  }
+  footer a { color: var(--ink-soft); border-bottom: none; }
+  footer a:hover { color: var(--moss); }
+  .col-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+</style>
+<!-- Plausible analytics -->
+<script async src="https://plausible.io/js/pa-nnhDJzDzdLCC33sPfVxZK.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="shell">
+    <div class="row">
+      <a href="/">← Conscious Leadership Circle</a>
+      <div class="nav-links">
+        <a href="/musings/">All musings</a>
+        <a href="/lotus.html">The lotus</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="mast">
+  <div class="shell">
+    <div class="mast-tag">Musing · Conscious Leadership Circle</div>
+    <h1>Jo hua <em>so hua</em></h1>
+    <p class="lede">A rabbit hole of worry, a friend who points back to the present, and a WhatsApp forward that arrived right on time. On acceptance — not as a slogan, but as the floor everything else stands on.</p>
+    <div class="mast-byline">
+      <span class="author">Sree Balakrishnan</span>
+      <span class="sep">·</span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="body">
+  <div class="shell">
+
+    <p>Even now, after years of leading, I still catch myself in the rabbit hole.</p>
+
+    <p>Not the work in front of me. Something adjacent. Something I read last week. Something someone said three months ago. Something that might happen in six months. The mind wanders into the past, into the future, into the <em>what about this, what about that</em> — and a low background hum of worry sets in. Nothing in the present is actually broken. But the present has quietly been left behind.</p>
+
+    <p>It's a strange thing to admit out loud as a senior leader. The picture from the outside is composure. The picture from the inside is sometimes a person chasing tails that don't exist yet.</p>
+
+    <div class="section-break"><span>The friend who points home</span></div>
+
+    <p>One of the people I trust most with this is Siva — friend, mentor, fellow traveller in this circle. He doesn't dismiss what I bring him. He listens to the whole thing. The cribs, the loops, the spirals. And then he says something simple that lands.</p>
+
+    <p>One day he said: <em>Sree, you're skilled — but your worries are baseless for the moment.</em></p>
+
+    <p>He didn't tell me the worries weren't real. He didn't ask me to "let it go" or "stay positive" or any of the smooth phrases that quietly make you feel worse for having the worry at all. He just pointed at <em>where</em> the worry was living. Not here. Somewhere else. The past. A hypothetical future. A scene that hadn't happened.</p>
+
+    <p>And what good is a worry that doesn't live in the moment you are actually in? It's not solving anything. It's not preparing you for anything. It's just borrowing from a tomorrow that may never come, and charging interest on a yesterday that already closed.</p>
+
+    <div class="pull">A worry that doesn't live in the moment you're in — what is it actually for?</div>
+
+    <p>We all know this. Books say it. Teachers say it. We say it to other people. And then we lose sight of it the next morning, the next meeting, the next quiet evening when the mind has nothing to do and finds something to chew on. So when a person we trust says it again — gently, without performance — it's worth holding onto.</p>
+
+    <div class="section-break"><span>The forward</span></div>
+
+    <p>Around that time, a clip landed in my WhatsApp. Audio and transcript. Someone speaking, half in Hindi and half in English, about exactly this — about acceptance, about how he learned to stop complaining, about a story of a Chinese couple named Hua. I have no idea who recorded it. It came as a forward, with no name attached.</p>
+
+    <p>If the original speaker ever reads this and surfaces — full credit and attribution belongs to them. I am not the author. I'm not taking any credit for the words below. I'm only the person who heard it at the right moment and wanted to keep it somewhere I could find again.</p>
+
+    <p>Have a listen, or have a read. Whichever lands. It's a fun, lopsided, very Indian way of saying something patient traditions have been saying for a long time.</p>
+
+    <div class="listen">
+      <div class="listen-label">Listen · 1 min 55 sec</div>
+      <audio controls preload="none">
+        <source src="audio/jo-hua-so-hua.mp3" type="audio/mpeg">
+        Your browser doesn't support audio playback — the transcript below has everything.
+      </audio>
+    </div>
+
+    <div class="forward">
+      <div class="forward-label">Forwarded · author unknown</div>
+      <div class="forward-attribution">If you recognise this voice or know who said it, please write — full attribution belongs to them.</div>
+
+      <p>that is people have full complaint. i used to also be like that. complaint complaint. yeh nahi hai, woh nahi hai.</p>
+
+      <p>then this thing happened. they were this newly married chinese couple mr and mrs hua. they went for a honeymoon and they were very clear they don't want a child so they went for full precautionary planning, iud, a full deal. god's plan you know? when they didn't want a single child they got twins so they named the twins जो हुआ सो हुआ but it changed my life. correct my life में भी जो हुआ सो हुआ.</p>
+
+      <p>flight is delayed जो हुआ सो हुआ. नाश्ता मिल क्यों नहीं है? अरे जो नहीं है वो नहीं है। वो क्यों नह वो है जो नहीं है वो नहीं है। ओमन में क्या है? ओमन अमेरिका में क्यों नहीं है? नहीं है। जो नहीं है वो नहीं है। जो है वो है।</p>
+
+      <p>the day i will be able to accept this from that day i realize acceptance is something that keeps your first peace then you can build up on happiness. पहले acceptance चाहिए। आपको accept नहीं करना चाहिए and it is not an imaginary thing i am asking to accept। तो ये सामने है we are together. यार वो होता तो अरे वो नहीं है ना।</p>
+
+      <p>let's enjoy this. accept the greatest quality i think i developed and everybody should develop this acceptance. quality acceptance. जो है वो है, जो नहीं है वो नहीं है। जो हुआ सो हुआ। बेमिसाल है। </p>
+    </div>
+
+    <div class="section-break"><span>What it leaves behind</span></div>
+
+    <p>The line that stays with me is the order he puts things in. Not happiness first. Not peace first. <em>Acceptance first.</em> Acceptance is the floor. Peace can sit on top of it. Happiness has somewhere to land.</p>
+
+    <p>Without that floor, peace is just a wish. Happiness is just a mood that happens to you when conditions briefly align. Anything can knock it over — a delayed flight, an unmade breakfast, a thing that's not there.</p>
+
+    <p>For a leader, this is not a soft point. We carry teams, decisions, futures. If our internal weather depends on every condition going our way, we are not actually steady. We are just lucky, until we aren't. The acceptance the speaker is describing — <em>जो है वो है, जो नहीं है वो नहीं है</em> — is the unglamorous ground on which steadiness becomes possible.</p>
+
+    <p>So this is a note to myself, mostly. The next time I find myself spiralling about something that isn't here, in a moment that is — I want to remember Mr and Mrs Hua, and the twins they named after the only sentence that ever really helps.</p>
+
+    <div class="closing-pull">What is, is. What is not, is not. What happened, happened. Begin from there.</div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="shell">
+    <div class="col-row">
+      <span><strong style="color:var(--ink-soft);font-weight:500;">Conscious Leadership Circle</strong> · consciousleadershipcircle.in</span>
+      <span>Maintained by <a href="https://sreebalakrishnan.in">Sree Balakrishnan</a></span>
+    </div>
+    <div style="margin-top:10px;font-size:13px;color:var(--ink-faint);line-height:1.6;">
+      Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
+    </div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
+      Created May 2026 · Last updated May 2026 · <a href="/musings/" style="color:var(--ink-faint);">All musings</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

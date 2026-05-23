@@ -32,6 +32,7 @@ Started as a thought. Then an in-person session across a few cities in India. No
 /lotus                        → lotus.html                          Article: Buddhism, Taoism, Stoicism, Gita — four traditions
 /musings/                     → musings/index.html                  Musings index — listing of all community reflections
 /musings/can-you-receive      → musings/can-you-receive.html        Musing: Sree — receiving as a capacity, the asymmetry of giving vs. receiving
+/musings/jo-hua-so-hua        → musings/jo-hua-so-hua.html          Musing: Sree — acceptance as the floor under peace and happiness; verbatim WhatsApp forward (author unknown)
 /musings/what-the-system-sees → musings/what-the-system-sees.html  Musing: Siva — "Curve-Balled by the System": annual review, leverage points, 3 practices
 /what-the-system-sees         → what-the-system-sees.html           Redirect → /musings/what-the-system-sees.html
 /puzzle                       → puzzle.html                         Dormant redirect to / — do not edit for content
@@ -107,6 +108,7 @@ These are the anchor of the circle. Always rendered consistently:
 ### Musings live
 - **Curve-Balled by the System** — annual review blindside, leverage points (Donella Meadows), three practices of a conscious leader. By Sivarama Sundar. `/musings/what-the-system-sees.html` (redirect at `/what-the-system-sees.html`)
 - **Can You Receive?** — receiving as a capacity, not a skill; the asymmetry of giving vs. receiving and what it means for how we lead. By Sree Balakrishnan. `/musings/can-you-receive.html`
+- **Jo Hua So Hua** — on acceptance as the floor under peace and happiness; framed around a mentor's grounding and a verbatim WhatsApp forward (author unknown). By Sree Balakrishnan. `/musings/jo-hua-so-hua.html`
 
 ### Articles teased / in progress
 - **The Same Question** — the Luddite comic and founding story (`the-same-question.html`)
