@@ -30,7 +30,7 @@ Started as a thought. Then an in-person session across a few cities in India. No
 /                             → index.html                          Homepage (CLC hub — who we are, how we gather, founding members)
 /the-same-question            → the-same-question.html              Article: Luddite comic, gate, founding story, Sunil's pillars
 /lotus                        → lotus.html                          Article: Buddhism, Taoism, Stoicism, Gita — four traditions
-/the-nine-presences           → the-nine-presences.html             Article: Sree — eight workplace archetypes (daśāvatāras) + Krishna as the Pūrṇa; 3×3 visual grid with per-archetype watercolor icons
+/the-nine-presences           → the-nine-presences.html             Article: Sree — eight workplace archetypes (daśāvatāras) + Krishna as the Pūrṇa; 3×3 visual grid; icons at /images/avatars/{matsya,kurma,varaha,narasimha,vamana,parashurama,rama,balarama,krishna}.png
 /musings/                     → musings/index.html                  Musings index — listing of all community reflections
 /musings/can-you-receive      → musings/can-you-receive.html        Musing: Sree — receiving as a capacity, the asymmetry of giving vs. receiving
 /musings/jo-hua-so-hua        → musings/jo-hua-so-hua.html          Musing: Sree — acceptance as the floor under peace and happiness; verbatim WhatsApp forward (author unknown)
@@ -106,7 +106,7 @@ These are the anchor of the circle. Always rendered consistently:
 
 ### Articles live
 - **The Architecture of Courage** — on Abhaya, The Witness, The word before the storm. By Sree. Full version on Substack: https://sreebalakrishnan.substack.com/p/the-architecture-of-courage
-- **The Nine Presences** — eight workplace archetypes (daśāvatāras) every team carries + Krishna as the Pūrṇa Avatāra to integrate into. 3×3 visual grid linking to nine deep sections, with per-archetype watercolor icons in `musings/images/avatars/`. By Sree Balakrishnan. `/the-nine-presences.html`
+- **The Nine Presences** — eight workplace archetypes (daśāvatāras) every team carries + Krishna as the Pūrṇa Avatāra to integrate into. 3×3 visual grid linking to nine deep sections, with per-archetype universal/symbolic icons (mostly photoreal; Krishna is watercolor) in `/images/avatars/*.png`. Multi-faith disclaimer at the top. By Sree Balakrishnan. `/the-nine-presences.html`
 
 ### Musings live
 - **Curve-Balled by the System** — annual review blindside, leverage points (Donella Meadows), three practices of a conscious leader. By Sivarama Sundar. `/musings/what-the-system-sees.html` (redirect at `/what-the-system-sees.html`)
