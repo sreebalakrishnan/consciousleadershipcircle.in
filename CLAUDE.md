@@ -106,7 +106,7 @@ These are the anchor of the circle. Always rendered consistently:
 
 ### Articles live
 - **The Architecture of Courage** — on Abhaya, The Witness, The word before the storm. By Sree. Full version on Substack: https://sreebalakrishnan.substack.com/p/the-architecture-of-courage
-- **The Nine Presences** — eight workplace archetypes (daśāvatāras) every team carries + Krishna as the Pūrṇa Avatāra to integrate into. 3×3 visual grid linking to nine deep sections, with per-archetype universal/symbolic icons (mostly photoreal; Krishna is watercolor) in `/images/avatars/*.png`. Multi-faith disclaimer at the top. By Sree Balakrishnan. `/the-nine-presences.html`
+- **The Nine Presences** — eight workplace archetypes (daśāvatāras) every team carries + Krishna as the Pūrṇa Avatāra to integrate into. 3×3 visual grid linking to nine deep sections, with per-archetype universal/symbolic icons (mostly photoreal; Krishna is watercolor) in `/images/avatars/*.png`. Multi-faith disclaimer at the top; English archetype label primary, Sanskrit name secondary. By Sree Balakrishnan. `/the-nine-presences.html` (mirror of `sreebalakrishnan.in/archetypes/`; canonical points there, silent — no visible "first published" banner)
 
 ### Musings live
 - **Curve-Balled by the System** — annual review blindside, leverage points (Donella Meadows), three practices of a conscious leader. By Sivarama Sundar. `/musings/what-the-system-sees.html` (redirect at `/what-the-system-sees.html`)
