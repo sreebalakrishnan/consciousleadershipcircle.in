@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indian voices on the inner mind, one line each · Conscious Leadership Circle</title>
+<meta name="description" content="Fifteen voices from India's long study of the inner mind — Vyāsa, Buddha, Kṛṣṇa, Patañjali, Śaṅkara, Ramaṇa, Krishnamurti and more — each in one line. A sister musing to the Western fifteen.">
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:      #FBFBF8;
+    --paper-deep: #F4F2EB;
+    --ink:        #14181D;
+    --ink-soft:   #4B5560;
+    --ink-faint:  #8B95A0;
+    --moss:       #3F5847;
+    --moss-soft:  #6E8473;
+    --rule:       #E5E2DA;
+    --rule-soft:  #EEEBE2;
+    --display:   "Bricolage Grotesque", "Noto Sans Devanagari", system-ui, sans-serif;
+    --serif:     "Instrument Serif", Georgia, serif;
+    --sans:      "Inter Tight", "Noto Sans Devanagari", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+  a { color: var(--moss); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--moss) 35%, transparent); transition: border-color .15s; }
+  a:hover { border-bottom-color: var(--moss); }
+
+  .shell { max-width: 680px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px); }
+
+  /* ── topbar ─────────────────────────────────────── */
+  .topbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+  }
+  .topbar .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .topbar a { color: var(--ink-soft); border-bottom: none; }
+  .topbar a:hover { color: var(--moss); }
+  .topbar .nav-links { display: flex; gap: 20px; }
+  .topbar .nav-links a { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-faint); }
+
+  /* ── masthead ────────────────────────────────────── */
+  .mast {
+    padding: clamp(52px, 8vw, 88px) 0 clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mast-tag {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .mast-tag::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--moss); border-radius: 50%; }
+  .mast h1 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 96, "wght" 300;
+    font-size: clamp(2.2rem, 6vw, 3.6rem);
+    line-height: 1.05; letter-spacing: -0.025em;
+    color: var(--ink); max-width: 20ch;
+    margin-bottom: 20px;
+  }
+  .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .mast .lede {
+    font-family: var(--sans); font-size: 1.05rem;
+    line-height: 1.65; color: var(--ink-soft); max-width: 54ch;
+    margin-bottom: 24px;
+  }
+  .mast-byline {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; color: var(--ink-faint);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .mast-byline .author { color: var(--moss-soft); }
+  .mast-byline .sep { color: var(--rule); }
+
+  /* ── body ───────────────────────────────────────── */
+  .body { padding: clamp(48px, 6vw, 72px) 0; }
+  .body p {
+    font-size: 1.04rem; line-height: 1.8;
+    color: var(--ink-soft); margin-bottom: 24px;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .body p em { font-style: italic; color: var(--ink); }
+  .body p strong { font-weight: 600; color: var(--ink); }
+
+  /* ── curated list block ─────────────────────────── */
+  .curated {
+    margin: clamp(32px, 4vw, 44px) 0;
+    padding: clamp(26px, 4vw, 40px) clamp(22px, 3.5vw, 36px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .curated-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 6px;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .curated-label::before {
+    content: ""; display: inline-block; width: 6px; height: 6px;
+    background: var(--moss-soft); border-radius: 50%;
+  }
+  .curated-attribution {
+    font-family: var(--serif); font-style: italic;
+    font-size: 0.92rem; color: var(--ink-faint);
+    margin-bottom: 14px; line-height: 1.55;
+  }
+
+  /* ── voice list ─────────────────────────────────── */
+  .voice-list {
+    list-style: none;
+    counter-reset: voice;
+    margin: 0;
+  }
+  .voice-list li {
+    counter-increment: voice;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 14px;
+    align-items: baseline;
+  }
+  .voice-list li:first-child { padding-top: 0; }
+  .voice-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .voice-list li::before {
+    content: counter(voice, decimal-leading-zero);
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 500;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+    padding-top: 2px;
+  }
+  .voice-name {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 32, "wght" 500;
+    font-size: 1.02rem;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 4px;
+    letter-spacing: -0.005em;
+    line-height: 1.3;
+  }
+  .voice-dates {
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    margin-left: 8px;
+    white-space: nowrap;
+  }
+  .voice-msg {
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+    line-height: 1.5;
+    display: block;
+  }
+  .voice-concept {
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-top: 8px;
+    display: block;
+  }
+  .voice-concept.is-kw { color: var(--moss); }
+  .voice-concept.is-kw::before {
+    content: "";
+    display: inline-block;
+    width: 5px; height: 5px;
+    background: var(--moss);
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+  .voice-legend {
+    font-family: var(--sans);
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--ink-faint);
+    margin-bottom: 22px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .voice-legend::before {
+    content: "";
+    display: inline-block;
+    width: 5px; height: 5px;
+    background: var(--moss);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── aside (did you know) ────────────────────────── */
+  .aside {
+    margin: clamp(36px, 5vw, 52px) 0;
+    padding: clamp(24px, 3.5vw, 32px) clamp(22px, 3.5vw, 32px);
+    background: var(--paper-deep);
+    border-left: 3px solid var(--moss-soft);
+    border-radius: 2px;
+  }
+  .aside-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--moss); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .aside-label::before {
+    content: ""; display: inline-block; width: 6px; height: 6px;
+    background: var(--moss); border-radius: 50%;
+  }
+  .aside p {
+    font-family: var(--sans); font-size: 0.99rem;
+    line-height: 1.75; color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .aside p:last-child { margin-bottom: 0; }
+  .aside p em { color: var(--ink); font-style: italic; }
+
+  /* ── reading list ───────────────────────────────── */
+  .reading-list {
+    margin-top: clamp(48px, 6vw, 72px);
+    padding-top: clamp(32px, 4vw, 44px);
+    border-top: 1px solid var(--rule);
+  }
+  .reading-list-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 16px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .reading-list-label::before {
+    content: ""; display: inline-block; width: 6px; height: 6px;
+    background: var(--moss); border-radius: 50%;
+  }
+  .reading-list-intro {
+    font-family: var(--sans); font-size: 0.97rem;
+    line-height: 1.65; color: var(--ink-soft);
+    margin-bottom: 22px; max-width: 58ch;
+  }
+  .reading-list-items {
+    list-style: none;
+    counter-reset: rl;
+    margin: 0;
+  }
+  .reading-list-items li {
+    counter-increment: rl;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .reading-list-items li:last-child { border-bottom: none; }
+  .reading-list-items a {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    gap: 14px;
+    align-items: baseline;
+    padding: 12px 0;
+    color: var(--ink);
+    border-bottom: none;
+    transition: color .15s;
+  }
+  .reading-list-items a:hover { color: var(--moss); }
+  .reading-list-items a::before {
+    content: counter(rl, decimal-leading-zero);
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    color: var(--ink-faint); letter-spacing: 0.08em;
+    padding-top: 2px;
+  }
+  .rl-content {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 10px;
+    min-width: 0;
+  }
+  .rl-author {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 24, "wght" 500;
+    font-size: 0.98rem;
+    color: var(--ink);
+  }
+  .rl-sep { color: var(--rule); font-size: 0.85rem; }
+  .rl-title {
+    font-family: var(--serif); font-style: italic;
+    font-size: 1rem; line-height: 1.4;
+    color: var(--ink-soft);
+  }
+  .reading-list-items a:hover .rl-title { color: var(--moss); }
+  .rl-arrow {
+    font-family: var(--serif); font-style: italic;
+    color: var(--ink-faint);
+    transition: color .15s, transform .15s;
+  }
+  .reading-list-items a:hover .rl-arrow { color: var(--moss); transform: translateX(3px); }
+  .reading-list-note {
+    font-family: var(--sans); font-size: 12px;
+    color: var(--ink-faint); font-style: italic;
+    margin-top: 20px; line-height: 1.6;
+  }
+
+  /* ── closing pull ────────────────────────────────── */
+  .closing-pull {
+    margin: clamp(40px, 5vw, 56px) 0 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.3vw, 1.35rem); line-height: 1.5;
+    color: var(--ink); max-width: 48ch;
+  }
+
+  /* ── footer ─────────────────────────────────────── */
+  footer {
+    padding: 36px 0 52px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-faint); line-height: 1.65;
+  }
+  footer a { color: var(--ink-soft); border-bottom: none; }
+  footer a:hover { color: var(--moss); }
+  .col-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+</style>
+<!-- Plausible analytics -->
+<script async src="https://plausible.io/js/pa-nnhDJzDzdLCC33sPfVxZK.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="shell">
+    <div class="row">
+      <a href="/">← Conscious Leadership Circle</a>
+      <div class="nav-links">
+        <a href="/musings/">All musings</a>
+        <a href="/musings/fifteen-psychologists.html">The Western fifteen</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="mast">
+  <div class="shell">
+    <div class="mast-tag">Musing · Conscious Leadership Circle</div>
+    <h1>Indian voices on the inner mind, <em>one line each</em></h1>
+    <p class="lede">Fifteen voices, roughly 2,500 years, one line each. India has been studying the inner mind much longer than the <a href="/musings/fifteen-psychologists.html">Western fifteen</a> — and these are the lines I would carry. Curated and distilled, not quoted.</p>
+    <div class="mast-byline">
+      <span class="author">Sree Balakrishnan</span>
+      <span class="sep">·</span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="body">
+  <div class="shell">
+
+    <p>The companion piece to <a href="/musings/fifteen-psychologists.html">the Western fifteen</a>. That one was a LinkedIn forward — the list arrived already formed and I just framed it. This one is mine. Different work.</p>
+
+    <p>Fifteen voices, drawn across roughly two and a half millennia and several traditions — the epic chroniclers (Vyāsa, Vālmīki), the founders of paths (Buddha, Mahāvīra, Kṛṣṇa, Patañjali), the philosophical architects (Nāgārjuna, Śaṅkara), the devotional poets (Kabīr), and the modern voices who brought all of it forward in English (Ramakrishna, Vivekānanda, Aurobindo, Ramaṇa, Krishnamurti, Nisargadatta).</p>
+
+    <p>The lines are my distillations of each thinker's central teaching — not direct quotes, except where noted. The curation is the work. If you have sat with these voices longer than I have, your fifteen would look different. This is mine.</p>
+
+    <div class="curated">
+      <div class="curated-label">Curated · Sree Balakrishnan</div>
+      <div class="curated-attribution">Indian voices on the inner mind, one line each. Distillations — not direct quotes — except for Vivekānanda's and Krishnamurti's, which are near-verbatim.</div>
+      <div class="voice-legend">Most relevant to modern conscious leadership</div>
+
+      <ol class="voice-list">
+        <li>
+          <div>
+            <span class="voice-name">Vyāsa<span class="voice-dates">~500 BCE · Mahābhārata</span></span>
+            <span class="voice-msg">Every character on the battlefield is a part of you.</span>
+            <span class="voice-concept">Itihāsa as inner allegory</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Vālmīki<span class="voice-dates">~500 BCE · Rāmāyaṇa</span></span>
+            <span class="voice-msg">You become what you devote yourself to.</span>
+            <span class="voice-concept">Maryādā Puruṣottama</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Buddha<span class="voice-dates">~500 BCE · Buddhism</span></span>
+            <span class="voice-msg">What you think, you become.</span>
+            <span class="voice-concept is-kw">Mindfulness &amp; the Eightfold path</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Mahāvīra<span class="voice-dates">~500 BCE · Jainism</span></span>
+            <span class="voice-msg">Every violence begins as a violence inside you first.</span>
+            <span class="voice-concept">Ahiṃsā &amp; Anekāntavāda</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Kṛṣṇa<span class="voice-dates">text ~200 BCE · Bhagavad Gītā</span></span>
+            <span class="voice-msg">Act — but do not cling to the fruit of your action.</span>
+            <span class="voice-concept is-kw">Niṣkāma karma</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Patañjali<span class="voice-dates">~200 BCE · Yoga</span></span>
+            <span class="voice-msg">Yoga is the stilling of the mind's fluctuations.</span>
+            <span class="voice-concept is-kw">Citta-vṛtti-nirodha</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Nāgārjuna<span class="voice-dates">~200 CE · Mahāyāna</span></span>
+            <span class="voice-msg">The self you defend so hard is empty all the way down.</span>
+            <span class="voice-concept">Śūnyatā</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Ādi Śaṅkara<span class="voice-dates">~800 CE · Advaita Vedānta</span></span>
+            <span class="voice-msg">You are not the body, not the mind — you are the awareness witnessing both.</span>
+            <span class="voice-concept is-kw">Sākṣī-bhāva (the witness)</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Kabīr<span class="voice-dates">~1450 · Bhakti / Nirguṇa</span></span>
+            <span class="voice-msg">The one you seek is closer than your own breath; stop looking outside.</span>
+            <span class="voice-concept">Nirguṇa Bhakti</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Ramakrishna<span class="voice-dates">1836–1886 · Bhakti / Vedānta</span></span>
+            <span class="voice-msg">Many paths, one summit; the mountain does not care which side you climbed.</span>
+            <span class="voice-concept">Sarva dharma samanvaya</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Vivekānanda<span class="voice-dates">1863–1902 · Practical Vedānta</span></span>
+            <span class="voice-msg">Each soul is potentially divine — the goal is to manifest that divinity.</span>
+            <span class="voice-concept">Practical Vedānta</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Sri Aurobindo<span class="voice-dates">1872–1950 · Integral Yoga</span></span>
+            <span class="voice-msg">Consciousness is not a side-effect of life; it is what is evolving.</span>
+            <span class="voice-concept">Integral consciousness</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Ramaṇa Maharṣi<span class="voice-dates">1879–1950 · Advaita Vedānta</span></span>
+            <span class="voice-msg">Ask <em>"who am I?"</em> patiently, and follow it home.</span>
+            <span class="voice-concept is-kw">Ātma-vichāra (self-inquiry)</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Jiddu Krishnamurti<span class="voice-dates">1895–1986 · Independent</span></span>
+            <span class="voice-msg">Truth is a pathless land — no organisation can lead you there.</span>
+            <span class="voice-concept is-kw">Choiceless awareness</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <span class="voice-name">Nisargadatta Mahārāj<span class="voice-dates">1897–1981 · Advaita Vedānta</span></span>
+            <span class="voice-msg">You are the awareness, not the appearance in it.</span>
+            <span class="voice-concept">Aham asmi (I AM)</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <p>Some land harder than others depending on where you are standing this week. For me, Kṛṣṇa's <em>niṣkāma karma</em> is the line I return to most often as a leader — <em>do the work, release the fruit</em> — that is most of the practice, in seven words. Ramaṇa's <em>who am I?</em> is the question that will not let go once you have actually sat with it. And Krishnamurti's <em>truth is a pathless land</em> is the line I would put on the wall of every leadership program that thinks it has a method.</p>
+
+    <p>The older voices — Vyāsa, Buddha, Mahāvīra — speak from a time before psychology was a category. The mind was their <em>only</em> subject, and they were not in a hurry. The modern voices — Ramaṇa, Krishnamurti, Nisargadatta — speak in English to a world that already speaks of "stress" and "self" and "identity," and meet us in our own vocabulary.</p>
+
+    <div class="aside">
+      <div class="aside-label">Did you know</div>
+      <p>The dates hide something startling. Six of the fifteen — <em>Ramakrishna</em>, <em>Vivekānanda</em>, <em>Aurobindo</em>, <em>Ramaṇa</em>, <em>Krishnamurti</em>, <em>Nisargadatta</em> — were alive in a single overlapping window between roughly 1880 and 1950. Add the contemporaries who did not make this list — Mā Ānandamayī, Yogānanda, Tagore, Gandhi, Vinoba, Ramana's brother monastics — and India in those seventy years produced one of the densest concentrations of inner-mind teachers any culture has produced in a single human lifetime.</p>
+      <p>The colonial encounter created the conditions: English as a shared medium, printing presses, travelling lecturers, a country examining its own traditions in the mirror of Western modernity, and a generation of seekers who could speak across both worlds. What Vienna was to Western psychology, India between 1880 and 1950 was to the world's understanding of consciousness.</p>
+      <p>A sequel musing is sitting right inside this list — <em>the Indian renaissance you were never taught about.</em> For another day.</p>
+    </div>
+
+    <section class="reading-list">
+      <div class="reading-list-label">If you want to go deeper</div>
+      <p class="reading-list-intro">One starting book per voice. Where the teacher did not write — Buddha, Ramaṇa, Nisargadatta, Vyāsa — I have linked the standard compilation or modern translation. Begin wherever the line landed hardest.</p>
+      <ol class="reading-list-items">
+        <li><a href="https://www.amazon.in/s?k=Mahabharata+Bibek+Debroy"><div class="rl-content"><span class="rl-author">Vyāsa</span><span class="rl-sep">·</span><span class="rl-title">The Mahābhārata (Bibek Debroy translation)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Valmiki+Ramayana+Bibek+Debroy"><div class="rl-content"><span class="rl-author">Vālmīki</span><span class="rl-sep">·</span><span class="rl-title">The Vālmīki Rāmāyaṇa (Bibek Debroy translation)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Dhammapada+Easwaran"><div class="rl-content"><span class="rl-author">Buddha</span><span class="rl-sep">·</span><span class="rl-title">The Dhammapada (Easwaran)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Tattvartha+Sutra+Umasvati"><div class="rl-content"><span class="rl-author">Mahāvīra</span><span class="rl-sep">·</span><span class="rl-title">Tattvārtha Sūtra (Umāsvāti)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Bhagavad+Gita+Easwaran"><div class="rl-content"><span class="rl-author">Kṛṣṇa</span><span class="rl-sep">·</span><span class="rl-title">The Bhagavad Gītā (Easwaran)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Patanjali+Yoga+Sutras+Edwin+Bryant"><div class="rl-content"><span class="rl-author">Patañjali</span><span class="rl-sep">·</span><span class="rl-title">The Yoga Sūtras (Edwin Bryant)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Nagarjuna+Mulamadhyamakakarika+Garfield"><div class="rl-content"><span class="rl-author">Nāgārjuna</span><span class="rl-sep">·</span><span class="rl-title">Mūlamadhyamakakārikā (Garfield)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Vivekachudamani+Shankara"><div class="rl-content"><span class="rl-author">Śaṅkara</span><span class="rl-sep">·</span><span class="rl-title">Vivekacūḍāmaṇi (Crest Jewel of Discrimination)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Songs+of+Kabir+Tagore"><div class="rl-content"><span class="rl-author">Kabīr</span><span class="rl-sep">·</span><span class="rl-title">Songs of Kabīr (Tagore translation)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Gospel+of+Sri+Ramakrishna"><div class="rl-content"><span class="rl-author">Ramakrishna</span><span class="rl-sep">·</span><span class="rl-title">The Gospel of Sri Ramakrishna</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Vivekananda+Karma+Yoga"><div class="rl-content"><span class="rl-author">Vivekānanda</span><span class="rl-sep">·</span><span class="rl-title">Karma Yoga</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Aurobindo+Life+Divine"><div class="rl-content"><span class="rl-author">Aurobindo</span><span class="rl-sep">·</span><span class="rl-title">The Life Divine</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Be+As+You+Are+Ramana+Maharshi+David+Godman"><div class="rl-content"><span class="rl-author">Ramaṇa</span><span class="rl-sep">·</span><span class="rl-title">Be As You Are (David Godman)</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Krishnamurti+Freedom+from+the+Known"><div class="rl-content"><span class="rl-author">Krishnamurti</span><span class="rl-sep">·</span><span class="rl-title">Freedom from the Known</span></div><span class="rl-arrow">→</span></a></li>
+        <li><a href="https://www.amazon.in/s?k=Nisargadatta+I+Am+That"><div class="rl-content"><span class="rl-author">Nisargadatta</span><span class="rl-sep">·</span><span class="rl-title">I Am That</span></div><span class="rl-arrow">→</span></a></li>
+      </ol>
+      <p class="reading-list-note">Search links to Amazon.in — pick the edition that suits you. Not affiliate links.</p>
+    </section>
+
+    <div class="closing-pull">Fifteen lines. Two and a half millennia of looking inward. Take the one you need today.</div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="shell">
+    <div class="col-row">
+      <span><strong style="color:var(--ink-soft);font-weight:500;">Conscious Leadership Circle</strong> · consciousleadershipcircle.in</span>
+      <span>Maintained by <a href="https://sreebalakrishnan.in">Sree Balakrishnan</a></span>
+    </div>
+    <div style="margin-top:10px;font-size:13px;color:var(--ink-faint);line-height:1.6;">
+      Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
+    </div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
+      Created May 2026 · Last updated May 2026 · <a href="/musings/" style="color:var(--ink-faint);">All musings</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
