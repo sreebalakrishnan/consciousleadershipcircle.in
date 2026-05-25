@@ -126,6 +126,25 @@
     line-height: 1.45; color: var(--ink); max-width: 40ch;
   }
 
+  /* ── about-author intro ─────────────────────────── */
+  .about-author {
+    margin: 0 0 clamp(28px, 4vw, 40px);
+    padding: 4px 0 4px 22px;
+    border-left: 2px solid var(--rule);
+  }
+  .about-author .label {
+    font-family: var(--sans); font-size: 10px; font-weight: 500;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 8px;
+  }
+  .about-author p {
+    font-family: var(--sans); font-size: 0.95rem;
+    line-height: 1.68; color: var(--ink-soft);
+    margin: 0;
+  }
+  .about-author p a { color: var(--moss-soft); border-bottom: 1px solid color-mix(in srgb, var(--moss-soft) 30%, transparent); }
+  .about-author p a:hover { border-bottom-color: var(--moss); }
+
   /* ── section divider ────────────────────────────── */
   .section-bridge {
     margin: clamp(44px, 6vw, 64px) 0 clamp(28px, 4vw, 40px);
@@ -304,6 +323,11 @@
 
 <div class="body">
   <div class="shell">
+
+    <aside class="about-author">
+      <div class="label">About Vikas</div>
+      <p>Vikas is a Senior Director of Engineering at Yubi. He has spent close to two decades building and running technology teams — CredAvenue, Mettl, Dell and Oracle along the way — and trained as a mathematician at IIT Kharagpur.</p>
+    </aside>
 
     <p>The notes below are Vikas's, lightly polished. The structure, the points, the emphasis are his — he kept it deliberately raw because he wanted the circle to have it before the day cooled. Read them as a sketch, not an essay.</p>
 
