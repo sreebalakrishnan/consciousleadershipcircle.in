@@ -32,6 +32,16 @@ Last reviewed: **May 2026**
 
 ### Homepage / nav
 - [x] Added **The Nine Presences** to homepage topbar nav (4 links now: The same question · The lotus · The nine presences · Musings)
+- [x] Added **Conversations** to homepage topbar nav and musings topbar nav (now 5 links on homepage)
+
+### Conversations (new section)
+- [x] **`/conversations/`** — new section: long-form video conversations with members of the circle
+  - [x] Index page at `/conversations/` modelled on `/musings/` (mast: "In *conversation*", item list with guest · date · duration, "more coming" closing note)
+  - [x] First episode: **The accidental leader — Roopa Sreeranganna** at `/conversations/roopa-sreeranganna.html`
+    - 43-min conversation, embedded YouTube iframe (16:9 aspect-ratio, lazy-loaded, youtube-nocookie domain)
+    - Sree's three-paragraph framing → embedded video → 17-chapter list with clickable timestamp links (open YouTube at the moment in a new tab) → "Three things that stayed with me" section with three pulled Roopa quotes + Sree gloss → closing pull-quote → guest card with LinkedIn
+    - [x] YouTube video ID wired in: **`a8ap2LJTSNk`** (https://youtu.be/a8ap2LJTSNk) — iframe src + all 17 chapter links
+- [x] Backlog item *"Video podcast landing page"* in CLAUDE.md → now superseded; rename to "Members-only page" remains
 
 ---
 
@@ -57,7 +67,7 @@ Last reviewed: **May 2026**
 ## Backlog — pages yet to build (from CLAUDE.md)
 - [ ] **`/reads/` or `/articles/`** — article index as the body of articles grows past 3–4. Currently top nav lists individual article names; that won't scale much further
 - [ ] **Members-only page** — early access to trends, member profiles, dedicated content
-- [ ] **Video podcast landing page** — member profiles + video, tied to the shared-corpus vision in CLAUDE.md
+- [x] ~~**Video podcast landing page**~~ — shipped as `/conversations/` (May 2026, first episode with Roopa)
 
 ---
 
