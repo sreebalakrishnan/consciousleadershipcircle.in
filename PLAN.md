@@ -49,7 +49,7 @@ Last reviewed: **May 2026**
   - [x] First gathering: **Navigating the AI vs. Human frontier** at `/gatherings/ai-vs-human-frontier.html` — the circle's first *virtual* session (May 2026, 7 voices)
     - Comic hero (lightbox + og:image) · Sree framing · `.consensus` card · 7 `.speaker` cards · Sunil pull-quote · 5 `.theme-item` blocks (incl. guardrail chips) · synthesis + closing pull · members-only `.recording` block linking the Google Drive recording directly with a WhatsApp fallback
     - [x] Added **Gatherings** to homepage topbar nav (6 links now) + conversations & musings index navs
-    - [ ] **Comic image** — sandbox network can't fetch from Drive (host not allowlisted) and the MCP base64 round-trip is too large for context. Page is wired to `/gatherings/images/ai-vs-human-frontier.jpg` and hides the figure gracefully (`onerror`) until the file lands. **Sree to convert the comic PNG → JPG and push it to that exact path on the branch** (source: Drive `1bCPtp3nPy1CH0F24gvuIqnDoVY8OL-0Q`, `CLC-may29.png`)
+    - [x] **Comic image** — landed. Sree uploaded the comic PNG (1536×1024) via mobile; it went onto `main`, so it was copied across to this branch as `gatherings/images/ai-vs-human-frontier.png` and the page references switched back to `.png` (with og:image width/height). **Cleanup note:** an orphaned copy still sits on `main` at `gatherings/images/9DC102A0-BE15-4C34-A367-42D0AD4E2001.png` (no gathering pages on main yet) — worth deleting on main, or it'll linger after merge.
 
 ---
 
