@@ -43,6 +43,14 @@ Last reviewed: **May 2026**
     - [x] YouTube video ID wired in: **`a8ap2LJTSNk`** (https://youtu.be/a8ap2LJTSNk) — iframe src + all 17 chapter links
 - [x] Backlog item *"Video podcast landing page"* in CLAUDE.md → now superseded; rename to "Members-only page" remains
 
+### Gatherings (new section)
+- [x] **`/gatherings/`** — new section: notes from the circle's actual meetings (in-person + virtual). A third content type, distinct from Musings (single-author) and Conversations (1:1 video)
+  - [x] Index page at `/gatherings/` modelled on `/conversations/` (mast "When the circle *gathers*"; item list with format · date · voice-count; `.gathering-item` classes)
+  - [x] First gathering: **Navigating the AI vs. Human frontier** at `/gatherings/ai-vs-human-frontier.html` — the circle's first *virtual* session (May 2026, 7 voices)
+    - Comic hero (lightbox + og:image) · Sree framing · `.consensus` card · 7 `.speaker` cards · Sunil pull-quote · 5 `.theme-item` blocks (incl. guardrail chips) · synthesis + closing pull · members-only `.recording` block linking the Google Drive recording directly with a WhatsApp fallback
+    - [x] Added **Gatherings** to homepage topbar nav (6 links now) + conversations & musings index navs
+    - [ ] **Comic image** — sandbox network can't fetch from Drive (host not allowlisted) and the MCP base64 round-trip is too large for context. Page is wired to `/gatherings/images/ai-vs-human-frontier.jpg` and hides the figure gracefully (`onerror`) until the file lands. **Sree to convert the comic PNG → JPG and push it to that exact path on the branch** (source: Drive `1bCPtp3nPy1CH0F24gvuIqnDoVY8OL-0Q`, `CLC-may29.png`)
+
 ---
 
 ## Open decisions — your call
