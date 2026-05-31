@@ -51,6 +51,16 @@ Last reviewed: **May 2026**
     - [x] Added **Gatherings** to homepage topbar nav (6 links now) + conversations & musings index navs
     - [x] **Comic image** — landed. Sree uploaded the comic PNG (1536×1024) via mobile; it went onto `main`, so it was copied across to this branch as `gatherings/images/ai-vs-human-frontier.png` and the page references switched back to `.png` (with og:image width/height). **Cleanup note:** an orphaned copy still sits on `main` at `gatherings/images/9DC102A0-BE15-4C34-A367-42D0AD4E2001.png` (no gathering pages on main yet) — worth deleting on main, or it'll linger after merge.
 
+### Sparks (new section)
+- [x] **`/sparks/`** — new section: short, alive moments from the circle's group chat (a screenshot, a forward, a one-line reply) and the conversation each one set off. A fourth content type, distinct from Musings (single-author), Conversations (1:1 video) and Gatherings (meeting notes)
+  - [x] Index page at `/sparks/` modelled on `/gatherings/` (mast "When something *catches*"; item list with format · date · voice-count; `.spark-item` classes)
+  - [x] First spark: **Should I walk or drive?** at `/sparks/context-is-everything.html` (May 2026, 5 voices)
+    - The whole exchange **rebuilt as chat bubbles, not screenshots** — a dark CSS `.ai-card` recreating the Claude reply (coral SVG asterisk mark, serif answer, "Opus 4.8 · High" footer) + a `.thread` recreating the WhatsApp messages (`.bubble`, sender colours, timestamps, emoji `.reacts`, a `.reply-quote` strip on Vaskar's reply)
+    - Voices: Venkata Rajesh Solasa (shared) · Abhiram J · Vikas Anand · Tuhin Mohanta · Vaskar Nag
+    - Sree's framing walks the small observation up into a leadership one; a `.gloss` aside explains the Mahābhārata Aśvatthāmā half-truth; closing pull "Context is everything"
+    - **No phone numbers published** (WhatsApp surfaced members' numbers; deliberately omitted). No og:image (chat is HTML, not a raster); `twitter:card` = `summary` — *worth a comic/quote-card og:image later for social previews*
+  - [x] Added **Sparks** to homepage topbar nav (7 links now) + gatherings / conversations / musings index navs
+
 ---
 
 ## Open decisions — your call
