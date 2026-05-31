@@ -3,9 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gatherings · Conscious Leadership Circle</title>
-<meta name="description" content="Notes from the gatherings of the Conscious Leadership Circle — what was said, who said it, and what we were left chewing on. The circle started in person; now it also meets online.">
+<title>Sparks · Conscious Leadership Circle</title>
+<meta name="description" content="Small, alive moments from the circle's group chat — a screenshot, a forward, a one-line reply — and the conversation each one set off. Sparks from the Conscious Leadership Circle.">
 <meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://consciousleadershipcircle.in/sparks/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://consciousleadershipcircle.in/sparks/">
+<meta property="og:title" content="Sparks · Conscious Leadership Circle">
+<meta property="og:description" content="Not every idea arrives as an essay. Sometimes it's a screenshot in the group chat that the circle catches fire around for ten minutes. These are those moments, kept.">
+<meta property="og:site_name" content="Conscious Leadership Circle">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sparks · Conscious Leadership Circle">
+<meta name="twitter:description" content="Small, alive moments from the circle's group chat — and the conversation each one set off.">
 
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
 
@@ -22,6 +35,7 @@
     --ink-faint:  #8B95A0;
     --moss:       #3F5847;
     --moss-soft:  #6E8473;
+    --indigo:     #3D4F7C;
     --rule:       #E5E2DA;
     --rule-soft:  #EEEBE2;
     --display:   "Bricolage Grotesque", system-ui, sans-serif;
@@ -84,10 +98,10 @@
     line-height: 1.65; color: var(--ink-soft); max-width: 52ch;
   }
 
-  /* ── gathering list ──────────────────────────────── */
+  /* ── spark list ──────────────────────────────────── */
   .list { padding: clamp(40px, 5vw, 64px) 0; }
 
-  .gathering-item {
+  .spark-item {
     padding: clamp(28px, 4vw, 40px) 0;
     border-bottom: 1px solid var(--rule-soft);
     display: grid;
@@ -98,21 +112,21 @@
     border-bottom-color: var(--rule-soft);
     transition: border-bottom-color .2s;
   }
-  .gathering-item:first-child { padding-top: 0; }
-  .gathering-item:last-child { border-bottom: none; }
-  .gathering-item:hover .gathering-title { color: var(--moss); }
+  .spark-item:first-child { padding-top: 0; }
+  .spark-item:last-child { border-bottom: none; }
+  .spark-item:hover .spark-title { color: var(--moss); }
 
-  .gathering-meta {
+  .spark-meta {
     font-family: var(--sans); font-size: 11px; font-weight: 500;
     letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--ink-faint); margin-bottom: 10px;
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   }
-  .gathering-meta .sep { color: var(--rule); }
-  .gathering-format { color: var(--moss-soft); }
-  .gathering-count { color: var(--ink-faint); }
+  .spark-meta .sep { color: var(--rule); }
+  .spark-format { color: var(--moss-soft); }
+  .spark-count { color: var(--ink-faint); }
 
-  .gathering-title {
+  .spark-title {
     font-family: var(--display);
     font-variation-settings: "opsz" 48, "wght" 400;
     font-size: clamp(1.2rem, 2.6vw, 1.5rem);
@@ -120,15 +134,15 @@
     color: var(--ink); margin-bottom: 12px; max-width: 36ch;
     transition: color .15s;
   }
-  .gathering-title em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .spark-title em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
 
-  .gathering-lede {
+  .spark-lede {
     font-family: var(--sans); font-size: 0.97rem;
     line-height: 1.65; color: var(--ink-soft);
     max-width: 52ch;
   }
 
-  .gathering-arrow {
+  .spark-arrow {
     font-family: var(--serif); font-style: italic;
     font-size: 1.4rem; color: var(--ink-faint);
     padding-top: 2px; align-self: center;
@@ -136,7 +150,7 @@
     border-bottom: none !important;
     flex-shrink: 0;
   }
-  .gathering-item:hover .gathering-arrow { color: var(--moss); transform: translateX(3px); }
+  .spark-item:hover .spark-arrow { color: var(--moss); transform: translateX(3px); }
 
   /* ── more coming note ────────────────────────────── */
   .more-note {
@@ -173,7 +187,7 @@
     <div class="row">
       <a href="/">← Conscious Leadership Circle</a>
       <div class="nav-links">
-        <a href="/sparks/">Sparks</a>
+        <a href="/gatherings/">Gatherings</a>
         <a href="/conversations/">Conversations</a>
         <a href="/musings/">Musings</a>
       </div>
@@ -183,37 +197,37 @@
 
 <header class="mast">
   <div class="shell">
-    <div class="mast-tag">Gatherings · Conscious Leadership Circle</div>
-    <h1>When the circle <em>gathers</em></h1>
-    <p class="lede">The circle started in person, across a few cities in India. Now it also meets online. These are the notes from those gatherings — what was said, who said it, and what we were left chewing on long after the call ended.</p>
+    <div class="mast-tag">Sparks · Conscious Leadership Circle</div>
+    <h1>When something <em>catches</em></h1>
+    <p class="lede">Not every idea arrives as an essay or a scheduled call. Sometimes it's a screenshot, a forward, a single one-line reply in the group chat — and the circle catches fire around it for ten minutes. These are those moments, kept before they scroll away.</p>
   </div>
 </header>
 
 <div class="list">
   <div class="shell">
 
-    <a class="gathering-item" href="/gatherings/ai-vs-human-frontier.html">
+    <a class="spark-item" href="/sparks/context-is-everything.html">
       <div>
-        <div class="gathering-meta">
-          <span class="gathering-format">Virtual gathering</span>
+        <div class="spark-meta">
+          <span class="spark-format">Group-chat thread</span>
           <span class="sep">·</span>
           <span>May 2026</span>
           <span class="sep">·</span>
-          <span class="gathering-count">7 voices</span>
+          <span class="spark-count">5 voices</span>
         </div>
-        <div class="gathering-title">Navigating the AI <em>vs.</em> Human frontier</div>
-        <div class="gathering-lede">Our first gathering online. Seven of us, one question: what AI is doing to the work we do, and to the people who do it. The views ran from "the engineer's role is ending" to "this is mostly hype" — and the circle landed somewhere wiser than either. Not AI versus human. Humans with AI.</div>
+        <div class="spark-title">Should I walk or <em>drive?</em></div>
+        <div class="spark-lede">A screenshot landed in the chat: someone had asked an AI whether to walk or drive to a car wash 100 metres away. It answered, sensibly, <em>walk.</em> What the circle did with it next — from clear prompting, to clear communication, to a half-truth that won the Mahābhārata — was the actual story.</div>
       </div>
-      <span class="gathering-arrow" aria-hidden="true">→</span>
+      <span class="spark-arrow" aria-hidden="true">→</span>
     </a>
 
-    <!-- future gatherings added above this comment -->
+    <!-- future sparks added above this comment -->
 
   </div>
 </div>
 
 <div class="shell">
-  <p class="more-note">More to come as the circle keeps meeting — in person and online. Each gathering leaves a few ideas worth holding on to. <em>If you sat in one and remember something we didn't capture, tell Sree.</em></p>
+  <p class="more-note">More as they spark. The group chat throws up one of these every so often — a screenshot, a forward, an offhand line that turns into something. The good ones land here. <em>Catch one we missed? Tell Sree.</em></p>
 </div>
 
 <footer>
