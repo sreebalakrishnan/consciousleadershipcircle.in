@@ -55,7 +55,7 @@ Last reviewed: **May 2026**
 ---
 
 ## Backlog — pages yet to build (from CLAUDE.md)
-- [ ] **`/reads/` or `/articles/`** — article index as the body of articles grows past 3–4. Currently top nav lists individual article names; that won't scale much further
+- [x] **`/reads/` article index** — shipped June 2026. `reads/index.html` mirrors the musings index; lists the 4 on-site articles + Architecture of Courage (external Substack ↗). Topbar nav collapsed everywhere to a fixed `Reading · Musings` two-item set; per-article nav links retired. Footer "Last updated" swept to June 2026 across all live pages (origins/puzzle left dormant)
 - [ ] **Members-only page** — early access to trends, member profiles, dedicated content
 - [ ] **Video podcast landing page** — member profiles + video, tied to the shared-corpus vision in CLAUDE.md
 

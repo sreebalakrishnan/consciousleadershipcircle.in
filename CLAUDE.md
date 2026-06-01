@@ -32,6 +32,7 @@ Started as a thought. Then an in-person session across a few cities in India. No
 /lotus                        → lotus.html                          Article: Buddhism, Taoism, Stoicism, Gita — four traditions
 /the-nine-presences           → the-nine-presences.html             Article: Sree — eight workplace archetypes (daśāvatāras) + Krishna as the Pūrṇa; 3×3 visual grid; icons at /images/avatars/{matsya,kurma,varaha,narasimha,vamana,parashurama,rama,balarama,krishna}.png
 /the-unhurried-craft          → the-unhurried-craft.html            Article: Sree — seven Japanese words (Ikigai, Kaizen, Hara Hachi Bu, Kintsugi, Wabi-Sabi, Shinrin-Yoku, Omoiyari) as correctives to the "go faster" AI-era default; sibling to /lotus; four "movements"; collapsible essences; text-only (no images)
+/reads/                       → reads/index.html                    Reading index — listing of all top-level articles (newest first); mirrors the /musings/ index pattern. Includes the 4 on-site articles + Architecture of Courage as an external (Substack ↗) entry. This is now the single nav home for articles
 /musings/                     → musings/index.html                  Musings index — listing of all community reflections
 /musings/can-you-receive      → musings/can-you-receive.html        Musing: Sree — receiving as a capacity, the asymmetry of giving vs. receiving
 /musings/jo-hua-so-hua        → musings/jo-hua-so-hua.html          Musing: Sree — acceptance as the floor under peace and happiness; verbatim WhatsApp forward (author unknown)
@@ -44,9 +45,12 @@ Started as a thought. Then an in-person session across a few cities in India. No
 
 > **Important:** Edit `index.html` directly for homepage changes. `puzzle.html` and `origins.html` are dormant legacy files.
 > When adding a new musing: create `musings/[slug].html`, add an entry to `musings/index.html` above the `<!-- future musings -->` comment.
+> When adding a new top-level article: create `<slug>.html`, then add an entry to `reads/index.html` above the `<!-- future reads added above this comment -->` comment. **Do NOT add it to the topbar nav** — the nav is now a fixed two-item set (`Reading` · `Musings`); the `/reads/` index is the discovery surface.
+
+### Nav convention (as of June 2026)
+Every page's topbar right-nav is a fixed two-item set: **Reading** (`/reads/`) · **Musings** (`/musings/`). The index pages show the other one (reads index → Musings; musings index → Reading; musing posts → All musings · Reading). Individual article/musing titles are no longer linked from the nav — they live in the two index pages. This replaced the old per-article nav, which didn't scale past ~4 articles.
 
 ### Pages yet to build
-- `/reads/` or `/articles/` — article index as content grows
 - Members-only page (early access to trends)
 - Video podcast landing page (member profiles + video)
 
