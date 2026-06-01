@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navigating the AI vs. Human frontier · Conscious Leadership Circle</title>
+<meta name="description" content="The first virtual gathering of the Conscious Leadership Circle. Seven technology leaders on one question — what AI is doing to the work we do, and to the people who do it. From 'the engineer's role is ending' to 'this is mostly hype', the circle landed on co-intelligence: not AI versus human, but humans with AI.">
+<meta name="robots" content="index, follow">
+
+<!-- Canonical: self -->
+<link rel="canonical" href="https://consciousleadershipcircle.in/gatherings/ai-vs-human-frontier.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://consciousleadershipcircle.in/gatherings/ai-vs-human-frontier.html">
+<meta property="og:title" content="Navigating the AI vs. Human frontier · Conscious Leadership Circle">
+<meta property="og:description" content="The first virtual gathering of the circle. Seven technology leaders, one question, and a consensus worth keeping: the future isn't AI versus humans — it's humans with AI.">
+<meta property="og:site_name" content="Conscious Leadership Circle">
+<meta property="og:image" content="https://consciousleadershipcircle.in/gatherings/images/ai-vs-human-frontier.png">
+<meta property="og:image:width" content="1536">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="A six-panel comic of the Conscious Leadership Circle's AI vs. Human discussion — leaders debating from 'AI will replace us' to 'AI is just hype', ending on 'The future isn't AI versus Humans. It's Humans with AI.'">
+<meta property="article:published_time" content="2026-05-29">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Navigating the AI vs. Human frontier">
+<meta name="twitter:description" content="The first virtual gathering of the circle. Seven technology leaders, one question, and a consensus worth keeping: not AI versus humans — humans with AI.">
+<meta name="twitter:image" content="https://consciousleadershipcircle.in/gatherings/images/ai-vs-human-frontier.png">
+<meta name="twitter:image:alt" content="A six-panel comic of the circle's AI vs. Human discussion, ending on 'The future isn't AI versus Humans. It's Humans with AI.'">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Navigating the AI vs. Human frontier",
+  "description": "The first virtual gathering of the Conscious Leadership Circle. Seven technology leaders on what AI is doing to the work we do and to the people who do it — landing on co-intelligence: not AI versus human, but humans with AI.",
+  "image": "https://consciousleadershipcircle.in/gatherings/images/ai-vs-human-frontier.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Conscious Leadership Circle",
+    "url": "https://consciousleadershipcircle.in"
+  },
+  "datePublished": "2026-05-29",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Conscious Leadership Circle",
+    "url": "https://consciousleadershipcircle.in"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://consciousleadershipcircle.in/gatherings/ai-vs-human-frontier.html"
+  }
+}
+</script>
+
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:      #FBFBF8;
+    --paper-deep: #F4F2EB;
+    --ink:        #14181D;
+    --ink-soft:   #4B5560;
+    --ink-faint:  #8B95A0;
+    --moss:       #3F5847;
+    --moss-soft:  #6E8473;
+    --rule:       #E5E2DA;
+    --rule-soft:  #EEEBE2;
+    --display:   "Bricolage Grotesque", system-ui, sans-serif;
+    --serif:     "Instrument Serif", Georgia, serif;
+    --sans:      "Inter Tight", system-ui, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+  a { color: var(--moss); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--moss) 35%, transparent); transition: border-color .15s; }
+  a:hover { border-bottom-color: var(--moss); }
+
+  .shell { max-width: 680px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px); }
+
+  /* ── topbar ─────────────────────────────────────── */
+  .topbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+  }
+  .topbar .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .topbar a { color: var(--ink-soft); border-bottom: none; }
+  .topbar a:hover { color: var(--moss); }
+  .topbar .nav-links { display: flex; gap: 20px; }
+  .topbar .nav-links a { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-faint); }
+
+  /* hamburger toggle — narrow screens only (CSS-only, no JS) */
+  .topbar .nav-toggle,
+  .topbar .nav-burger { display: none; }
+  @media (max-width: 640px) {
+    .topbar .row { flex-wrap: wrap; }
+    .topbar .nav-burger {
+      display: flex; flex-direction: column; justify-content: center; gap: 5px;
+      width: 30px; height: 30px; padding: 4px; margin: -4px;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .topbar .nav-burger span {
+      display: block; width: 20px; height: 2px; border-radius: 2px;
+      background: var(--ink-soft); transition: transform .2s ease, opacity .2s ease;
+    }
+    .topbar .nav-links {
+      display: none; flex-basis: 100%; flex-direction: column;
+      gap: 16px; padding-top: 18px;
+    }
+    .topbar .nav-links a { font-size: 14px; }
+    .topbar .nav-toggle:checked ~ .nav-links { display: flex; }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+
+  /* ── masthead ────────────────────────────────────── */
+  .mast {
+    padding: clamp(52px, 8vw, 88px) 0 clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mast-tag {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .mast-tag::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--moss); border-radius: 50%; }
+  .mast h1 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 96, "wght" 300;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    line-height: 1.02; letter-spacing: -0.025em;
+    color: var(--ink); max-width: 18ch;
+    margin-bottom: 20px;
+  }
+  .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .mast .lede {
+    font-family: var(--serif); font-style: italic;
+    font-size: 1.1rem; line-height: 1.55; color: var(--ink-soft);
+    max-width: 52ch; margin-bottom: 24px;
+  }
+  .mast-byline {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; color: var(--ink-faint);
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .mast-byline .author { color: var(--moss-soft); }
+  .mast-byline .sep { color: var(--rule); }
+
+  /* ── article image (hero comic) ─────────────────── */
+  .article-img {
+    margin: 0 0 clamp(32px, 4vw, 48px);
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--rule-soft);
+  }
+  .article-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+  }
+  .article-img figcaption {
+    font-family: var(--sans); font-size: 12px;
+    color: var(--ink-faint); line-height: 1.55;
+    padding: 12px 16px; background: var(--paper-deep);
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  /* ── lightbox ───────────────────────────────────── */
+  .lightbox {
+    display: none;
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(20, 24, 29, 0.92);
+    align-items: center; justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: min(94vw, 1400px);
+    max-height: 92vh;
+    width: auto; height: auto;
+    object-fit: contain;
+    border-radius: 2px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    cursor: default;
+    animation: lb-in .2s ease;
+  }
+  .lightbox-close {
+    position: fixed; top: 20px; right: 24px;
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+    letter-spacing: 0.08em; color: rgba(255,255,255,0.5);
+    background: none; border: none; cursor: pointer;
+    padding: 8px; transition: color .15s;
+  }
+  .lightbox-close:hover { color: #fff; }
+  @keyframes lb-in {
+    from { opacity: 0; transform: scale(0.96); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lightbox img { animation: none; }
+  }
+
+  /* ── body ───────────────────────────────────────── */
+  .body { padding: clamp(40px, 5vw, 60px) 0 clamp(48px, 6vw, 72px); }
+  .body p {
+    font-size: 1.04rem; line-height: 1.8;
+    color: var(--ink-soft); margin-bottom: 24px;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .body p em { font-style: italic; color: var(--ink); }
+  .body p strong { font-weight: 600; color: var(--ink); }
+
+  /* ── section divider ─────────────────────────────── */
+  .section-break {
+    margin: clamp(40px, 5vw, 56px) 0 clamp(24px, 3vw, 36px);
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); display: flex; align-items: center; gap: 12px;
+  }
+  .section-break::before, .section-break::after {
+    content: ""; flex: 1; height: 1px; background: var(--rule);
+  }
+  .section-break span { white-space: nowrap; }
+
+  /* ── consensus card ──────────────────────────────── */
+  .consensus {
+    margin: clamp(32px, 4vw, 48px) 0;
+    padding: clamp(28px, 4vw, 40px) clamp(24px, 4vw, 36px);
+    background: var(--paper-deep);
+    border-left: 3px solid var(--moss);
+    border-radius: 2px;
+  }
+  .consensus-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 16px;
+  }
+  .consensus-text {
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+    line-height: 1.45; color: var(--ink);
+  }
+  .consensus-text strong { font-style: normal; color: var(--moss); font-weight: 400; }
+
+  /* ── speaker cards ───────────────────────────────── */
+  .speakers { margin: clamp(16px, 2vw, 24px) 0 clamp(28px, 3.5vw, 36px); }
+  .speaker {
+    padding: 16px 0 18px 18px;
+    border-left: 2px solid var(--moss-soft);
+    margin-bottom: 18px;
+  }
+  .speaker:last-child { margin-bottom: 0; }
+  .speaker-head {
+    display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .speaker-name {
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--moss-soft);
+  }
+  .speaker-role {
+    font-family: var(--serif); font-style: italic;
+    font-size: 0.95rem; color: var(--ink-faint);
+  }
+  .speaker-view {
+    font-family: var(--sans); font-size: 0.99rem;
+    line-height: 1.68; color: var(--ink-soft);
+  }
+  .speaker-view em { font-style: italic; color: var(--ink); }
+
+  /* ── pull quote ──────────────────────────────────── */
+  .pull {
+    margin: clamp(32px, 4vw, 48px) 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5;
+    color: var(--ink); max-width: 44ch;
+  }
+  .pull .attr {
+    display: block; margin-top: 12px;
+    font-family: var(--sans); font-style: normal;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+
+  /* ── theme list ──────────────────────────────────── */
+  .themes { margin: clamp(12px, 1.5vw, 18px) 0 0; }
+  .theme-item {
+    padding: 22px 0;
+    border-top: 1px solid var(--rule-soft);
+  }
+  .theme-item:last-child { border-bottom: 1px solid var(--rule-soft); }
+  .theme-q {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 32, "wght" 400;
+    font-size: 1.1rem; line-height: 1.35;
+    color: var(--ink); margin-bottom: 10px;
+    letter-spacing: -0.005em;
+  }
+  .theme-body {
+    font-family: var(--sans); font-size: 0.99rem;
+    line-height: 1.7; color: var(--ink-soft);
+  }
+  .theme-body em { font-style: italic; color: var(--ink); }
+
+  /* ── guardrails inline list ──────────────────────── */
+  .guardrails {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-top: 14px;
+  }
+  .guardrails span {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.04em; color: var(--moss);
+    padding: 4px 11px; background: var(--paper-deep);
+    border: 1px solid var(--rule); border-radius: 20px;
+  }
+
+  /* ── closing pull ────────────────────────────────── */
+  .closing-pull {
+    margin: clamp(40px, 5vw, 56px) 0 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem); line-height: 1.45;
+    color: var(--ink); max-width: 42ch;
+  }
+
+  /* ── recording block (members only) ──────────────── */
+  .recording {
+    margin: clamp(36px, 5vw, 52px) 0 0;
+    padding: clamp(22px, 3vw, 28px) clamp(24px, 3.5vw, 32px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .recording-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .recording-label::before { content: "🔒"; font-size: 12px; }
+  .recording p {
+    font-family: var(--sans); font-size: 0.99rem;
+    line-height: 1.7; color: var(--ink-soft); margin: 0;
+  }
+  .recording p a { color: var(--moss); font-weight: 500; }
+
+  /* ── footer ─────────────────────────────────────── */
+  footer {
+    padding: 36px 0 52px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-faint); line-height: 1.65;
+  }
+  footer a { color: var(--ink-soft); border-bottom: none; }
+  footer a:hover { color: var(--moss); }
+  .col-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+</style>
+<!-- Plausible analytics -->
+<script async src="https://plausible.io/js/pa-nnhDJzDzdLCC33sPfVxZK.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="shell">
+    <div class="row">
+      <a href="/">← Conscious Leadership Circle</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></label>
+      <div class="nav-links">
+        <a href="/gatherings/">All gatherings</a>
+        <a href="/conversations/">Conversations</a>
+        <a href="/musings/">Musings</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="mast">
+  <div class="shell">
+    <div class="mast-tag">Gathering · Conscious Leadership Circle</div>
+    <h1>AI <em>vs.</em> Human?</h1>
+    <p class="lede">The first time the circle met online. Seven of us, one question — and a question mark that turned out to be the whole point.</p>
+    <div class="mast-byline">
+      <span>Notes from the circle</span>
+      <span class="sep">·</span>
+      <span class="author">Sree Balakrishnan</span>
+      <span class="sep">·</span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</header>
+
+<div class="body">
+  <div class="shell">
+
+    <figure class="article-img" id="comic">
+      <img src="/gatherings/images/ai-vs-human-frontier.png"
+           alt="A six-panel comic strip of the Conscious Leadership Circle's first virtual discussion on AI vs. Human. Panel 1, 'The Arena': Sree at a mic between protest signs reading 'AI will replace us' and 'AI is just hype', with Sunil Rawlani saying 'Let's have a healthy conversation.' Panel 2, Arun's view, wait and watching: 'Knowledge isn't experience, and AI is only as good as good instructions.' Panel 3, Rajesh's view, human in the loop: 'Speed isn't judgment.' Panel 4, Surya's view, AI as an enhancer: 'AI is a tool to improve performance, not to replace humans.' Panel 5, Mahesh and Rohit, growth with guardrails: transparency, ethics, safety, accountability, fairness — 'Innovation needs responsibility.' Panel 6, Tuhin's view, co-intelligence: 'Wrong question — how do we become co-intelligent?' ending on 'The future isn't AI versus Humans. It's Humans with AI.'"
+           loading="eager"
+           onerror="var f=this.closest('.article-img'); if(f) f.style.display='none';">
+      <figcaption>The session, drawn as a strip — from the arena of extremes to the line we ended on: <em>humans with AI.</em></figcaption>
+    </figure>
+
+    <p>Most of what lives on this site so far is a single voice thinking out loud, or two people in a long conversation. This is something else. This is the circle <em>gathered</em> — the first time we met online rather than in a room in some city — and it was loud in the best way.</p>
+
+    <p>One question was on the table: what is AI actually doing to the work we do, and to the people who do it? Seven of us answered, and we did not agree. The views ran the full spectrum — from <em>the engineer's role as we knew it is ending</em> to <em>most of this is hype, slow down.</em> Sunil set the tone early: not a debate to win, a conversation to have.</p>
+
+    <p>If you take one thing from the hour, take where we landed. Not on a side. The honest answer to "AI versus human" turned out to be that it was the wrong question. The future the circle could actually defend is <strong>co-intelligence</strong> — humans <em>with</em> AI. And the leadership question underneath it is a conscious one: to optimise, to replace, to automate — only ever with full awareness of who it touches.</p>
+
+    <div class="consensus">
+      <div class="consensus-label">Where the room converged</div>
+      <div class="consensus-text">The future is not <strong>AI vs. human.</strong> It is <strong>AI + human</strong> — technology deployed with awareness of its impact on people and on the way the work actually flows.</div>
+    </div>
+
+    <div class="section-break"><span>Where everyone stood</span></div>
+
+    <p>Seven leaders, seven angles. None of them wrong, which is exactly why it was worth recording.</p>
+
+    <div class="speakers">
+
+      <div class="speaker">
+        <div class="speaker-head">
+          <span class="speaker-name">Sree Balakrishnan</span>
+          <span class="speaker-role">the optimist · agent orchestrator</span>
+        </div>
+        <div class="speaker-view">The traditional role of the hands-on engineer and coder, as we knew it, is ending. Not in theory — in practice. I ran <em>five</em> digital agents in parallel and delivered what would have been six weeks of human work in a single week. The job is shifting from writing the code to orchestrating the things that write it.</div>
+      </div>
+
+      <div class="speaker">
+        <div class="speaker-head">
+          <span class="speaker-name">Sunil Rawlani</span>
+          <span class="speaker-role">the lived-experience realist</span>
+        </div>
+        <div class="speaker-view">AI has no lived experience, and no ownership. When a hospital bot couldn't reach its backend services in the middle of an emergency, there was no one <em>inside</em> the machine to own the exception and make it right. Knowledge is not the same as having been there.</div>
+      </div>
+
+      <div class="speaker">
+        <div class="speaker-head">
+          <span class="speaker-name">Nagamahesh Pingali</span>
+          <span class="speaker-role">the strategic AI director</span>
+        </div>
+        <div class="speaker-view">Workflow first. Use AI to drive revenue, growth and operational efficiency <em>without</em> cutting staff — and protect brand safety while you do it. The structure comes before the autonomy.</div>
+      </div>
+
+      <div class="speaker">
+        <div class="speaker-head">
+          <span class="speaker-name">Arun Kundu</span>
+          <span class="speaker-role">the wait-and-watch pragmatist</span>
+        </div>
+        <div class="speaker-view">This is Ford's assembly line again — a revolution humans will evolve alongside and coexist with. AI is better at scale, but it misses the human touch. <em>Knowledge isn't experience, and AI is only as good as good instructions.</em></div>
+      </div>
+
+      <div class="speaker">
+        <div class="speaker-head">
+          <span class="speaker-name">Solasa Rajesh</span>
+          <span class="speaker-role">the developer skeptic</span>
+        </div>
+        <div class="speaker-view">Humans stay mandatory in software development. AI still struggles to hold long-term context, and it can't reliably fix the complex loops a real codebase throws at you. It's fast — but <em>speed isn't judgment.</em></div>
+      </div>
+
+      <div class="speaker">
+        <div class="speaker-head">
+          <span class="speaker-name">Surya Pandey</span>
+          <span class="speaker-role">the performance enhancer</span>
+        </div>
+        <div class="speaker-view">AI is a push for personal goals — health, pace of learning, performance. A tool to improve what you do, not to replace who does it. The guidance stays human.</div>
+      </div>
+
+      <div class="speaker">
+        <div class="speaker-head">
+          <span class="speaker-name">Tuhin Mohanta</span>
+          <span class="speaker-role">the co-intelligence proponent</span>
+        </div>
+        <div class="speaker-view">It was never AI vs. human — that's the wrong question. AI is a companion. Mind the man behind the machine, and the real question becomes: <em>how do we become co-intelligent?</em></div>
+      </div>
+
+    </div>
+
+    <div class="pull">
+      AI has no lived experience and no ownership. When the bot failed mid-emergency, there was no one inside the machine to own the exception.
+      <span class="attr">Sunil Rawlani, on what the machine cannot carry</span>
+    </div>
+
+    <div class="section-break"><span>What we kept circling back to</span></div>
+
+    <div class="themes">
+
+      <div class="theme-item">
+        <div class="theme-q">The human in the loop.</div>
+        <div class="theme-body">Almost everyone agreed: the human stays in the loop until AI can self-learn and establish patterns the way people do. For now, AI lacks the judgment and the deep experience of a senior leader — and that gap is exactly where the human belongs.</div>
+      </div>
+
+      <div class="theme-item">
+        <div class="theme-q">Workflow, or autonomy?</div>
+        <div class="theme-body">The sharpest open question of the night. Should AI be <em>workflow-first</em> — structured, bounded, predictable — or allowed to act autonomously? The room didn't settle it. It's the design decision most teams will be making for the next few years.</div>
+      </div>
+
+      <div class="theme-item">
+        <div class="theme-q">Ownership and accountability.</div>
+        <div class="theme-body">Sunil's point that wouldn't leave: when an AI agent fails, there is often no clear human ownership to resolve the exception. Accountability doesn't disappear because a machine did the step — it just becomes harder to locate.</div>
+      </div>
+
+      <div class="theme-item">
+        <div class="theme-q">Growth needs guardrails.</div>
+        <div class="theme-body">Nagamahesh and Rohit Thomas pressed the same nerve from two sides — drive growth, but innovation needs responsibility. Rohit leaned to the human side: stronger guard rails to prevent chaos. The non-negotiables they named:
+          <div class="guardrails">
+            <span>Transparency</span><span>Ethics</span><span>Safety</span><span>Accountability</span><span>Fairness</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="theme-item">
+        <div class="theme-q">The economics of it.</div>
+        <div class="theme-body">AI tokens keep getting cheaper relative to human salaries — but the group noted a catch the spreadsheets miss: the wider economy needs money to keep circulating <em>through human workers</em> to stay functional. Replacing people is not a cost line that closes cleanly.</div>
+      </div>
+
+    </div>
+
+    <div class="section-break"><span>Where we landed</span></div>
+
+    <p>True consciousness in leadership, we decided, is about deliberate choice. Optimising, replacing, or automating — but only with full awareness of the human consequence. Success in this era isn't picking AI over people or people over AI. It's co-intelligence: letting the technology expose the inefficiency, and letting the human bring the context and the empathy the machine can't.</p>
+
+    <p>Different views. One goal — a better future for all.</p>
+
+    <div class="closing-pull">The future isn't AI versus humans. It's humans <em>with</em> AI.</div>
+
+    <div class="recording">
+      <div class="recording-label">The recording · members only</div>
+      <p>The full conversation was recorded and is shared within the circle — <a href="https://drive.google.com/file/d/1xBi0mbCB60HLM7S9ax1YRIoKGcRhkcCT/view?usp=drivesdk" target="_blank" rel="noopener">watch it on Drive</a>. If the link asks for access and you are part of the circle, <a href="https://wa.me/919880330330?text=Hi%20Sree%20%E2%80%94%20I%27d%20like%20access%20to%20the%20recording%20of%20the%20AI%20vs%20Human%20gathering." target="_blank" rel="noopener">ping Sree on WhatsApp</a> and we'll let you in.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="shell">
+    <div class="col-row">
+      <span><strong style="color:var(--ink-soft);font-weight:500;">Conscious Leadership Circle</strong> · consciousleadershipcircle.in</span>
+      <span>Maintained by <a href="https://sreebalakrishnan.in">Sree Balakrishnan</a></span>
+    </div>
+    <div style="margin-top:10px;font-size:13px;color:var(--ink-faint);line-height:1.6;">
+      Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
+    </div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
+      Created May 2026 · Last updated May 2026 · <a href="/gatherings/" style="color:var(--ink-faint);">All gatherings</a>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image enlarged">
+  <button class="lightbox-close" id="lightbox-close">Close ✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+(function() {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.article-img img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  lb.addEventListener('click', function(e) {
+    if (e.target === lb) close();
+  });
+  document.getElementById('lightbox-close').addEventListener('click', close);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') close();
+  });
+})();
+</script>
+
+</body>
+</html>

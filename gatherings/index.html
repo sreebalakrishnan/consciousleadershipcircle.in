@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Musings · Conscious Leadership Circle</title>
-<meta name="description" content="Reflections from the Conscious Leadership Circle — technology leaders thinking out loud about work, systems, and what it means to lead well.">
+<title>Gatherings · Conscious Leadership Circle</title>
+<meta name="description" content="Notes from the gatherings of the Conscious Leadership Circle — what was said, who said it, and what we were left chewing on. The circle started in person; now it also meets online.">
 <meta name="robots" content="index, follow">
 
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
@@ -106,13 +106,13 @@
   .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
   .mast .lede {
     font-family: var(--sans); font-size: 1.05rem;
-    line-height: 1.65; color: var(--ink-soft); max-width: 50ch;
+    line-height: 1.65; color: var(--ink-soft); max-width: 52ch;
   }
 
-  /* ── article list ────────────────────────────────── */
+  /* ── gathering list ──────────────────────────────── */
   .list { padding: clamp(40px, 5vw, 64px) 0; }
 
-  .musing-item {
+  .gathering-item {
     padding: clamp(28px, 4vw, 40px) 0;
     border-bottom: 1px solid var(--rule-soft);
     display: grid;
@@ -123,20 +123,21 @@
     border-bottom-color: var(--rule-soft);
     transition: border-bottom-color .2s;
   }
-  .musing-item:first-child { padding-top: 0; }
-  .musing-item:last-child { border-bottom: none; }
-  .musing-item:hover .musing-title { color: var(--moss); }
+  .gathering-item:first-child { padding-top: 0; }
+  .gathering-item:last-child { border-bottom: none; }
+  .gathering-item:hover .gathering-title { color: var(--moss); }
 
-  .musing-meta {
+  .gathering-meta {
     font-family: var(--sans); font-size: 11px; font-weight: 500;
     letter-spacing: 0.14em; text-transform: uppercase;
     color: var(--ink-faint); margin-bottom: 10px;
     display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   }
-  .musing-meta .sep { color: var(--rule); }
-  .musing-author { color: var(--moss-soft); }
+  .gathering-meta .sep { color: var(--rule); }
+  .gathering-format { color: var(--moss-soft); }
+  .gathering-count { color: var(--ink-faint); }
 
-  .musing-title {
+  .gathering-title {
     font-family: var(--display);
     font-variation-settings: "opsz" 48, "wght" 400;
     font-size: clamp(1.2rem, 2.6vw, 1.5rem);
@@ -144,15 +145,15 @@
     color: var(--ink); margin-bottom: 12px; max-width: 36ch;
     transition: color .15s;
   }
-  .musing-title em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .gathering-title em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
 
-  .musing-lede {
+  .gathering-lede {
     font-family: var(--sans); font-size: 0.97rem;
     line-height: 1.65; color: var(--ink-soft);
     max-width: 52ch;
   }
 
-  .musing-arrow {
+  .gathering-arrow {
     font-family: var(--serif); font-style: italic;
     font-size: 1.4rem; color: var(--ink-faint);
     padding-top: 2px; align-self: center;
@@ -160,7 +161,7 @@
     border-bottom: none !important;
     flex-shrink: 0;
   }
-  .musing-item:hover .musing-arrow { color: var(--moss); transform: translateX(3px); }
+  .gathering-item:hover .gathering-arrow { color: var(--moss); transform: translateX(3px); }
 
   /* ── more coming note ────────────────────────────── */
   .more-note {
@@ -200,8 +201,8 @@
       <label for="nav-toggle" class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></label>
       <div class="nav-links">
         <a href="/reads/">Reading</a>
+        <a href="/musings/">Musings</a>
         <a href="/conversations/">Conversations</a>
-        <a href="/gatherings/">Gatherings</a>
         <a href="/sparks/">Sparks</a>
       </div>
     </div>
@@ -210,113 +211,37 @@
 
 <header class="mast">
   <div class="shell">
-    <div class="mast-tag">Musings · Conscious Leadership Circle</div>
-    <h1>Thinking <em>out loud</em></h1>
-    <p class="lede">Reflections from the circle — sparked by something read, something experienced, something that wouldn't leave. Not finished essays. Living thoughts.</p>
+    <div class="mast-tag">Gatherings · Conscious Leadership Circle</div>
+    <h1>When the circle <em>gathers</em></h1>
+    <p class="lede">The circle started in person, across a few cities in India. Now it also meets online. These are the notes from those gatherings — what was said, who said it, and what we were left chewing on long after the call ended.</p>
   </div>
 </header>
 
 <div class="list">
   <div class="shell">
 
-    <a class="musing-item" href="/musings/a-day-with-ram-charan.html">
+    <a class="gathering-item" href="/gatherings/ai-vs-human-frontier.html">
       <div>
-        <div class="musing-meta">
-          <span class="musing-author">Vikas Anand</span>
+        <div class="gathering-meta">
+          <span class="gathering-format">Virtual gathering</span>
           <span class="sep">·</span>
           <span>May 2026</span>
-        </div>
-        <div class="musing-title">A day with a <em>leadership coach</em></div>
-        <div class="musing-lede">Vikas got back from a one-day workshop with a popular leadership coach and sent the notes to the circle while they were still warm. Five take-aways — clarity, the salesperson's gift, the right people in the right jobs, future-back goal-setting, and what helps people actually excel.</div>
-      </div>
-      <span class="musing-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a class="musing-item" href="/musings/indian-voices-on-the-inner-mind.html">
-      <div>
-        <div class="musing-meta">
-          <span class="musing-author">Sree Balakrishnan</span>
           <span class="sep">·</span>
-          <span>May 2026</span>
+          <span class="gathering-count">7 voices</span>
         </div>
-        <div class="musing-title">Indian voices on the inner mind, <em>one line each</em></div>
-        <div class="musing-lede">Fifteen voices, roughly 2,500 years, one line each. India has been studying the inner mind much longer than the Western fifteen — Vyāsa, Buddha, Kṛṣṇa, Patañjali, Śaṅkara, Ramaṇa, Krishnamurti and others. A curated, sister musing.</div>
+        <div class="gathering-title">Navigating the AI <em>vs.</em> Human frontier</div>
+        <div class="gathering-lede">Our first gathering online. Seven of us, one question: what AI is doing to the work we do, and to the people who do it. The views ran from "the engineer's role is ending" to "this is mostly hype" — and the circle landed somewhere wiser than either. Not AI versus human. Humans with AI.</div>
       </div>
-      <span class="musing-arrow" aria-hidden="true">→</span>
+      <span class="gathering-arrow" aria-hidden="true">→</span>
     </a>
 
-    <a class="musing-item" href="/musings/fifteen-psychologists.html">
-      <div>
-        <div class="musing-meta">
-          <span class="musing-author">Sree Balakrishnan</span>
-          <span class="sep">·</span>
-          <span>May 2026</span>
-        </div>
-        <div class="musing-title">Fifteen psychologists, <em>one line each</em></div>
-        <div class="musing-lede">Most of leadership is applied psychology. A LinkedIn forward (author not known to me) — fifteen thinkers, one line each — covers a surprising amount of the territory in a single screen.</div>
-      </div>
-      <span class="musing-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a class="musing-item" href="/musings/the-mca-question.html">
-      <div>
-        <div class="musing-meta">
-          <span class="musing-author">Sree Balakrishnan</span>
-          <span class="sep">·</span>
-          <span>May 2026</span>
-        </div>
-        <div class="musing-title">The MCA <em>Question</em></div>
-        <div class="musing-lede">Should a fresh BCA graduate spend ₹5–6 lakh on an MCA, or start working first? A real question from a real family — and what a circle of tech leaders sent back.</div>
-      </div>
-      <span class="musing-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a class="musing-item" href="/musings/jo-hua-so-hua.html">
-      <div>
-        <div class="musing-meta">
-          <span class="musing-author">Sree Balakrishnan</span>
-          <span class="sep">·</span>
-          <span>May 2026</span>
-        </div>
-        <div class="musing-title">Jo hua <em>so hua</em></div>
-        <div class="musing-lede">A rabbit hole of worry, a friend who points back to the present, and a WhatsApp forward that arrived right on time. On acceptance — not as a slogan, but as the floor everything else stands on.</div>
-      </div>
-      <span class="musing-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a class="musing-item" href="/musings/can-you-receive.html">
-      <div>
-        <div class="musing-meta">
-          <span class="musing-author">Sree Balakrishnan</span>
-          <span class="sep">·</span>
-          <span>May 2026</span>
-        </div>
-        <div class="musing-title">Can you <em>receive?</em></div>
-        <div class="musing-lede">Someone gives you a genuine compliment. What happens in you? On why receiving is a capacity, not a skill — and what it has to do with how we lead.</div>
-      </div>
-      <span class="musing-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a class="musing-item" href="/musings/what-the-system-sees.html">
-      <div>
-        <div class="musing-meta">
-          <span class="musing-author">Sivarama Sundar</span>
-          <span class="sep">·</span>
-          <span>May 2026</span>
-        </div>
-        <div class="musing-title">Curve-Balled by the <em>System</em></div>
-        <div class="musing-lede">An employee leaves her annual review in tears. Not because she failed — because the review wasn't measuring what she thought it was measuring. On leverage points, visibility, and what conscious leaders actually do about it.</div>
-      </div>
-      <span class="musing-arrow" aria-hidden="true">→</span>
-    </a>
-
-    <!-- future musings added above this comment -->
+    <!-- future gatherings added above this comment -->
 
   </div>
 </div>
 
 <div class="shell">
-  <p class="more-note">More coming as the circle keeps thinking. If something is sitting with you — something you read, something you witnessed, something that won't leave — <em>bring it to the circle.</em></p>
+  <p class="more-note">More to come as the circle keeps meeting — in person and online. Each gathering leaves a few ideas worth holding on to. <em>If you sat in one and remember something we didn't capture, tell Sree.</em></p>
 </div>
 
 <footer>
@@ -329,7 +254,7 @@
       Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
     </div>
     <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
-      Created May 2026 · Last updated June 2026 · <a href="/" style="color:var(--ink-faint);">Back to home</a>
+      Created May 2026 · Last updated May 2026 · <a href="/" style="color:var(--ink-faint);">Back to home</a>
     </div>
   </div>
 </footer>

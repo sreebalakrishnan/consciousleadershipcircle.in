@@ -110,6 +110,31 @@
   .topbar .nav-links { display: flex; gap: 20px; }
   .topbar .nav-links a { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-faint); }
 
+  /* hamburger toggle — narrow screens only (CSS-only, no JS) */
+  .topbar .nav-toggle,
+  .topbar .nav-burger { display: none; }
+  @media (max-width: 640px) {
+    .topbar .row { flex-wrap: wrap; }
+    .topbar .nav-burger {
+      display: flex; flex-direction: column; justify-content: center; gap: 5px;
+      width: 30px; height: 30px; padding: 4px; margin: -4px;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .topbar .nav-burger span {
+      display: block; width: 20px; height: 2px; border-radius: 2px;
+      background: var(--ink-soft); transition: transform .2s ease, opacity .2s ease;
+    }
+    .topbar .nav-links {
+      display: none; flex-basis: 100%; flex-direction: column;
+      gap: 16px; padding-top: 18px;
+    }
+    .topbar .nav-links a { font-size: 14px; }
+    .topbar .nav-toggle:checked ~ .nav-links { display: flex; }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+
   /* ── masthead ────────────────────────────────────── */
   .mast {
     padding: clamp(56px, 9vw, 96px) 0 clamp(36px, 5vw, 56px);
@@ -447,6 +472,8 @@
   <div class="shell-wide">
     <div class="row">
       <a href="/">← Conscious Leadership Circle</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></label>
       <div class="nav-links">
         <a href="/reads/">Reading</a>
         <a href="/musings/">Musings</a>

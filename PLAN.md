@@ -32,6 +32,34 @@ Last reviewed: **May 2026**
 
 ### Homepage / nav
 - [x] Added **The Nine Presences** to homepage topbar nav (4 links now: The same question · The lotus · The nine presences · Musings)
+- [x] Added **Conversations** to homepage topbar nav and musings topbar nav (now 5 links on homepage)
+
+### Conversations (new section)
+- [x] **`/conversations/`** — new section: long-form video conversations with members of the circle
+  - [x] Index page at `/conversations/` modelled on `/musings/` (mast: "In *conversation*", item list with guest · date · duration, "more coming" closing note)
+  - [x] First episode: **The accidental leader — Roopa Sreeranganna** at `/conversations/roopa-sreeranganna.html`
+    - 43-min conversation, embedded YouTube iframe (16:9 aspect-ratio, lazy-loaded, youtube-nocookie domain)
+    - Sree's three-paragraph framing → embedded video → 17-chapter list with clickable timestamp links (open YouTube at the moment in a new tab) → "Three things that stayed with me" section with three pulled Roopa quotes + Sree gloss → closing pull-quote → guest card with LinkedIn
+    - [x] YouTube video ID wired in: **`a8ap2LJTSNk`** (https://youtu.be/a8ap2LJTSNk) — iframe src + all 17 chapter links
+- [x] Backlog item *"Video podcast landing page"* in CLAUDE.md → now superseded; rename to "Members-only page" remains
+
+### Gatherings (new section)
+- [x] **`/gatherings/`** — new section: notes from the circle's actual meetings (in-person + virtual). A third content type, distinct from Musings (single-author) and Conversations (1:1 video)
+  - [x] Index page at `/gatherings/` modelled on `/conversations/` (mast "When the circle *gathers*"; item list with format · date · voice-count; `.gathering-item` classes)
+  - [x] First gathering: **Navigating the AI vs. Human frontier** at `/gatherings/ai-vs-human-frontier.html` — the circle's first *virtual* session (May 2026, 7 voices)
+    - Comic hero (lightbox + og:image) · Sree framing · `.consensus` card · 7 `.speaker` cards · Sunil pull-quote · 5 `.theme-item` blocks (incl. guardrail chips) · synthesis + closing pull · members-only `.recording` block linking the Google Drive recording directly with a WhatsApp fallback
+    - [x] Added **Gatherings** to homepage topbar nav (6 links now) + conversations & musings index navs
+    - [x] **Comic image** — landed. Sree uploaded the comic PNG (1536×1024) via mobile; it went onto `main`, so it was copied across to this branch as `gatherings/images/ai-vs-human-frontier.png` and the page references switched back to `.png` (with og:image width/height). **Cleanup note:** an orphaned copy still sits on `main` at `gatherings/images/9DC102A0-BE15-4C34-A367-42D0AD4E2001.png` (no gathering pages on main yet) — worth deleting on main, or it'll linger after merge.
+
+### Sparks (new section)
+- [x] **`/sparks/`** — new section: short, alive moments from the circle's group chat (a screenshot, a forward, a one-line reply) and the conversation each one set off. A fourth content type, distinct from Musings (single-author), Conversations (1:1 video) and Gatherings (meeting notes)
+  - [x] Index page at `/sparks/` modelled on `/gatherings/` (mast "When something *catches*"; item list with format · date · voice-count; `.spark-item` classes)
+  - [x] First spark: **Should I walk or drive?** at `/sparks/context-is-everything.html` (May 2026, 5 voices)
+    - The whole exchange **rebuilt as chat bubbles, not screenshots** — a dark CSS `.ai-card` recreating the Claude reply (coral SVG asterisk mark, serif answer, "Opus 4.8 · High" footer) + a `.thread` recreating the WhatsApp messages (`.bubble`, sender colours, timestamps, emoji `.reacts`, a `.reply-quote` strip on Vaskar's reply)
+    - Voices: Venkata Rajesh Solasa (shared) · Abhiram J · Vikas Anand · Tuhin Mohanta · Vaskar Nag
+    - Sree's framing walks the small observation up into a leadership one; a `.gloss` aside explains the Mahābhārata Aśvatthāmā half-truth; closing pull "Context is everything"
+    - **No phone numbers published** (WhatsApp surfaced members' numbers; deliberately omitted). No og:image (chat is HTML, not a raster); `twitter:card` = `summary` — *worth a comic/quote-card og:image later for social previews*
+  - [x] Added **Sparks** to homepage topbar nav (7 links now) + gatherings / conversations / musings index navs
 
 ---
 
@@ -57,7 +85,7 @@ Last reviewed: **May 2026**
 ## Backlog — pages yet to build (from CLAUDE.md)
 - [x] **`/reads/` article index** — shipped June 2026. `reads/index.html` mirrors the musings index; lists the 4 on-site articles + Architecture of Courage (external Substack ↗). Topbar nav collapsed everywhere to a fixed `Reading · Musings` two-item set; per-article nav links retired. Footer "Last updated" swept to June 2026 across all live pages (origins/puzzle left dormant)
 - [ ] **Members-only page** — early access to trends, member profiles, dedicated content
-- [ ] **Video podcast landing page** — member profiles + video, tied to the shared-corpus vision in CLAUDE.md
+- [x] ~~**Video podcast landing page**~~ — shipped as `/conversations/` (May 2026, first episode with Roopa)
 
 ---
 
