@@ -12,7 +12,13 @@
 <meta property="og:title" content="Three decades, five machines — Sivarama Sundar">
 <meta property="og:description" content="A small-town boy follows a game called Prince of Persia into thirty years of computing — and out the other side, into the machine that talks back. An audio conversation with Sree Balakrishnan.">
 <meta property="og:url" content="https://consciousleadershipcircle.in/conversations/sivarama-sundar.html">
-<meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://consciousleadershipcircle.in/conversations/images/sivarama-sundar.png">
+<meta property="og:image:width" content="1536">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="A six-panel comic following Sivarama Sundar across three decades of computing — from a boy at a dual-floppy PC playing Prince of Persia, through factory floors, Wall Street trading desks and corporate meeting rooms, to a calm engineer in conversation with a friendly AI presence.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://consciousleadershipcircle.in/conversations/images/sivarama-sundar.png">
+<meta name="twitter:image:alt" content="A six-panel comic of Sivarama Sundar's three decades in computing, ending with him in conversation with a friendly AI presence.">
 
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
 
@@ -125,6 +131,62 @@
   }
   .mast-byline .author { color: var(--moss-soft); }
   .mast-byline .sep { color: var(--rule); }
+
+  /* ── article image (hero comic) ─────────────────── */
+  .article-img {
+    margin: clamp(40px, 6vw, 64px) 0 0;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid var(--rule-soft);
+  }
+  .article-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+  }
+  .article-img figcaption {
+    font-family: var(--sans); font-size: 12px;
+    color: var(--ink-faint); line-height: 1.55;
+    padding: 12px 16px; background: var(--paper-deep);
+    border-top: 1px solid var(--rule-soft);
+  }
+
+  /* ── lightbox ───────────────────────────────────── */
+  .lightbox {
+    display: none;
+    position: fixed; inset: 0; z-index: 999;
+    background: rgba(20, 24, 29, 0.92);
+    align-items: center; justify-content: center;
+    padding: 24px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: min(94vw, 1400px);
+    max-height: 92vh;
+    width: auto; height: auto;
+    object-fit: contain;
+    border-radius: 2px;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.5);
+    cursor: default;
+    animation: lb-in .2s ease;
+  }
+  .lightbox-close {
+    position: fixed; top: 20px; right: 24px;
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+    letter-spacing: 0.08em; color: rgba(255,255,255,0.5);
+    background: none; border: none; cursor: pointer;
+    padding: 8px; transition: color .15s;
+  }
+  .lightbox-close:hover { color: #fff; }
+  @keyframes lb-in {
+    from { opacity: 0; transform: scale(0.96); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .lightbox img { animation: none; }
+  }
 
   /* ── body ───────────────────────────────────────── */
   .body { padding: clamp(48px, 6vw, 72px) 0; }
@@ -474,6 +536,15 @@
 
     <p>That career maps almost perfectly onto machines — so that is how this page is built. Five eras, five machines. Listen to the whole thing, jump to a moment from the chapters, or read the edited conversation below. <em>Questions in italics are mine. The answers are Siva's, lightly edited from the recording — the two boxed exchanges are verbatim, because some things shouldn't be cleaned up.</em></p>
 
+    <figure class="article-img" id="comic">
+      <img src="images/sivarama-sundar.png"
+           width="1536" height="1024"
+           loading="lazy"
+           alt="A six-panel comic following Sivarama Sundar across three decades of computing. Panel 1, 1992: a curious boy in a small-town library leans toward a beige dual-floppy PC, eyes wide at a Prince-of-Persia figure on a green CRT. Panel 2, 1995: the young man at a cluttered desk inside a flour mill, holding his first paycheck beside stacked floppy disks. Panel 3: he builds trading software one wall away from frantic Wall Street traders, clocks marking milliseconds. Panel 4: in a grey corporate meeting room, navigating diplomacy and tangled arrows. Panel 5: now greying, he guides a group of bright young campus grads at a whiteboard. Panel 6: serene with a coffee, in conversation as an equal with a soft, glowing, friendly AI presence — a faint empty third chair beside them."
+           onerror="var f=this.closest('.article-img'); if(f) f.style.display='none';">
+      <figcaption>Three decades, five machines — the boy at the CRT, the factory floor, the trading desk, the grey meeting room, the next generation, and the machine that talks back. Tap to enlarge.</figcaption>
+    </figure>
+
     <div class="watch-wrap" id="listen">
       <div class="watch-label">Listen · 1 hr 41 min</div>
       <div class="watch" id="player-frame">
@@ -818,6 +889,40 @@ s</i>
       ch.classList.add("waiting");
       ch.addEventListener("click", function (e) { e.preventDefault(); });
     }
+  });
+})();
+</script>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image enlarged">
+  <button class="lightbox-close" id="lightbox-close">Close ✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+(function() {
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightbox-img');
+
+  document.querySelectorAll('.article-img img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      lbImg.src = img.src;
+      lbImg.alt = img.alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  lb.addEventListener('click', function(e) {
+    if (e.target === lb) close();
+  });
+  document.getElementById('lightbox-close').addEventListener('click', close);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') close();
   });
 })();
 </script>
