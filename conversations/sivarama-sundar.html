@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Three decades, five machines · Sivarama Sundar · Conscious Leadership Circle</title>
+<meta name="description" content="From Prince of Persia on a dual-floppy 8086 to AI platforms — Sivarama Sundar walks Sree Balakrishnan through three decades of computing: the library in Pollachi, the ₹750 first paycheck, Wall Street milliseconds, the mainframe nobody dared touch, and the machine that talks back.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://consciousleadershipcircle.in/conversations/sivarama-sundar.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Three decades, five machines — Sivarama Sundar">
+<meta property="og:description" content="A small-town boy follows a game called Prince of Persia into thirty years of computing — and out the other side, into the machine that talks back. An audio conversation with Sree Balakrishnan.">
+<meta property="og:url" content="https://consciousleadershipcircle.in/conversations/sivarama-sundar.html">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="2" fill="%2314181D"/><text x="16" y="22" text-anchor="middle" font-family="serif" font-size="20" font-style="italic" fill="%23FBFBF8">c</text></svg>' type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper:      #FBFBF8;
+    --paper-deep: #F4F2EB;
+    --ink:        #14181D;
+    --ink-soft:   #4B5560;
+    --ink-faint:  #8B95A0;
+    --moss:       #3F5847;
+    --moss-soft:  #6E8473;
+    --indigo:     #3D4F7C;
+    --rule:       #E5E2DA;
+    --rule-soft:  #EEEBE2;
+    --display:   "Bricolage Grotesque", system-ui, sans-serif;
+    --serif:     "Instrument Serif", Georgia, serif;
+    --sans:      "Inter Tight", system-ui, sans-serif;
+    --mono:      ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--moss); color: var(--paper); }
+  a { color: var(--moss); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--moss) 35%, transparent); transition: border-color .15s; }
+  a:hover { border-bottom-color: var(--moss); }
+
+  .shell { max-width: 680px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 36px); }
+
+  /* ── topbar ─────────────────────────────────────── */
+  .topbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em;
+  }
+  .topbar .row { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .topbar a { color: var(--ink-soft); border-bottom: none; }
+  .topbar a:hover { color: var(--moss); }
+  .topbar .nav-links { display: flex; gap: 20px; }
+  .topbar .nav-links a { font-size: 12px; letter-spacing: 0.04em; color: var(--ink-faint); }
+
+  /* hamburger toggle — narrow screens only (CSS-only, no JS) */
+  .topbar .nav-toggle,
+  .topbar .nav-burger { display: none; }
+  @media (max-width: 640px) {
+    .topbar .row { flex-wrap: wrap; }
+    .topbar .nav-burger {
+      display: flex; flex-direction: column; justify-content: center; gap: 5px;
+      width: 30px; height: 30px; padding: 4px; margin: -4px;
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .topbar .nav-burger span {
+      display: block; width: 20px; height: 2px; border-radius: 2px;
+      background: var(--ink-soft); transition: transform .2s ease, opacity .2s ease;
+    }
+    .topbar .nav-links {
+      display: none; flex-basis: 100%; flex-direction: column;
+      gap: 16px; padding-top: 18px;
+    }
+    .topbar .nav-links a { font-size: 14px; }
+    .topbar .nav-toggle:checked ~ .nav-links { display: flex; }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(2) { opacity: 0; }
+    .topbar .nav-toggle:checked ~ .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+
+  /* ── masthead ────────────────────────────────────── */
+  .mast {
+    padding: clamp(52px, 8vw, 88px) 0 clamp(36px, 5vw, 56px);
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .mast-tag {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+  }
+  .mast-tag::before { content: ""; display: inline-block; width: 6px; height: 6px; background: var(--moss); border-radius: 50%; }
+  .mast h1 {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 96, "wght" 300;
+    font-size: clamp(2.4rem, 7vw, 4rem);
+    line-height: 1.02; letter-spacing: -0.025em;
+    color: var(--ink); max-width: 18ch;
+    margin-bottom: 20px;
+  }
+  .mast h1 em { font-family: var(--serif); font-style: italic; color: var(--moss); font-weight: 400; }
+  .mast .lede {
+    font-family: var(--sans); font-size: 1.05rem;
+    line-height: 1.65; color: var(--ink-soft); max-width: 52ch;
+    margin-bottom: 26px;
+  }
+  .mast-byline {
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; color: var(--ink-faint);
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  }
+  .mast-byline .author { color: var(--moss-soft); }
+  .mast-byline .sep { color: var(--rule); }
+
+  /* ── body ───────────────────────────────────────── */
+  .body { padding: clamp(48px, 6vw, 72px) 0; }
+  .body p {
+    font-size: 1.04rem; line-height: 1.8;
+    color: var(--ink-soft); margin-bottom: 24px;
+  }
+  .body p:last-child { margin-bottom: 0; }
+  .body p em { font-style: italic; color: var(--ink); }
+  .body p strong { font-weight: 600; color: var(--ink); }
+
+  /* ── section divider ─────────────────────────────── */
+  .section-break {
+    margin: clamp(44px, 6vw, 64px) 0 clamp(24px, 3vw, 36px);
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--ink-faint); display: flex; align-items: center; gap: 12px;
+  }
+  .section-break::before, .section-break::after {
+    content: ""; flex: 1; height: 1px; background: var(--rule);
+  }
+  .section-break span { white-space: nowrap; }
+
+  /* ── interview Q&A ───────────────────────────────── */
+  .q {
+    margin: clamp(30px, 4vw, 42px) 0 16px;
+    padding-left: 18px;
+    border-left: 2px solid var(--rule);
+    font-family: var(--serif); font-style: italic;
+    font-size: 1.16rem; line-height: 1.55;
+    color: var(--ink); max-width: 50ch;
+  }
+  .ed-note {
+    font-family: var(--sans); font-size: 0.88rem; line-height: 1.6;
+    color: var(--ink-faint); font-style: italic;
+    margin-bottom: 8px;
+  }
+
+  /* ── verbatim duet ───────────────────────────────── */
+  .duet {
+    margin: clamp(26px, 4vw, 36px) 0;
+    padding: 18px 22px 16px;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .duet-label {
+    font-family: var(--sans); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 12px;
+  }
+  .duet-line {
+    font-size: 0.97rem; line-height: 1.6;
+    color: var(--ink-soft); margin-bottom: 10px;
+  }
+  .duet-line:last-child { margin-bottom: 0; }
+  .duet-line .who {
+    font-family: var(--sans); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; margin-right: 8px;
+  }
+  .who.sree { color: var(--moss); }
+  .who.siva { color: var(--indigo); }
+
+  /* ── gloss for the younger reader ────────────────── */
+  .gloss {
+    margin: clamp(24px, 3vw, 32px) 0;
+    padding: 16px 20px;
+    background: var(--paper-deep);
+    border-left: 2px solid var(--moss-soft);
+    border-radius: 0 2px 2px 0;
+    font-size: 0.95rem; line-height: 1.65; color: var(--ink-soft);
+  }
+  .gloss-label {
+    font-family: var(--sans); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--moss-soft); margin-bottom: 6px;
+  }
+  .gloss em { color: var(--ink); }
+
+  /* ── pull quote ──────────────────────────────────── */
+  .pull {
+    margin: clamp(32px, 4vw, 48px) 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.1rem, 2.2vw, 1.35rem); line-height: 1.5;
+    color: var(--ink); max-width: 44ch;
+  }
+  .pull .attr {
+    display: block; margin-top: 12px;
+    font-family: var(--sans); font-style: normal;
+    font-size: 11px; font-weight: 500; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-faint);
+  }
+
+  /* ── listen block (player) ───────────────────────── */
+  .watch-wrap { margin: clamp(28px, 4vw, 40px) 0 clamp(20px, 3vw, 32px); }
+  .watch-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 14px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .watch-label::before {
+    content: ""; display: inline-block; width: 6px; height: 6px;
+    background: var(--moss); border-radius: 50%;
+  }
+  .watch {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .watch iframe {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .watch-fallback {
+    display: flex; align-items: center; justify-content: center;
+    height: 100%; padding: 24px;
+    font-family: var(--serif); font-style: italic;
+    color: var(--ink-faint); text-align: center; line-height: 1.5;
+  }
+
+  /* ── chapter list, grouped by era ────────────────── */
+  .chapters {
+    margin: clamp(24px, 3vw, 36px) 0 clamp(28px, 4vw, 40px);
+    padding: clamp(22px, 3vw, 28px) clamp(22px, 3vw, 28px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .chapters-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 6px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .chapters-label::before {
+    content: ""; display: inline-block; width: 6px; height: 6px;
+    background: var(--moss-soft); border-radius: 50%;
+  }
+  .chapters-note {
+    font-family: var(--sans); font-size: 12px; font-style: italic;
+    color: var(--ink-faint); margin-bottom: 16px; line-height: 1.5;
+  }
+  .chapter-era {
+    margin: 20px 0 6px;
+    font-family: var(--sans); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--moss); display: flex; align-items: baseline; gap: 8px;
+  }
+  .chapter-era .yrs { color: var(--ink-faint); font-weight: 500; letter-spacing: 0.08em; }
+  .chapter {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 14px;
+    padding: 9px 0;
+    border-top: 1px solid var(--rule-soft);
+    border-bottom: none;
+    font-size: 0.97rem;
+    line-height: 1.5;
+    transition: background .15s;
+  }
+  .chapter:hover { background: color-mix(in srgb, var(--paper) 50%, transparent); }
+  .chapter .t {
+    font-family: var(--sans);
+    font-variant-numeric: tabular-nums;
+    font-size: 12px; font-weight: 500;
+    color: var(--moss); letter-spacing: 0.02em;
+    padding-top: 2px;
+  }
+  .chapter .x { color: var(--ink-soft); }
+  .chapter:hover .x { color: var(--ink); }
+  .chapter.waiting { cursor: default; }
+  .chapter.waiting:hover { background: none; }
+  .chapter.waiting:hover .x { color: var(--ink-soft); }
+
+  /* ── the raindrops virus, rebuilt ────────────────── */
+  .dos {
+    margin: clamp(28px, 4vw, 40px) 0 8px;
+    background: #0B0F0D;
+    border: 1px solid #1E2A22;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(20,24,29,0.18);
+  }
+  .dos-bar {
+    display: flex; gap: 6px; padding: 10px 14px;
+    border-bottom: 1px solid #1E2A22;
+  }
+  .dos-bar i { display: block; width: 9px; height: 9px; border-radius: 50%; background: #22302A; }
+  .dos-screen {
+    position: relative;
+    padding: 22px 24px 30px;
+    font-family: var(--mono);
+    font-size: 13.5px; line-height: 1.75;
+    color: #57D98A;
+    min-height: 230px;
+    overflow: hidden;
+  }
+  .dos-screen .dim { color: #2E5C42; }
+  .dos-cursor { animation: dosblink 1.1s steps(1) infinite; }
+  @keyframes dosblink { 50% { opacity: 0; } }
+  .dos-rain { position: absolute; inset: 0; pointer-events: none; }
+  .dos-rain i {
+    position: absolute; top: -130px;
+    font-style: normal; white-space: pre;
+    font-family: var(--mono); font-size: 12px; line-height: 1.2;
+    color: #3FBF74; opacity: 0.5;
+    animation: dosfall linear infinite;
+  }
+  .dos-rain i:nth-child(1) { left: 8%;  animation-duration: 6.5s;  animation-delay: 0s; }
+  .dos-rain i:nth-child(2) { left: 22%; animation-duration: 9s;    animation-delay: 2.2s; }
+  .dos-rain i:nth-child(3) { left: 37%; animation-duration: 7.4s;  animation-delay: 4.1s; }
+  .dos-rain i:nth-child(4) { left: 53%; animation-duration: 10.2s; animation-delay: 1.3s; }
+  .dos-rain i:nth-child(5) { left: 68%; animation-duration: 8.1s;  animation-delay: 3.4s; }
+  .dos-rain i:nth-child(6) { left: 82%; animation-duration: 6.9s;  animation-delay: 5.2s; }
+  .dos-rain i:nth-child(7) { left: 93%; animation-duration: 9.6s;  animation-delay: 0.8s; }
+  @keyframes dosfall { to { transform: translateY(440px); } }
+  @media (prefers-reduced-motion: reduce) {
+    .dos-rain i { animation: none; opacity: 0.22; transform: translateY(140px); }
+    .dos-cursor { animation: none; }
+  }
+  .dos-cap {
+    font-family: var(--sans); font-size: 12px;
+    color: var(--ink-faint); line-height: 1.55;
+    margin: 14px 2px clamp(24px, 3vw, 32px); text-align: center;
+  }
+
+  /* ── coda ────────────────────────────────────────── */
+  .coda {
+    margin: clamp(28px, 4vw, 40px) 0;
+    padding: clamp(22px, 3vw, 30px) clamp(24px, 3.5vw, 32px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .coda-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 12px;
+  }
+  .coda p { font-size: 0.99rem; }
+  .coda p:last-child { margin-bottom: 0; }
+
+  /* ── guest card ──────────────────────────────────── */
+  .guest {
+    margin: clamp(36px, 5vw, 52px) 0 0;
+    padding: clamp(22px, 3vw, 30px) clamp(24px, 3.5vw, 32px);
+    background: var(--paper-deep);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+  }
+  .guest-label {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink-faint); margin-bottom: 10px;
+  }
+  .guest-name {
+    font-family: var(--display);
+    font-variation-settings: "opsz" 36, "wght" 500;
+    font-size: 1.1rem; letter-spacing: -0.01em;
+    color: var(--ink); margin-bottom: 6px;
+  }
+  .guest p {
+    font-size: 0.97rem; line-height: 1.65;
+    color: var(--ink-soft); margin: 0;
+  }
+  .guest p a { color: var(--moss-soft); font-weight: 500; }
+  .guest p a:hover { color: var(--moss); }
+
+  /* ── closing pull ────────────────────────────────── */
+  .closing-pull {
+    margin: clamp(40px, 5vw, 56px) 0 0;
+    padding-left: 22px;
+    border-left: 2px solid var(--moss);
+    font-family: var(--serif); font-style: italic;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem); line-height: 1.45;
+    color: var(--ink); max-width: 42ch;
+  }
+
+  /* ── footer ─────────────────────────────────────── */
+  footer {
+    padding: 36px 0 52px;
+    border-top: 1px solid var(--rule-soft);
+    font-family: var(--sans); font-size: 13px;
+    color: var(--ink-faint); line-height: 1.65;
+  }
+  footer a { color: var(--ink-soft); border-bottom: none; }
+  footer a:hover { color: var(--moss); }
+  .col-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+</style>
+<!-- Plausible analytics -->
+<script async src="https://plausible.io/js/pa-nnhDJzDzdLCC33sPfVxZK.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="shell">
+    <div class="row">
+      <a href="/">← Conscious Leadership Circle</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+      <label for="nav-toggle" class="nav-burger" aria-label="Open menu"><span></span><span></span><span></span></label>
+      <div class="nav-links">
+        <a href="/conversations/">All conversations</a>
+        <a href="/reads/">Reading</a>
+        <a href="/musings/">Musings</a>
+        <a href="/gatherings/">Gatherings</a>
+        <a href="/sparks/">Sparks</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<header class="mast">
+  <div class="shell">
+    <div class="mast-tag">Conversation · Audio · Conscious Leadership Circle</div>
+    <h1>Three decades, <em>five machines</em></h1>
+    <p class="lede">A small-town boy from Pollachi follows a game called Prince of Persia into thirty years of computing — floppy swaps, factory floors, Wall Street milliseconds, a mainframe nobody dared touch — and out the other side, into the machine that talks back. Sivarama Sundar sits with Sree. Voice only, this time.</p>
+    <div class="mast-byline">
+      <span class="author">Sree Balakrishnan</span>
+      <span>with</span>
+      <span class="author">Sivarama Sundar</span>
+      <span class="sep">·</span>
+      <span>June 2026</span>
+      <span class="sep">·</span>
+      <span>1 hr 41 min</span>
+    </div>
+  </div>
+</header>
+
+<div class="body">
+  <div class="shell">
+
+    <p>We recorded this conversation twice. The first take was on video, and it wasn't Siva. He is the kind of person who is at his fullest when nobody is pointing a camera at him — so we threw it away and did it again, voice only. He at home, me on an evening walk. What you have here is the second take, and it is the truer one. (For the record: the conversation ran an hour and forty-one minutes and carried me through eight kilometres. Siva made me walk eight kilometres.)</p>
+
+    <p>You may already know Siva from these pages — he is one of the five who started this circle, and he wrote <a href="/musings/what-the-system-sees.html">Curve-Balled by the System</a>. What I had never heard end to end was the origin: a single child from a business family in Pollachi, forty kilometres from Coimbatore, who grew up in a library and followed a video game into a three-decade career that touched nearly every era of computing.</p>
+
+    <p>That career maps almost perfectly onto machines — so that is how this page is built. Five eras, five machines. Listen to the whole thing, jump to a moment from the chapters, or read the edited conversation below. <em>Questions in italics are mine. The answers are Siva's, lightly edited from the recording — the two boxed exchanges are verbatim, because some things shouldn't be cleaned up.</em></p>
+
+    <div class="watch-wrap" id="listen">
+      <div class="watch-label">Listen · 1 hr 41 min</div>
+      <div class="watch" id="player-frame">
+        <div class="watch-fallback" id="player-fallback">The recording is on its way.<br>The player will appear here — the chapters below already give you the shape of it.</div>
+      </div>
+    </div>
+
+    <div class="chapters">
+      <div class="chapters-label">Chapters · five machines</div>
+      <div class="chapters-note" id="chapters-note">Tap a row to play from that moment.</div>
+
+      <div class="chapter-era">I · The dual-floppy 8086 <span class="yrs">1992–95</span></div>
+      <a class="chapter" href="#listen" data-t="0"><span class="t">00:00</span><span class="x">Where do we start?</span></a>
+      <a class="chapter" href="#listen" data-t="102"><span class="t">01:42</span><span class="x">A small-town kid from Pollachi</span></a>
+      <a class="chapter" href="#listen" data-t="140"><span class="t">02:20</span><span class="x">Prince of Persia — a world inside a box</span></a>
+      <a class="chapter" href="#listen" data-t="384"><span class="t">06:24</span><span class="x">Growing up in a library</span></a>
+      <a class="chapter" href="#listen" data-t="521"><span class="t">08:41</span><span class="x">NIIT at sixteen</span></a>
+      <a class="chapter" href="#listen" data-t="738"><span class="t">12:18</span><span class="x">COBOL by day, Turbo C by night</span></a>
+      <a class="chapter" href="#listen" data-t="930"><span class="t">15:30</span><span class="x">The raindrops virus</span></a>
+
+      <div class="chapter-era">II · The Clipper years <span class="yrs">1995–99</span></div>
+      <a class="chapter" href="#listen" data-t="1108"><span class="t">18:28</span><span class="x">₹750 and a flour mill</span></a>
+      <a class="chapter" href="#listen" data-t="1239"><span class="t">20:39</span><span class="x">To Bangalore — the TCS dream</span></a>
+      <a class="chapter" href="#listen" data-t="1424"><span class="t">23:44</span><span class="x">A classified ad and a four-hour interview</span></a>
+      <a class="chapter" href="#listen" data-t="1575"><span class="t">26:15</span><span class="x">One-man shows — we even collected the cheques</span></a>
+
+      <div class="chapter-era">III · The Delphi decade <span class="yrs">1999–2009</span></div>
+      <a class="chapter" href="#listen" data-t="1664"><span class="t">27:44</span><span class="x">Everest — a mini-ERP from Koramangala</span></a>
+      <a class="chapter" href="#listen" data-t="1758"><span class="t">29:18</span><span class="x">Germany — an app server before the cloud</span></a>
+      <a class="chapter" href="#listen" data-t="1846"><span class="t">30:46</span><span class="x">What real engineering is</span></a>
+      <a class="chapter" href="#listen" data-t="2148"><span class="t">35:48</span><span class="x">Wall Street — the significance of milliseconds</span></a>
+      <a class="chapter" href="#listen" data-t="2310"><span class="t">38:30</span><span class="x">Silicon Valley — a store in 48 hours</span></a>
+
+      <div class="chapter-era">IV · The gray shades <span class="yrs">2009–23</span></div>
+      <a class="chapter" href="#listen" data-t="2534"><span class="t">42:14</span><span class="x">What corporate broke, and taught</span></a>
+      <a class="chapter" href="#listen" data-t="2648"><span class="t">44:08</span><span class="x">Tesco — the system nobody dared touch</span></a>
+      <a class="chapter" href="#listen" data-t="2826"><span class="t">47:06</span><span class="x">Building future engineers</span></a>
+
+      <div class="chapter-era">V · The machine that talks back <span class="yrs">2023–</span></div>
+      <a class="chapter" href="#listen" data-t="3101"><span class="t">51:41</span><span class="x">Three decades in one breath</span></a>
+      <a class="chapter" href="#listen" data-t="3176"><span class="t">52:56</span><span class="x">The point of no return</span></a>
+      <a class="chapter" href="#listen" data-t="3355"><span class="t">55:55</span><span class="x">How to talk to a machine</span></a>
+      <a class="chapter" href="#listen" data-t="3887"><span class="t">1:04:47</span><span class="x">Rethinking business, not just code</span></a>
+      <a class="chapter" href="#listen" data-t="4177"><span class="t">1:09:37</span><span class="x">Advice to four generations</span></a>
+      <a class="chapter" href="#listen" data-t="4403"><span class="t">1:13:23</span><span class="x">AI's side effect — better humans</span></a>
+      <a class="chapter" href="#listen" data-t="4825"><span class="t">1:20:25</span><span class="x">Bitter pills, plastics, and coal per megabyte</span></a>
+      <a class="chapter" href="#listen" data-t="5603"><span class="t">1:33:23</span><span class="x">Maya — a third voice, next time</span></a>
+    </div>
+
+    <!-- ════════ ERA I ════════ -->
+    <div class="section-break"><span>I · The world inside a box · 1992–95</span></div>
+
+    <div class="q">Where do we start? From the time I've known you — thanks to Sunil's circle — I've been intrigued by your journey, your depth, the role you play today. Take us through it. What made you who you are?</div>
+
+    <p>It's almost a three-decade journey. I'm a small-town kid — from Pollachi, about forty kilometres from Coimbatore. A business family. A single child. And by nature, curious — fascinated by the things around us in general. The journey formally starts in '94, when I came to Bangalore after my PU and NIIT, with a dream of being a programmer. But the spark was earlier. Around '92 I got interested in computers — thanks to a game. Prince of Persia.</p>
+
+    <p>The graphics. Creating a world inside a box. That was magic to me. I kept asking — <em>how are they doing it? How does this work?</em> That's what led me toward computer science.</p>
+
+    <div class="duet">
+      <div class="duet-label">Verbatim · from the recording</div>
+      <div class="duet-line"><span class="who sree">Sree</span> I could never win that game. I pivoted to Super Mario — at least I'd get some scores. That swordsman used to kill me, right there. There was one place where the soldiers always got you.</div>
+      <div class="duet-line"><span class="who siva">Siva</span> Yes — and every level had different types of soldiers. From the thin ones to the heavy ones. You had to hit them multiple times.</div>
+      <div class="duet-line"><span class="who sree">Sree</span> Exactly. I didn't have the patience. I was a simple-brain kid.</div>
+    </div>
+
+    <p>Later I figured out that a large part of Prince of Persia was written in assembly, by Jordan Mechner. These figures were gurus for us. Peter Norton. Jordan Mechner. Philippe Kahn — Borland's founder. <strong>Borland was a cult.</strong></p>
+
+    <div class="gloss">
+      <div class="gloss-label">For the younger reader</div>
+      <em>Borland</em> made Turbo C, Turbo Pascal and later Delphi — the developer tools a whole generation learned to program on. <em>Peter Norton</em> wrote the books and utilities every DOS programmer kept within reach (he's the Norton in Norton Antivirus). When Siva says "Borland was a cult," it's roughly how people now talk about early Apple.
+    </div>
+
+    <div class="q">So — books, creativity, games. Where did the library come in?</div>
+
+    <p>My parents had a shop, and after school I would sit in it and get bored. So one day they introduced me to the library — and from then on, the library was my evergreen friend. All types of books. The ones with pictures. The large bound ones I never shied away from. And comics — I was a mad fan of comics. These small, subtle things that we think are insignificant carry a lot of value.</p>
+
+    <div class="pull">
+      They taught me to imagine. They taught me to be creative. They taught me to be brave. The books helped me build a vivid world of imagination around me.
+      <span class="attr">Siva, on a childhood spent in a library</span>
+    </div>
+
+    <div class="q">How does the boy in the library become the geek? What happened between Pollachi and Bangalore?</div>
+
+    <p>My schooling was a little unconventional — the equivalent of open schooling after my tenth. I had been bitten by the computer bug, and there was always this thirst for being independent, doing things myself. I can't nail where it comes from — perhaps the books, the characters. The sensible plan was a three-year diploma in electronics, so as not to burden my parents. The accident was a cousin who took me to NIIT instead. I was sixteen, seventeen — it was unusual for them to take in someone who had just finished schooling. They were sceptical. But they saw how curious I was about computers, and they said: we'll give you the opportunity. I have been blessed with opportunity, starting from that one decision.</p>
+
+    <div class="gloss">
+      <div class="gloss-label">For the younger reader</div>
+      <em>NIIT</em> — the National Institute of Information Technology — was, with Aptech, the great private computer-training institute of early-90s India. Before engineering seats and bootcamps, this was the door into software for a small-town kid. Every other student of that generation dreamed of enrolling there before getting a job.
+    </div>
+
+    <div class="q">And they started you on… COBOL.</div>
+
+    <p>COBOL and dBase — a far cry from building graphics and games. And it felt slow to me. When they were starting the code section, the data section, I wouldn't be waiting for my turn — I jumped into assembly and Turbo C in parallel. That's the explorer in me. Remember, this was before hard disks were commonplace: a 10&nbsp;MB disk in itself was a big thing. We had 8086 PCs with dual floppy drives — to use something like Turbo C you swapped floppies, bring in the compiler, then the IDE, then do your coding. Crazy days. Quite interesting days as well.</p>
+
+    <div class="gloss">
+      <div class="gloss-label">For the younger reader</div>
+      A <em>floppy disk</em> held 1.44&nbsp;MB — less than one photo on your phone. Siva's lab machines had no hard disk at all, just two floppy slots, so programming meant juggling disks like a card dealer. A <em>TSR</em> — terminate-and-stay-resident program — was a small piece of code that quietly stayed in memory after it ran. Useful for utilities. Also, as you're about to see, for mischief.
+    </div>
+
+    <div class="q">This is where the mischief starts.</div>
+
+    <p>We used to build TSR programs — the ones that stick to the RAM. There was a virus going around called <em>raindrops</em>: you've seen the Matrix? Like that — the characters on your screen falling down like rain. We used to recreate that naughty stuff in assembly and leave it on the shared machines in the practical rooms. The next student would come, sign in, start typing — and watch all their characters fall down the screen.</p>
+
+    <div class="dos" role="img" aria-label="A recreated DOS screen showing the raindrops virus — characters falling down the screen like rain">
+      <div class="dos-bar"><i></i><i></i><i></i></div>
+      <div class="dos-screen">
+        <div>C:\NIIT\LAB&gt;<span class="dim"> </span>dir *.com</div>
+        <div class="dim">RAIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COM&nbsp;&nbsp;&nbsp;&nbsp;1,847&nbsp;&nbsp;&nbsp;12-06-94&nbsp;&nbsp;4:51p</div>
+        <div class="dim">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1 file(s)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,847 bytes</div>
+        <div>C:\NIIT\LAB&gt;<span class="dim"> </span>rain</div>
+        <div class="dim">· the next student sits down and starts typing ·</div>
+        <div>C:\NIIT\LAB&gt;<span class="dim"> </span><span class="dos-cursor">█</span></div>
+        <div class="dos-rain" aria-hidden="true">
+          <i>d
+i
+r</i>
+          <i>C
+:
+\
+&gt;</i>
+          <i>e
+x
+i
+t</i>
+          <i>t
+y
+p
+e</i>
+          <i>0
+1
+0</i>
+          <i>c
+l
+s</i>
+          <i>?
+!
+~</i>
+        </div>
+      </div>
+    </div>
+    <p class="dos-cap">The raindrops virus, as the next student at the shared lab machine would have met it. Rebuilt here — harmless, this time.</p>
+
+    <p>I told him my own version of this story. My introduction to computers was watching a real developer fix a virus on one of those old x86 machines, during a summer-holiday computer class in the eighth grade. It is still vivid in my brain — the moment I understood <em>oh, this is possible.</em> Somewhere, a Siva writes the virus; a stranger fixes it; and a third kid, watching, decides what to do with his life. Those were days, Siva said, without information overload — when computers themselves were new, and even a Walkman made you the cool dude.</p>
+
+    <!-- ════════ ERA II ════════ -->
+    <div class="section-break"><span>II · ₹750 and a flour mill · 1995–99</span></div>
+
+    <div class="q">How did all of this land you your first job?</div>
+
+    <p>Even before completing the course, I picked up work with the faculty there — building inventory software for a flour mill. My first paycheck was around 750 rupees. And I was uber-kicked about it.</p>
+
+    <div class="duet">
+      <div class="duet-label">Verbatim · from the recording</div>
+      <div class="duet-line"><span class="who sree">Sree</span> Minus 500. You got 250 more than me.</div>
+      <div class="duet-line"><span class="who siva">Siva</span> And I said — no, I want to continue over here.</div>
+    </div>
+
+    <p>My dad gave me a choice: come back and help with the business, or study more. I chose to study more. For a family that had traditionally never been out of the hometown, going to Bangalore was breaking a barrier. Bangalore was my uncle's place — he ran a DTP shop, desktop publishing — and it was there, during the holidays, that the games had first got me. My agenda was clear: something in computers. Not commerce, not arts. The open schooling had closed the engineering door, so I had settled for commerce — which only made me clearer. I wanted to be a programmer.</p>
+
+    <div class="q">What was the five-year dream then?</div>
+
+    <p>If somebody asked me what I wanted to become, the answer was: I want to work in TCS. Infosys was the premium — to get in there was a privilege. My seniors who cracked it landed an opening salary of 5,000 rupees, which was a big, big thing.</p>
+
+    <p>I kept learning. Clipper — Computer Associates' compiled dBase, the best tool of its time for building applications. We never had the privilege of campus placements, so I applied through the Deccan Herald classifieds. Somebody saw something in me and said, let me give this boy a chance. The funny thing is, my first interview was also the interviewer's first interview — it ran nearly four hours, A to Z of everything Clipper. They offered me the job. June '95. Touchwood — from there, there was no looking back.</p>
+
+    <div class="q">What was the work actually like, in 1995?</div>
+
+    <p>Inventory, stock and order management for factories — Bangalore was the electronics hub then, Hosur the manufacturing belt. You visited the factories. You talked directly to the operators who took in stock and sent it to the production floor. You could really see the whole business in operation. There were no boundaries like today — no layers of product and strategy and experience before something even hits engineering.</p>
+
+    <div class="pull">
+      One-man show: requirements, design, implementation, testing, packaging, delivery. We even collected the cheques.
+      <span class="attr">Siva, on software in the Clipper years</span>
+    </div>
+
+    <!-- ════════ ERA III ════════ -->
+    <div class="section-break"><span>III · The Delphi decade · 1999–2009</span></div>
+
+    <div class="q">You once told me your career splits into three parts. Take me through the middle one.</div>
+
+    <p>After the factory years came IICODE — an amazing product startup in late-90s Koramangala, building accounting software from India for US small businesses, competing with QuickBooks. I came in for their modernization — moving from DOS to Windows — and built a product called Everest, which was a mini-ERP in itself. Those were the years of PowerBuilder, Visual C++, Visual Basic — and Borland Delphi. I was a Borland fan, so landing with Delphi was like falling in love. More than a decade of my career was dedicated to that one tool.</p>
+
+    <p>Then a German company — an ASP, an application service provider. During the dot-com period the ASPs were the equivalent of today's cloud and SaaS providers put together. We had our own data centre in Germany, our own platform — web servers, app servers, workflow engines. While the rest of the world was building Java solutions on app servers, we were building our own app server. That was also my first time leading a larger team — twenty-plus people, in India, in a startup.</p>
+
+    <div class="q">So the small-town boy fascinated by comics and libraries is now building engineering teams. Tell me more.</div>
+
+    <p>Yes — though what I thought of as engineering, and what engineering actually is, turned out to be different things. The reality dawned on me thanks to my mentor and boss, Bala, who came from a manufacturing background. He taught me what real engineering was — that was around 2005. Before that, it was crunching and churning code: solving problems, building things, good programming. We followed discipline, but it never had the fancy names — design principles, design patterns, those terminologies came in the mid-2000s. What we had were the classics. Peter Norton. <em>Code Complete.</em> Those books were the Bibles that taught us how to write good code.</p>
+
+    <p>Then came the maiden account in Europe — I was the first member in, and over three years I watched that team grow to around a hundred people. We built retail products — the POS systems, front end and back. And then a New York Wall Street firm, Euro Brokers, which taught me the significance of milliseconds.</p>
+
+    <div class="q">You were sitting next to the traders.</div>
+
+    <p>One wall away. The brokers earn from their trades, not their paychecks — if the system delays even ten seconds, they lose the trade. Imagine building platforms sitting right next to them. It was equally exciting and scary, because they knew the people building their systems were in the next room. I learned to build distributed systems there, optimizing for milliseconds.</p>
+
+    <p>And then a Silicon Valley startup — Mercantila — B2B and B2C drop-ship retail. We built a seventy-million-dollar business and a platform around it: if the marketing team said <em>I want a theme store, I want a brand store, and I want it in a day</em> — wild asks — the platform could stand up a whole new store in under 48 hours. I built a fifty-plus member team from scratch. It was later taken over by a Naval Ravikant startup, and eventually by Google. Those three years taught me how business works — connecting the dots between technology and business — and my boss introduced me to the Toyota Production System, the lean philosophy. I was also running both the software and the IT, with multiple data centres.</p>
+
+    <div class="pull">
+      In peak holiday season, when something goes wrong, you don't have time to think. Reboot the machine first. Find the root cause after.
+      <span class="attr">Siva, on running a dot-com</span>
+    </div>
+
+    <!-- ════════ ERA IV ════════ -->
+    <div class="section-break"><span>IV · The gray shades · 2009–23</span></div>
+
+    <div class="q">Then came corporate. You said it taught you totally different things.</div>
+
+    <p>Corporate broke everything I thought I was doing right. It introduced me to the gray shades. It introduced diplomacy, tact. It made me slow down — and invest more in people and process. What I had picked up in technology and problem-solving now got strengthened with process, with business, with the corporate way of doing things.</p>
+
+    <p>At Philips I built a healthcare platform for the X-ray business — the cath labs, where the C-arms give doctors the live feed they operate on in a typical angio situation. We even defined a protocol connecting the front-end machines to the backend software. And we moved, slowly, from waterfall to agile.</p>
+
+    <div class="q">And then Tesco — this is my favourite story of yours.</div>
+
+    <p>Six years. APIs, the DevOps and cloud wave, mobile — and I re-architected the Clubcard platform. Can you imagine: they had a socket-based distributed system so robust it ran for decades without a single downtime. Built fault-tolerant before the cloud existed, working in tandem with the mainframes. And there was no code for it. You could never extend it or fix it. It was the classic situation — <em>there is no code, but as long as it runs, it's great</em> — and the business ran on a critical component like that. Nobody wanted to touch it. I had the opportunity to slowly migrate it into a microservices architecture and modernise it. Early cloud days. CI/CD just becoming mainstream.</p>
+
+    <div class="pull">
+      It ran for decades without a single downtime. And there was no code. Nobody wanted to touch it.
+      <span class="attr">Siva, on the system that outlived its authors</span>
+    </div>
+
+    <div class="q">And today?</div>
+
+    <p>I never thought I'd come back to consulting — but I did, with an engineering flavour: running a mini-enterprise within an enterprise. We hire engineers from the top 200 campuses of India and take them through a rigorous twelve-week course — not just how to build software, but how to build it thinking from the customer's point of view, with design and the non-functional requirements from day one. It breaks an old rule: that a fresh grad gets bug-fixing on the fringes until somebody finally lets them build. These kids have cracked JEE Advanced and survived four gruelling years of proving themselves. Applying common sense to real problems should not be hard for them. So I give them real-life problems, and in twelve weeks they build something end to end and deploy it at scale. One half of my day is growing them — nurturing them, making them succeed. The other half is taking up complex platforms and deliveries. And, last but not least, the AI wave — adopting early, building AI solutions.</p>
+
+    <!-- ════════ ERA V ════════ -->
+    <div class="section-break"><span>V · The machine that talks back · 2023–</span></div>
+
+    <div class="q">Desktop to client-server to web to mobile to cloud to distributed — and now AI, which pretty much eats everything we've done for thirty years. How do you hold that?</div>
+
+    <p>As an opportunity — and an inevitable evolution. Whether we liked it or not, cloud took the hardware out of our span of control, and without it we could never have built for millions of users. We adopted, and now cloud is the norm; today it would be difficult to find somebody who can set up a data centre from the ground up. AI is on the same path — but it's more than that. It's an inflection point. A divergence. A point of no return.</p>
+
+    <div class="pull">
+      It's like when you see something new and you can't unsee it. That's the effect AI has on us.
+      <span class="attr">Siva, on the inflection point</span>
+    </div>
+
+    <p>And what AI is giving us — a blessing in disguise — is wings. Look at the three decades: what started as a one-man show slowly became a team for every function. Experience, product, engineering, architecture, design, testing, DevOps, support. Now you just need to ask — nicely — for what you want. Strategy, business, a complex technical problem, analysis, recommendations. It's like having a genie in your pocket. But the big <em>but</em> is: how do we leverage it?</p>
+
+    <div class="q">Go on — this connects to what you said in Roopa's conversation, about what twenty years of experience means now.</div>
+
+    <p>The more you are able to articulate — to specify what you need unambiguously, to shape the context, to say what the agent's role is, what it must avoid, where the guardrails and boundaries are — the more AI gives you. We can't arbitrarily start coding anymore; that needs thought and deliberation up front. One wrong prompt and you're losing tokens — and tokens have become the new-age currency. There's a change in the prompting, in the dialect, in the tone, in the narrative. An experienced person is well equipped to put that narrative in place. A campus grad comes with lots of energy — but they lack the nuance. The perspectives. The constraints.</p>
+
+    <p>Here I told him what this looks like from my side of the fence. This very website is two days of prompting — a thought I had carried for years, executed without a designer, a UI engineer, or browser testing. And a few weeks ago I built a camera-shy friend her coaching website from a forty-minute recorded conversation: transcript in, prompt out, first version live in two and a half hours, for a coffee's worth of tokens. In the old world that would have been four weeks and three unhappy people. Which led me to the question that has been sitting with me ever since.</p>
+
+    <div class="q">Building has become the cost of a coffee. Has selling become the tougher half?</div>
+
+    <p>That's where the wisdom comes in. And not all the questions are answered. If everything happens faster — if there is too much to offer — what happens to consumption? And if there's going to be more and more consumption, where is it taking us? Maybe we don't have answers to some of these. I think it's a time for balance. We now know there's an arsenal at our disposal to do whatever we want. How we wield it, to solve what kind of problems, how effectively, and in what balance — there lies the answer.</p>
+
+    <div class="q">Let me divide us into four generations — our parents' generation, ours, the ten years behind us, and the fresh grads. What would you say to each?</div>
+
+    <p>That's a wonderful question — and I think all the generations need to come together. AI has given us the opportunity to do that, which otherwise wouldn't have been possible. The young grads come with a lot of energy that needs channelising and guiding; they still need to break bones learning how business is done, how things work behind the scenes. Our generation has to do the shaping — articulate, create opportunities to work along with them, tapping both energies, the grads' and AI's. The orchestrators. And the oldest generation sees what others don't see that easily — only the experience and the scars make you see some things. They lay the strategic outlook, playing the coach, the mentor, the guide. The grads take the baton — the energy, the groundwork, the creating and innovating. All the generations, beautifully helping each other — each one using AI in their own way.</p>
+
+    <div class="q">You also said something I didn't expect — that AI has a side effect of making us better humans.</div>
+
+    <p>If you don't talk to AI nicely, it gives you junk. And you can be rough with it — but the creators have ensured the AI stays polite. You throw stones at it, and it still responds politely, diplomatically, tactfully. That's a subtle cue for us, for how to form our own next conversation. Second — AI is making us think more. Tokens being the currency they are, we're forced to get to the paper, make our prompts clear, make our asks specific. Fewer confusions, fewer assumptions, better clarity for everybody. And last — AI has an answer for everything, so you don't have to say no. It amplifies that human right of <em>let me try before I say yes or no.</em> It helps you become a better communicator. These are the positive sides I see.</p>
+
+    <div class="q">Then let me push you. The same labs that sell us the tokens publish essays asking us to slow down and use AI consciously — and ship the next model two days later. Nobody meters your car, your tap water, your flights. Is "use AI consciously" sincere, or marketing?</div>
+
+    <p>For me those aren't counter-arguments — they're genuine eye-openers. The back of the hand we never pay attention to. Can we stop driving, stop using petrol? The whole world would stop. There is going to be a cost attached to this progression, and that is inevitable — and that's where I have made peace with it. Look at plastics: harmful, yes — there are traces of it now in the food we eat and the water we drink. But can you imagine a world without plastics? Not the PET bottles — think of healthcare. Your syringes are plastic.</p>
+
+    <p>When the internet emerged, there used to be a deep-dive paper on how much coal it takes to serve one megabyte of download — the energy from the server, through the cables, to wherever you are. It died a natural death; nobody thinks about it anymore. I'm sure we will forget the token argument the same way, in another two or three years. Embracing is the only way to move forward, whether we like it or not — that's why I call it a bitter pill: you take it for your own betterment, because you don't have a choice about evolving. But — in the right quantities. In the right balance. Use AI where it is really, really needed.</p>
+
+    <!-- ════════ CODA ════════ -->
+    <div class="section-break"><span>A third voice, next time</span></div>
+
+    <p>Right at the end — after I half-joked that he had been thoroughly on his elements — Siva lit up about something neither of us had planned to discuss: <strong>Maya</strong>, the voice AI from a quiet startup called Sesame. "The most human AI," he called it. "It doesn't stutter. It's so articulate, so smooth — unbelievable. While the whole world was going gaga between GPT and Anthropic, these guys were doing something pathbreaking, in a very silent tone."</p>
+
+    <div class="coda">
+      <div class="coda-label">The proposal · accepted publicly</div>
+      <p>Siva's idea, which this page now holds him to: the next conversation in this series will have three participants. Him, me — and Maya, on the call with us, holding the same intensity and tone. The next conversation in this series may have three voices. One of them won't be human.</p>
+    </div>
+
+    <p>And the very last thing we spoke about wasn't AI at all. It was India — how a country that builds the world's software is still primarily a consumer of it, sandwiched between the indigenous tech of the US and China. How many models of our own can we name? "We have a lot to do," he said. And then he gave me the line I want this conversation to be remembered by.</p>
+
+    <div class="closing-pull">Happy to leave any tiny breadcrumbs that we could, to bring in change.</div>
+
+    <div class="guest">
+      <div class="guest-label">Guest</div>
+      <div class="guest-name">Sivarama Sundar</div>
+      <p>Co-founder of the Conscious Leadership Circle. Three decades in software — from Clipper on factory floors to AI platforms. He wrote <a href="/musings/what-the-system-sees.html">Curve-Balled by the System</a> on these pages. Find him on <a href="https://www.linkedin.com/in/sivaramasundar/" target="_blank" rel="noopener">LinkedIn</a>.</p>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="shell">
+    <div class="col-row">
+      <span><strong style="color:var(--ink-soft);font-weight:500;">Conscious Leadership Circle</strong> · consciousleadershipcircle.in</span>
+      <span>Maintained by <a href="https://sreebalakrishnan.in">Sree Balakrishnan</a></span>
+    </div>
+    <div style="margin-top:10px;font-size:13px;color:var(--ink-faint);line-height:1.6;">
+      Started as a thought. Then an in-person session across a few cities in India. Now slowly finding its rhythm.
+    </div>
+    <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--rule-soft);font-size:12px;letter-spacing:0.04em;color:var(--ink-faint);">
+      Created June 2026 · Last updated June 2026 · <a href="/conversations/" style="color:var(--ink-faint);">All conversations</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // ── paste the real YouTube video ID below and the player + chapters light up ──
+  var VIDEO_ID = "YOUTUBE_VIDEO_ID_HERE";
+
+  var live = VIDEO_ID !== "YOUTUBE_VIDEO_ID_HERE" && VIDEO_ID.length > 5;
+  var frame = document.getElementById("player-frame");
+  var note = document.getElementById("chapters-note");
+  var iframe = null;
+
+  if (live) {
+    iframe = document.createElement("iframe");
+    iframe.src = "https://www.youtube-nocookie.com/embed/" + VIDEO_ID + "?rel=0&enablejsapi=1";
+    iframe.title = "Three decades, five machines — Sivarama Sundar in conversation with Sree Balakrishnan";
+    iframe.setAttribute("allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share");
+    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("loading", "lazy");
+    frame.innerHTML = "";
+    frame.appendChild(iframe);
+    note.textContent = "Tap a row to play from that moment.";
+  } else {
+    note.textContent = "The recording is being prepared — once it's live, tapping a row plays from that moment.";
+  }
+
+  function cmd(func, args) {
+    if (!iframe || !iframe.contentWindow) return;
+    iframe.contentWindow.postMessage(JSON.stringify({ event: "command", func: func, args: args || [] }), "*");
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll(".chapter"), function (ch) {
+    var t = parseInt(ch.getAttribute("data-t"), 10) || 0;
+    if (live) {
+      // real link as fallback (opens YouTube if the inline seek can't run)
+      ch.href = "https://www.youtube.com/watch?v=" + VIDEO_ID + "&t=" + t + "s";
+      ch.addEventListener("click", function (e) {
+        if (!iframe) return; // let the link work
+        e.preventDefault();
+        cmd("seekTo", [t, true]);
+        cmd("playVideo");
+        document.getElementById("listen").scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+    } else {
+      ch.classList.add("waiting");
+      ch.addEventListener("click", function (e) { e.preventDefault(); });
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
